@@ -139,25 +139,20 @@ export function Hero() {
       {/* Value Propositions Banner */}
       <div className="bg-slate-800 mt-16">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-700">
             {[
               { icon: FileText, title: "EHR", subtitle: "Electronic Health Records" },
               { icon: DollarSign, title: "RCM", subtitle: "Revenue Cycle Management" },
               { icon: Users, title: "PM", subtitle: "Practice Management" },
               { icon: UserCircle, title: "Portal", subtitle: "Patient Engagement" },
-              { icon: Pill, title: "eRx", subtitle: "e-Prescribing" },
-              { icon: FlaskConical, title: "Labs", subtitle: "Lab Integration" },
-              { icon: Video, title: "Telehealth", subtitle: "Video Visits" },
-              { icon: BarChart3, title: "Analytics", subtitle: "Reporting & MIPS" },
-              { icon: ShieldCheck, title: "Compliance", subtitle: "ONC Certified" },
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 py-4 px-3 md:px-4 justify-center" data-testid={`banner-solution-${i}`}>
-                <div className="h-9 w-9 rounded-full bg-slate-700 flex items-center justify-center shrink-0">
-                  <item.icon className="h-4 w-4 text-cyan-400" />
+              <div key={i} className="flex items-center gap-3 py-5 px-4 md:px-6 justify-center" data-testid={`banner-solution-${i}`}>
+                <div className="h-10 w-10 rounded-full bg-slate-700 flex items-center justify-center shrink-0">
+                  <item.icon className="h-5 w-5 text-cyan-400" />
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm leading-tight">{item.title}</p>
-                  <p className="text-slate-400 text-[11px]">{item.subtitle}</p>
+                  <p className="text-slate-400 text-xs">{item.subtitle}</p>
                 </div>
               </div>
             ))}
