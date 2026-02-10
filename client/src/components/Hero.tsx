@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ShieldCheck, Award } from "lucide-react";
+import { ArrowRight, ShieldCheck, Award, Zap, FileCheck, Rocket, Headphones } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/futuristic_glass_medical_interface_abstract_3d.png";
 import oncSeal from "@assets/generated_images/onc_certified_health_it_seal_3d_gold_and_blue.png";
@@ -136,6 +136,29 @@ export function Hero() {
         </div>
       </div>
 
+      {/* Value Propositions Banner */}
+      <div className="bg-slate-800 mt-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-700">
+            {[
+              { icon: Zap, title: "Optimized", subtitle: "Workflow Efficiency" },
+              { icon: FileCheck, title: "Streamlined", subtitle: "Documentation" },
+              { icon: Rocket, title: "Rapid", subtitle: "Implementation" },
+              { icon: Headphones, title: "Dedicated", subtitle: "Support" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 py-5 px-4 md:px-6 justify-center" data-testid={`banner-value-${i}`}>
+                <div className="h-10 w-10 rounded-full bg-slate-700 flex items-center justify-center shrink-0">
+                  <item.icon className="h-5 w-5 text-cyan-400" />
+                </div>
+                <div>
+                  <p className="text-white font-bold text-sm leading-tight">{item.title}</p>
+                  <p className="text-slate-400 text-xs">{item.subtitle}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
           </section>
   );
 }
