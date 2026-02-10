@@ -19,15 +19,10 @@ const specialties = [
 ];
 
 const allSpecialties = [
-  "Allergy & Immunology", "Anesthesiology", "Cardiology", "Dermatology",
-  "Emergency Medicine", "Endocrinology", "Family Medicine", "Gastroenterology",
-  "General Surgery", "Geriatrics", "Hematology", "Infectious Disease",
-  "Internal Medicine", "Nephrology", "Neurology", "OB/GYN",
-  "Oncology", "Ophthalmology", "Orthopedics", "Otolaryngology",
-  "Pain Management", "Pathology", "Pediatrics", "Physical Medicine",
-  "Plastic Surgery", "Podiatry", "Psychiatry", "Pulmonology",
-  "Radiology", "Rheumatology", "Sleep Medicine", "Sports Medicine",
-  "Urgent Care", "Urology", "Vascular Surgery", "Wound Care"
+  "Cardiology", "Dermatology", "Family Medicine", "Gastroenterology",
+  "Internal Medicine", "Neurology", "OB/GYN", "Oncology",
+  "Ophthalmology", "Orthopedics", "Pediatrics", "Psychiatry",
+  "Pulmonology", "Radiology", "Urgent Care", "Urology"
 ];
 
 export default function SpecialtiesPage() {
@@ -134,14 +129,14 @@ export default function SpecialtiesPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              All Supported Specialties
+              Popular Specialties
             </h2>
             <p className="text-lg text-slate-600">
-              We support over 40 medical specialties with dedicated templates
+              Dedicated templates for the most in-demand medical specialties
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3">
             {allSpecialties.map((specialty, i) => (
               <motion.div
                 key={i}
