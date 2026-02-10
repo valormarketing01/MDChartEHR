@@ -152,7 +152,7 @@ export function Hero() {
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm leading-tight">{item.title}</p>
-                  <p className="text-white/70 text-xs">{item.subtitle}</p>
+                  <p className="text-white font-semibold text-xs">{item.subtitle}</p>
                 </div>
               </div>
             ))}
