@@ -8,7 +8,7 @@ import heroImage from "@assets/generated_images/corporate_leadership_team_meetin
 import aaronImage from "@assets/Gemini_Generated_Image_7ejgbg7ejgbg7ejg_1770827867393.png";
 import maitryImage from "@assets/Gemini_Generated_Image_4s1te44s1te44s1t_1770827529031.png";
 import danielImage from "@assets/Gemini_Generated_Image_60hu5060hu5060hu_1770827363357.png";
-import magoImage from "@assets/generated_images/mago_saldana_business_analyst_headshot.png";
+import magoImage from "@assets/Gemini_Generated_Image_o9bedjo9bedjo9be_1770828177671.png";
 import jackieImage from "@assets/image_1770826311845.png";
 
 const fadeIn = {
