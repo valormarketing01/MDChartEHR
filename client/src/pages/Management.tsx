@@ -7,7 +7,7 @@ import { Users, ArrowRight } from "lucide-react";
 import heroImage from "@assets/generated_images/corporate_leadership_team_meeting.png";
 import aaronImage from "@assets/generated_images/aaron_wachspress_cto_headshot.png";
 import maitryImage from "@assets/generated_images/maitry_shah_it_manager_headshot.png";
-import danielImage from "@assets/daniel_sticca_headshot.png";
+import danielImage from "@assets/image_1770826702613.png";
 import magoImage from "@assets/generated_images/mago_saldana_business_analyst_headshot.png";
 import jackieImage from "@assets/image_1770826311845.png";
 
@@ -126,11 +126,12 @@ export default function Management() {
               >
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="flex-shrink-0">
-                    <div className="w-32 h-32 rounded-2xl overflow-hidden shadow-lg">
+                    <div className="w-32 h-32 rounded-2xl overflow-hidden shadow-lg bg-slate-100">
                       <img 
                         src={member.image} 
                         alt={member.name}
-                        className="w-full h-full object-cover"
+                        className={`w-full h-full object-cover ${member.name === "Daniel Sticca" ? "brightness-125 contrast-110 grayscale-0" : ""}`}
+                        style={member.name === "Daniel Sticca" ? { filter: "brightness(1.3) contrast(1.1) saturate(0.2)" } : undefined}
                       />
                     </div>
                   </div>
