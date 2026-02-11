@@ -9,7 +9,7 @@ import aaronImage from "@assets/Gemini_Generated_Image_7ejgbg7ejgbg7ejg_17708278
 import maitryImage from "@assets/Gemini_Generated_Image_4s1te44s1te44s1t_1770827529031.png";
 import danielImage from "@assets/Gemini_Generated_Image_60hu5060hu5060hu_1770827363357.png";
 import magoImage from "@assets/Gemini_Generated_Image_o9bedjo9bedjo9be_1770828177671.png";
-import jackieImage from "@assets/image_1770826311845.png";
+import jackieImage from "@assets/Gemini_Generated_Image_5virbn5virbn5vir_1770828376474.png";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
