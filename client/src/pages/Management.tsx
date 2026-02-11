@@ -7,7 +7,7 @@ import { Users, ArrowRight } from "lucide-react";
 import heroImage from "@assets/generated_images/corporate_leadership_team_meeting.png";
 import aaronImage from "@assets/generated_images/aaron_wachspress_cto_headshot.png";
 import maitryImage from "@assets/generated_images/maitry_shah_it_manager_headshot.png";
-import ranImage from "@assets/generated_images/ran_berkman_marketing_director_headshot.png";
+import danielImage from "@assets/daniel_sticca_headshot.png";
 import magoImage from "@assets/generated_images/mago_saldana_business_analyst_headshot.png";
 import jackieImage from "@assets/image_1770826311845.png";
 
@@ -30,10 +30,10 @@ const teamMembers = [
     bio: "As the IT Project Manager, Maitry is focused on MD Charts' product and technology strategy in support of the company's goals and vision. She brings extensive experience in developing and leading technology integration teams, defining strategic product vision and roadmaps, and developing a customer-focused culture."
   },
   {
-    name: "Ran Berkman",
+    name: "Daniel Sticca",
     title: "Digital Marketing Director",
-    image: ranImage,
-    bio: "Ran brings extensive digital experience in the health and aesthetics sector. His unique expertise has enabled him to assist clients in developing and implementing winning strategies that continually enhance results across the USA and abroad."
+    image: danielImage,
+    bio: "Daniel brings extensive digital experience in the health and aesthetics sector. His unique expertise has enabled him to assist clients in developing and implementing winning strategies that continually enhance results across the USA and abroad."
   },
   {
     name: "Mago Saldana",
