@@ -16,10 +16,6 @@ const specialties = [
   { icon: Pill, title: "Urology", desc: "Urological assessments, procedure documentation, and treatment planning workflows." },
 ];
 
-const allSpecialties = [
-  "Cardiology", "Dermatology", "Family Medicine",
-  "OB/GYN", "Pediatrics", "Urology"
-];
 
 export default function SpecialtiesPage() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -100,7 +96,7 @@ export default function SpecialtiesPage() {
             Featured Specialties
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {specialties.map((specialty, i) => (
               <motion.div
                 key={i}
@@ -115,34 +111,6 @@ export default function SpecialtiesPage() {
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{specialty.title}</h3>
                 <p className="text-sm text-slate-600">{specialty.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Popular Specialties
-            </h2>
-            <p className="text-lg text-slate-600">
-              Dedicated templates for the most in-demand medical specialties
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 max-w-2xl mx-auto">
-            {allSpecialties.map((specialty, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.02 }}
-                className="bg-white rounded-lg px-3 py-2 border border-slate-200 text-center text-sm font-medium text-slate-700 hover:border-primary hover:text-primary transition-colors cursor-pointer"
-              >
-                {specialty}
               </motion.div>
             ))}
           </div>
