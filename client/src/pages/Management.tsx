@@ -126,15 +126,11 @@ export default function Management() {
               >
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="flex-shrink-0">
-                    <div className={`w-32 h-32 rounded-2xl overflow-hidden shadow-lg ${member.name === "Daniel Sticca" ? "bg-[#d5dde0] relative" : ""}`}>
-                      {member.name === "Daniel Sticca" && (
-                        <div className="absolute inset-0 bg-[#d5dde0] z-0" />
-                      )}
+                    <div className="w-32 h-32 rounded-2xl overflow-hidden shadow-lg">
                       <img 
                         src={member.image} 
                         alt={member.name}
                         className="w-full h-full object-cover"
-                        style={member.name === "Daniel Sticca" ? { mixBlendMode: "lighten", position: "relative", zIndex: 1 } : undefined}
                       />
                     </div>
                   </div>
