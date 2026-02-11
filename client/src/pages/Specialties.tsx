@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Stethoscope, Heart, Brain, Baby, Eye, Bone, Activity, Pill, ArrowRight } from "lucide-react";
+import { Stethoscope, Heart, Baby, Eye, Activity, Pill, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { ContactModal } from "@/components/ContactModal";
@@ -8,14 +8,12 @@ import { Footer } from "@/components/Footer";
 import specialtiesHeroImage from "@assets/stock_images/group_of_doctors_med_da5596cd.jpg";
 
 const specialties = [
-  { icon: Stethoscope, title: "Internal Medicine", desc: "Comprehensive templates for adult primary care and chronic disease management." },
   { icon: Heart, title: "Cardiology", desc: "Specialized workflows for cardiac assessments, ECG documentation, and stress tests." },
-  { icon: Baby, title: "Pediatrics", desc: "Growth charts, immunization tracking, and age-appropriate templates." },
-  { icon: Activity, title: "OB/GYN", desc: "Prenatal care, labor & delivery documentation, and women's health templates." },
-  { icon: Brain, title: "Psychiatry", desc: "Mental health assessments, therapy notes, and medication management." },
   { icon: Eye, title: "Dermatology", desc: "Skin exam templates, lesion mapping, and procedure documentation." },
-  { icon: Bone, title: "Orthopedics", desc: "Musculoskeletal exams, injury documentation, and surgical planning." },
-  { icon: Pill, title: "Pain Management", desc: "Controlled substance tracking, treatment plans, and outcome monitoring." },
+  { icon: Stethoscope, title: "Family Medicine", desc: "Comprehensive templates for primary care, wellness visits, and chronic disease management." },
+  { icon: Activity, title: "OB/GYN", desc: "Prenatal care, labor & delivery documentation, and women's health templates." },
+  { icon: Baby, title: "Pediatrics", desc: "Growth charts, immunization tracking, and age-appropriate templates." },
+  { icon: Pill, title: "Urology", desc: "Urological assessments, procedure documentation, and treatment planning workflows." },
 ];
 
 const allSpecialties = [
