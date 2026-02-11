@@ -9,7 +9,7 @@ import aaronImage from "@assets/generated_images/aaron_wachspress_cto_headshot.p
 import maitryImage from "@assets/generated_images/maitry_shah_it_manager_headshot.png";
 import ranImage from "@assets/generated_images/ran_berkman_marketing_director_headshot.png";
 import magoImage from "@assets/generated_images/mago_saldana_business_analyst_headshot.png";
-import jackieImage from "@assets/generated_images/jacqueline_lally_revenue_manager_headshot.png";
+import jackieImage from "@assets/image_1770826311845.png";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
