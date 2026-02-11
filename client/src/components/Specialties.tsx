@@ -1,25 +1,19 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { 
-  Stethoscope, Heart, Brain, Baby, Eye, Bone, 
-  Activity, Pill, Thermometer, Ear, Syringe, Scissors,
+  Stethoscope, Heart, Baby, 
+  Activity, Thermometer, Syringe,
   ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const specialtyIcons = [
-  { icon: Stethoscope, name: "Internal Medicine", color: "bg-primary/10 text-primary" },
-  { icon: Heart, name: "Cardiology", color: "bg-rose-100 text-rose-600" },
-  { icon: Brain, name: "Neurology", color: "bg-purple-100 text-purple-600" },
-  { icon: Baby, name: "Pediatrics", color: "bg-amber-100 text-amber-600" },
-  { icon: Eye, name: "Ophthalmology", color: "bg-emerald-100 text-emerald-600" },
-  { icon: Bone, name: "Orthopedics", color: "bg-slate-100 text-slate-600" },
-  { icon: Activity, name: "OB/GYN", color: "bg-pink-100 text-pink-600" },
-  { icon: Pill, name: "Pain Management", color: "bg-blue-100 text-blue-600" },
-  { icon: Thermometer, name: "Family Medicine", color: "bg-orange-100 text-orange-600" },
-  { icon: Ear, name: "ENT", color: "bg-teal-100 text-teal-600" },
   { icon: Syringe, name: "Dermatology", color: "bg-rose-100 text-rose-600" },
-  { icon: Scissors, name: "General Surgery", color: "bg-indigo-100 text-indigo-600" },
+  { icon: Activity, name: "OB/GYN", color: "bg-pink-100 text-pink-600" },
+  { icon: Baby, name: "Pediatrics", color: "bg-amber-100 text-amber-600" },
+  { icon: Stethoscope, name: "Urology", color: "bg-primary/10 text-primary" },
+  { icon: Heart, name: "Cardiology", color: "bg-rose-100 text-rose-600" },
+  { icon: Thermometer, name: "Family Medicine", color: "bg-orange-100 text-orange-600" },
 ];
 
 export function Specialties() {
@@ -43,7 +37,7 @@ export function Specialties() {
         
         <motion.div 
           className="flex gap-6"
-          animate={{ x: [0, -1200] }}
+          animate={{ x: [0, -600] }}
           transition={{ 
             duration: 30,
             repeat: Infinity,
