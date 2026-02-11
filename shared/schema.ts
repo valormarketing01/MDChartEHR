@@ -1,4 +1,4 @@
-import { pgTable, text, serial, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, timestamp, integer } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -41,3 +41,29 @@ export const insertWhitePaperDownloadSchema = createInsertSchema(whitePaperDownl
 
 export type InsertWhitePaperDownload = z.infer<typeof insertWhitePaperDownloadSchema>;
 export type WhitePaperDownload = typeof whitePaperDownloads.$inferSelect;
+
+export const pageViews = pgTable("page_views", {
+  id: serial("id").primaryKey(),
+  path: text("path").notNull(),
+  referrer: text("referrer"),
+  userAgent: text("user_agent"),
+  language: text("language"),
+  screenWidth: integer("screen_width"),
+  screenHeight: integer("screen_height"),
+  country: text("country"),
+  city: text("city"),
+  region: text("region"),
+  deviceType: text("device_type"),
+  browser: text("browser"),
+  os: text("os"),
+  sessionId: text("session_id"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const insertPageViewSchema = createInsertSchema(pageViews).omit({
+  id: true,
+  createdAt: true,
+});
+
+export type InsertPageView = z.infer<typeof insertPageViewSchema>;
+export type PageView = typeof pageViews.$inferSelect;
