@@ -19,10 +19,8 @@ const specialties = [
 ];
 
 const allSpecialties = [
-  "Cardiology", "Dermatology", "Family Medicine", "Gastroenterology",
-  "Internal Medicine", "Neurology", "OB/GYN", "Oncology",
-  "Ophthalmology", "Orthopedics", "Pediatrics", "Psychiatry",
-  "Pulmonology", "Radiology", "Urgent Care", "Urology"
+  "Cardiology", "Dermatology", "Family Medicine",
+  "OB/GYN", "Pediatrics", "Urology"
 ];
 
 export default function SpecialtiesPage() {
@@ -136,7 +134,7 @@ export default function SpecialtiesPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 max-w-2xl mx-auto">
             {allSpecialties.map((specialty, i) => (
               <motion.div
                 key={i}
