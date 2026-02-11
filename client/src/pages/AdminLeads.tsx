@@ -13,7 +13,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { 
-  Users, FileText, ArrowLeft, Search, Download, Mail, MapPin, Calendar, LogIn, Loader2
+  Users, FileText, ArrowLeft, Search, Download, Mail, MapPin, Calendar, LogIn, Loader2,
+  BarChart3, Eye, Monitor, Globe, Clock, Smartphone, Laptop, Tablet, RefreshCw
 } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 
@@ -39,6 +40,27 @@ interface ContactRequest {
   createdAt: string;
 }
 
+interface PageViewStats {
+  totalViews: number;
+  todayViews: number;
+  topPages: { path: string; views: number }[];
+  deviceBreakdown: { deviceType: string; views: number }[];
+  browserBreakdown: { browser: string; views: number }[];
+  locationBreakdown: { country: string; views: number }[];
+  hourlyViews: { hour: string; views: number }[];
+}
+
+interface RecentPageView {
+  id: number;
+  path: string;
+  country: string | null;
+  city: string | null;
+  deviceType: string | null;
+  browser: string | null;
+  os: string | null;
+  createdAt: string;
+}
+
 const whitePaperTitles: Record<string, string> = {
   "ehr-selection": "EHR Selection Guide",
   "rcm-optimization": "RCM Optimization",
@@ -53,8 +75,27 @@ export default function AdminLeads() {
   const [downloads, setDownloads] = useState<WhitePaperDownload[]>([]);
   const [contacts, setContacts] = useState<ContactRequest[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [activeTab, setActiveTab] = useState<"downloads" | "contacts">("downloads");
+  const [activeTab, setActiveTab] = useState<"downloads" | "contacts" | "analytics">("downloads");
   const [isLoading, setIsLoading] = useState(true);
+  const [pageStats, setPageStats] = useState<PageViewStats | null>(null);
+  const [recentViews, setRecentViews] = useState<RecentPageView[]>([]);
+  const [analyticsLoading, setAnalyticsLoading] = useState(false);
+
+  const fetchAnalytics = async () => {
+    setAnalyticsLoading(true);
+    try {
+      const [statsRes, recentRes] = await Promise.all([
+        fetch("/api/page-views/stats"),
+        fetch("/api/page-views/recent?limit=50")
+      ]);
+      if (statsRes.ok) setPageStats(await statsRes.json());
+      if (recentRes.ok) setRecentViews(await recentRes.json());
+    } catch (error) {
+      console.error("Error fetching analytics:", error);
+    } finally {
+      setAnalyticsLoading(false);
+    }
+  };
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -87,6 +128,7 @@ export default function AdminLeads() {
     };
 
     fetchData();
+    fetchAnalytics();
   }, [isAuthenticated]);
 
   if (authLoading) {
@@ -231,6 +273,14 @@ export default function AdminLeads() {
                 <Mail className="h-4 w-4 mr-2" />
                 Contact Requests ({contacts.length})
               </Button>
+              <Button 
+                variant={activeTab === "analytics" ? "default" : "outline"}
+                onClick={() => { setActiveTab("analytics"); fetchAnalytics(); }}
+                data-testid="tab-analytics"
+              >
+                <BarChart3 className="h-4 w-4 mr-2" />
+                Site Analytics
+              </Button>
             </div>
             
             <div className="flex gap-2">
@@ -258,6 +308,199 @@ export default function AdminLeads() {
           {isLoading ? (
             <div className="flex items-center justify-center py-20">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+            </div>
+          ) : activeTab === "analytics" ? (
+            <div>
+              {analyticsLoading ? (
+                <div className="flex items-center justify-center py-20">
+                  <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                </div>
+              ) : pageStats ? (
+                <div className="space-y-6">
+                  <div className="flex justify-end">
+                    <Button variant="outline" size="sm" onClick={fetchAnalytics} data-testid="button-refresh-analytics">
+                      <RefreshCw className="h-4 w-4 mr-2" />
+                      Refresh
+                    </Button>
+                  </div>
+
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="bg-white rounded-xl border p-5" data-testid="stat-total-views">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="h-10 w-10 rounded-lg bg-blue-50 flex items-center justify-center">
+                          <Eye className="h-5 w-5 text-blue-600" />
+                        </div>
+                        <span className="text-sm font-medium text-slate-500">Total Views</span>
+                      </div>
+                      <p className="text-3xl font-bold text-slate-900">{pageStats.totalViews.toLocaleString()}</p>
+                    </div>
+                    <div className="bg-white rounded-xl border p-5" data-testid="stat-today-views">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="h-10 w-10 rounded-lg bg-emerald-50 flex items-center justify-center">
+                          <Clock className="h-5 w-5 text-emerald-600" />
+                        </div>
+                        <span className="text-sm font-medium text-slate-500">Today</span>
+                      </div>
+                      <p className="text-3xl font-bold text-slate-900">{pageStats.todayViews.toLocaleString()}</p>
+                    </div>
+                    <div className="bg-white rounded-xl border p-5" data-testid="stat-top-page">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="h-10 w-10 rounded-lg bg-purple-50 flex items-center justify-center">
+                          <FileText className="h-5 w-5 text-purple-600" />
+                        </div>
+                        <span className="text-sm font-medium text-slate-500">Top Page</span>
+                      </div>
+                      <p className="text-lg font-bold text-slate-900 truncate">{pageStats.topPages[0]?.path || "—"}</p>
+                    </div>
+                    <div className="bg-white rounded-xl border p-5" data-testid="stat-unique-pages">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="h-10 w-10 rounded-lg bg-amber-50 flex items-center justify-center">
+                          <Globe className="h-5 w-5 text-amber-600" />
+                        </div>
+                        <span className="text-sm font-medium text-slate-500">Countries</span>
+                      </div>
+                      <p className="text-3xl font-bold text-slate-900">{pageStats.locationBreakdown.length}</p>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-white rounded-xl border p-5">
+                      <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <FileText className="h-4 w-4 text-primary" /> Top Pages
+                      </h3>
+                      <div className="space-y-3">
+                        {pageStats.topPages.map((page, i) => {
+                          const maxViews = pageStats.topPages[0]?.views || 1;
+                          return (
+                            <div key={i} className="flex items-center gap-3">
+                              <span className="text-xs font-mono text-slate-500 w-6 text-right">{i + 1}</span>
+                              <div className="flex-1">
+                                <div className="flex justify-between text-sm mb-1">
+                                  <span className="font-medium text-slate-700 truncate">{page.path}</span>
+                                  <span className="text-slate-500 ml-2 shrink-0">{page.views}</span>
+                                </div>
+                                <div className="h-1.5 bg-slate-100 rounded-full">
+                                  <div className="h-1.5 bg-primary rounded-full" style={{ width: `${(page.views / maxViews) * 100}%` }} />
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                        {pageStats.topPages.length === 0 && <p className="text-sm text-slate-400">No page views yet</p>}
+                      </div>
+                    </div>
+
+                    <div className="bg-white rounded-xl border p-5">
+                      <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <Globe className="h-4 w-4 text-primary" /> Visitor Locations
+                      </h3>
+                      <div className="space-y-3">
+                        {pageStats.locationBreakdown.map((loc, i) => {
+                          const maxViews = pageStats.locationBreakdown[0]?.views || 1;
+                          return (
+                            <div key={i} className="flex items-center gap-3">
+                              <div className="flex-1">
+                                <div className="flex justify-between text-sm mb-1">
+                                  <span className="font-medium text-slate-700">{loc.country}</span>
+                                  <span className="text-slate-500">{loc.views}</span>
+                                </div>
+                                <div className="h-1.5 bg-slate-100 rounded-full">
+                                  <div className="h-1.5 bg-emerald-500 rounded-full" style={{ width: `${(loc.views / maxViews) * 100}%` }} />
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                        {pageStats.locationBreakdown.length === 0 && <p className="text-sm text-slate-400">No location data yet</p>}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-white rounded-xl border p-5">
+                      <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <Monitor className="h-4 w-4 text-primary" /> Devices
+                      </h3>
+                      <div className="space-y-3">
+                        {pageStats.deviceBreakdown.map((device, i) => {
+                          const DeviceIcon = device.deviceType === "Mobile" ? Smartphone : device.deviceType === "Tablet" ? Tablet : Laptop;
+                          return (
+                            <div key={i} className="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50">
+                              <DeviceIcon className="h-5 w-5 text-slate-400" />
+                              <span className="text-sm font-medium text-slate-700 flex-1">{device.deviceType}</span>
+                              <span className="text-sm font-bold text-slate-900">{device.views}</span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    <div className="bg-white rounded-xl border p-5">
+                      <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <Monitor className="h-4 w-4 text-primary" /> Browsers
+                      </h3>
+                      <div className="space-y-3">
+                        {pageStats.browserBreakdown.map((b, i) => (
+                          <div key={i} className="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50">
+                            <span className="text-sm font-medium text-slate-700 flex-1">{b.browser}</span>
+                            <span className="text-sm font-bold text-slate-900">{b.views}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl border p-5">
+                    <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                      <Clock className="h-4 w-4 text-primary" /> Recent Visitors
+                    </h3>
+                    <div className="rounded-lg border overflow-hidden">
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead>Page</TableHead>
+                            <TableHead>Location</TableHead>
+                            <TableHead>Device</TableHead>
+                            <TableHead>Browser</TableHead>
+                            <TableHead>Time</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          {recentViews.slice(0, 20).map((view) => (
+                            <TableRow key={view.id} data-testid={`row-pageview-${view.id}`}>
+                              <TableCell className="font-medium text-sm">{view.path}</TableCell>
+                              <TableCell className="text-sm text-slate-600">
+                                {[view.city, view.country].filter(Boolean).join(", ") || "—"}
+                              </TableCell>
+                              <TableCell className="text-sm text-slate-600">{view.deviceType || "—"}</TableCell>
+                              <TableCell className="text-sm text-slate-600">{view.browser || "—"}</TableCell>
+                              <TableCell className="text-sm text-slate-500">
+                                <div className="flex items-center gap-1">
+                                  <Clock className="h-3 w-3" />
+                                  {formatDate(view.createdAt)}
+                                </div>
+                              </TableCell>
+                            </TableRow>
+                          ))}
+                          {recentViews.length === 0 && (
+                            <TableRow>
+                              <TableCell colSpan={5} className="text-center py-8 text-slate-400">
+                                No page views recorded yet
+                              </TableCell>
+                            </TableRow>
+                          )}
+                        </TableBody>
+                      </Table>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center py-20">
+                  <BarChart3 className="h-12 w-12 text-slate-300 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-slate-600 mb-2">No analytics data</h3>
+                  <p className="text-slate-500">Page view data will appear here as visitors browse your site</p>
+                </div>
+              )}
             </div>
           ) : activeTab === "downloads" ? (
             filteredDownloads.length === 0 ? (

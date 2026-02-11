@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertContactRequestSchema, insertWhitePaperDownloadSchema } from "@shared/schema";
+import { insertContactRequestSchema, insertWhitePaperDownloadSchema, insertPageViewSchema } from "@shared/schema";
 import { z } from "zod";
 import { sendContactEmail, sendWhitePaperDownloadEmail } from "./resend";
 import { setupAuth, registerAuthRoutes, isAuthenticated } from "./replit_integrations/auth";
@@ -90,6 +90,103 @@ export async function registerRoutes(
     } catch (error) {
       console.error("Error fetching white paper downloads:", error);
       res.status(500).json({ error: "Failed to fetch downloads" });
+    }
+  });
+
+  const pageViewLimiter = new Map<string, number[]>();
+  setInterval(() => pageViewLimiter.clear(), 60000);
+
+  app.post("/api/page-view", async (req, res) => {
+    try {
+      const ip = (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() || req.socket.remoteAddress || "";
+
+      const now = Date.now();
+      const hits = pageViewLimiter.get(ip) || [];
+      const recentHits = hits.filter(t => now - t < 10000);
+      if (recentHits.length >= 5) {
+        return res.status(429).json({ error: "Too many requests" });
+      }
+      recentHits.push(now);
+      pageViewLimiter.set(ip, recentHits);
+
+      const ua = req.headers["user-agent"] || "";
+      let deviceType = "Desktop";
+      if (/mobile/i.test(ua)) deviceType = "Mobile";
+      else if (/tablet|ipad/i.test(ua)) deviceType = "Tablet";
+
+      let browser = "Other";
+      if (/edg/i.test(ua)) browser = "Edge";
+      else if (/chrome/i.test(ua)) browser = "Chrome";
+      else if (/firefox/i.test(ua)) browser = "Firefox";
+      else if (/safari/i.test(ua)) browser = "Safari";
+
+      let os = "Other";
+      if (/windows/i.test(ua)) os = "Windows";
+      else if (/mac/i.test(ua)) os = "macOS";
+      else if (/linux/i.test(ua)) os = "Linux";
+      else if (/android/i.test(ua)) os = "Android";
+      else if (/iphone|ipad/i.test(ua)) os = "iOS";
+
+      let country = null;
+      let city = null;
+      let region = null;
+      try {
+        const geoRes = await fetch(`http://ip-api.com/json/${ip}?fields=country,city,regionName`);
+        if (geoRes.ok) {
+          const geoData = await geoRes.json();
+          country = geoData.country || null;
+          city = geoData.city || null;
+          region = geoData.regionName || null;
+        }
+      } catch {}
+
+      const viewData = {
+        path: req.body.path || "/",
+        referrer: req.body.referrer || null,
+        userAgent: ua,
+        language: req.body.language || null,
+        screenWidth: req.body.screenWidth || null,
+        screenHeight: req.body.screenHeight || null,
+        country,
+        city,
+        region,
+        deviceType,
+        browser,
+        os,
+        sessionId: req.body.sessionId || null,
+      };
+
+      await storage.createPageView(viewData);
+      res.status(201).json({ success: true });
+    } catch (error) {
+      console.error("Error logging page view:", error);
+      res.status(500).json({ error: "Failed to log page view" });
+    }
+  });
+
+  app.get("/api/page-views/stats", isAuthenticated, async (req, res) => {
+    try {
+      const stats = await storage.getPageViewStats();
+      res.json(stats);
+    } catch (error) {
+      console.error("Error fetching page view stats:", error);
+      res.status(500).json({ error: "Failed to fetch stats" });
+    }
+  });
+
+  app.get("/api/config/ga", (_req, res) => {
+    const gaId = process.env.GA_MEASUREMENT_ID || "";
+    res.json({ gaId });
+  });
+
+  app.get("/api/page-views/recent", isAuthenticated, async (req, res) => {
+    try {
+      const limit = parseInt(req.query.limit as string) || 50;
+      const views = await storage.getRecentPageViews(limit);
+      res.json(views);
+    } catch (error) {
+      console.error("Error fetching recent page views:", error);
+      res.status(500).json({ error: "Failed to fetch recent views" });
     }
   });
 

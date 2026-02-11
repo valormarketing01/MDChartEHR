@@ -60,6 +60,8 @@ import HIPAACompliancePage from "@/pages/HIPAACompliance";
 import SecurityPage from "@/pages/Security";
 import AdminLeadsPage from "@/pages/AdminLeads";
 
+import { usePageTracker } from "@/hooks/use-page-tracker";
+
 function ScrollToTop() {
   const [location] = useLocation();
   
@@ -70,10 +72,16 @@ function ScrollToTop() {
   return null;
 }
 
+function PageTracker() {
+  usePageTracker();
+  return null;
+}
+
 function Router() {
   return (
     <>
       <ScrollToTop />
+      <PageTracker />
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/rcm" component={RCMPage} />

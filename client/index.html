@@ -12,6 +12,28 @@
     <meta name="twitter:title" content="MDcharts EHR - Click Less, Care More" />
     <meta name="twitter:description" content="Comprehensive EHR and RCM solution for modern medical practices. Streamline your workflow and maximize revenue." />
 
+    <!-- Google Analytics - Loads dynamically if GA_MEASUREMENT_ID is configured -->
+    <script>
+      (function() {
+        fetch('/api/config/ga')
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            if (data.gaId && data.gaId.startsWith('G-')) {
+              var s = document.createElement('script');
+              s.async = true;
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=' + data.gaId;
+              document.head.appendChild(s);
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+              gtag('config', data.gaId);
+            }
+          })
+          .catch(function() {});
+      })();
+    </script>
+
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
