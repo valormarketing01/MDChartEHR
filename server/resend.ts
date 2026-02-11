@@ -49,6 +49,14 @@ export interface ContactFormData {
   requestType?: string;
 }
 
+function getNotificationRecipients(): string[] {
+  const envRecipients = process.env.NOTIFICATION_EMAIL;
+  if (envRecipients) {
+    return envRecipients.split(',').map(e => e.trim()).filter(Boolean);
+  }
+  return ['awachspress@mdcharts.net'];
+}
+
 export async function sendContactEmail(data: ContactFormData): Promise<{ success: boolean; error?: string }> {
   try {
     const { client, fromEmail } = await getUncachableResendClient();
@@ -72,7 +80,7 @@ export async function sendContactEmail(data: ContactFormData): Promise<{ success
 
     const result = await client.emails.send({
       from: fromEmail || 'MDcharts EHR <noreply@mdchartsehr.com>',
-      to: ['awachspress@mdcharts.net'],
+      to: getNotificationRecipients(),
       subject: `MDcharts Contact: ${data.requestType || 'General Inquiry'} from ${data.firstName} ${data.lastName}`,
       html: htmlContent,
       replyTo: data.email,
@@ -132,7 +140,7 @@ export async function sendWhitePaperDownloadEmail(data: WhitePaperDownloadData):
 
     const result = await client.emails.send({
       from: fromEmail || 'MDcharts EHR <noreply@mdchartsehr.com>',
-      to: ['awachspress@mdcharts.net'],
+      to: getNotificationRecipients(),
       subject: `New Lead: ${data.firstName} ${data.lastName} downloaded "${whitePaperTitle}"`,
       html: htmlContent,
       replyTo: data.email,
