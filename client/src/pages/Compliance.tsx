@@ -191,7 +191,12 @@ export default function CompliancePage() {
               We provide comprehensive compliance documentation including BAAs, security policies, 
               and certification details for your records.
             </p>
-            <Button variant="secondary" size="lg">
+            <Button 
+              variant="secondary" 
+              size="lg"
+              onClick={() => setModalOpen(true)}
+              data-testid="button-request-documentation"
+            >
               Request Documentation
             </Button>
           </div>
