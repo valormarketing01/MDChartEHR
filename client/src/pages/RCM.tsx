@@ -65,9 +65,6 @@ export default function RCMPage() {
                 >
                   Schedule RCM Consultation
                 </Button>
-                <Button size="lg" variant="outline" className="h-12 px-8 text-sm font-bold uppercase tracking-wide bg-white border-slate-300 text-slate-700 rounded-sm">
-                  Download Case Study
-                </Button>
               </div>
 
               {/* Stat Banner - Tighter */}
