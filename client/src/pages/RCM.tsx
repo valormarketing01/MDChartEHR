@@ -60,10 +60,10 @@ export default function RCMPage() {
                 <Button 
                   size="lg" 
                   className="h-12 px-8 text-sm font-bold uppercase tracking-wide shadow-xl bg-primary hover:bg-blue-700 rounded-sm"
-                  onClick={() => setModalState({ isOpen: true, type: "rcm_audit", title: "Request Free RCM Audit" })}
-                  data-testid="button-rcm-audit"
+                  onClick={() => setModalState({ isOpen: true, type: "demo", title: "Schedule RCM Consultation" })}
+                  data-testid="button-rcm-consultation"
                 >
-                  Get a Free RCM Audit
+                  Schedule RCM Consultation
                 </Button>
                 <Button size="lg" variant="outline" className="h-12 px-8 text-sm font-bold uppercase tracking-wide bg-white border-slate-300 text-slate-700 rounded-sm">
                   Download Case Study
@@ -159,7 +159,8 @@ export default function RCMPage() {
                 "Claim submission",
                 "Rejection resolution",
                 "Denial management",
-                "Real-time tracking"
+                "Medical record submissions",
+                "Appeal submissions"
               ]}
               delay={0.1}
             />
@@ -216,7 +217,7 @@ export default function RCMPage() {
             <AddOnCard 
               title="A/R Recovery"
               icon={RefreshCw}
-              features={["Old Claims", "Appeals"]}
+              features={["Claims (1-2 Years)", "Appeals"]}
               className="bg-blue-900 text-white border-blue-800"
               dark={true}
             />
@@ -230,7 +231,7 @@ export default function RCMPage() {
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-bold font-heading text-slate-900">RCM Performance Metrics</h2>
             <div className="flex gap-2">
-               <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Live Benchmark Data</span>
+               <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Industry Benchmarks</span>
             </div>
           </div>
           

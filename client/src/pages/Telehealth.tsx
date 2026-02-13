@@ -13,7 +13,7 @@ const features = [
   {
     icon: Video,
     title: "HD Video Visits",
-    description: "High-quality, HIPAA-compliant video conferencing built directly into your EHR workflow"
+    description: "High-quality video conferencing built directly into your EHR workflow"
   },
   {
     icon: Calendar,

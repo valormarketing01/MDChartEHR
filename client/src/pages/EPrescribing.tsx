@@ -17,7 +17,7 @@ const features = [
   },
   {
     icon: Zap,
-    title: "One-Click Prescribing",
+    title: "Fast Prescribing",
     description: "Favorites and templates for commonly prescribed medications to speed up your workflow"
   },
   {
@@ -32,8 +32,8 @@ const features = [
   },
   {
     icon: Shield,
-    title: "PDMP Integration",
-    description: "Direct access to state Prescription Drug Monitoring Programs within your workflow"
+    title: "Safety & Compliance",
+    description: "Built-in safeguards for regulatory compliance and prescribing best practices"
   },
   {
     icon: Clock,
@@ -45,7 +45,6 @@ const features = [
 const benefits = [
   "Electronic prior authorizations",
   "Medication history access",
-  "Patient medication adherence tracking",
   "Pharmacy network connectivity",
   "Automatic generic substitution suggestions",
   "Dosage calculator tools"

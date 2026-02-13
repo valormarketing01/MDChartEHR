@@ -53,7 +53,7 @@ export function Hero() {
               </h1>
               
               <p className="text-lg text-slate-600 mb-8 leading-snug font-medium max-w-xl">
-                A highly configurable, template-based EHR engine that adapts to your workflow. Create detailed clinical notes in seconds, not minutes.
+                A highly configurable, template-based EHR engine that adapts to your workflow. Create detailed clinical notes quickly and efficiently.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-10">

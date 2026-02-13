@@ -19,7 +19,7 @@ const features = [
   { icon: Activity, title: "MIPS Reporting", desc: "Automated MACRA/MIPS", color: "bg-emerald-100 text-emerald-600" },
   { icon: CreditCard, title: "RCM & Billing", desc: "High first-pass rate", color: "bg-amber-100 text-amber-600" },
   { icon: Users, title: "Patient Portal", desc: "Self-service scheduling", color: "bg-purple-100 text-purple-600" },
-  { icon: Smartphone, title: "Mobile App", desc: "iOS & Android native", color: "bg-primary/10 text-primary" },
+  { icon: Smartphone, title: "Mobile Access", desc: "Responsive web access", color: "bg-primary/10 text-primary" },
   { icon: ShieldCheck, title: "ONC Certified", desc: "2015 Cures Update", color: "bg-emerald-100 text-emerald-600" },
   { icon: Calendar, title: "Smart Schedule", desc: "Reduce no-shows", color: "bg-amber-100 text-amber-600" },
   { icon: MessageSquare, title: "Secure Text", desc: "Direct patient SMS", color: "bg-purple-100 text-purple-600" },

@@ -33,7 +33,6 @@ const features = [
 const portalFeatures = [
   "View Medical Records",
   "Access Lab Results",
-  "Request Rx Refills",
   "Message Your Provider",
   "Book Appointments",
   "Pay Bills Online",
@@ -41,7 +40,6 @@ const portalFeatures = [
   "Update Demographics",
   "View Visit Summaries",
   "Download Records",
-  "Manage Family Members",
   "Receive Reminders"
 ];
 
@@ -182,9 +180,9 @@ export default function PatientEngagementPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
-              { stat: "40%", label: "Reduction in Phone Calls" },
-              { stat: "85%", label: "Patient Portal Adoption" },
-              { stat: "4.8/5", label: "Patient Satisfaction Score" }
+              { stat: "Fewer", label: "Phone Calls with Portal" },
+              { stat: "Growing", label: "Patient Portal Adoption" },
+              { stat: "High", label: "Patient Satisfaction" }
             ].map((item, i) => (
               <motion.div
                 key={i}

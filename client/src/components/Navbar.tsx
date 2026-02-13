@@ -135,10 +135,8 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <Link href="/support" className="hover:text-white transition-colors">Support</Link>
             <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-            <span className="text-slate-700">|</span>
-            <Link href="#" className="text-white hover:text-primary transition-colors font-bold flex items-center gap-1">
-              Client Login <ChevronRight className="h-3 w-3" />
-            </Link>
+
+
           </div>
         </div>
       </div>

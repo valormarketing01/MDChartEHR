@@ -10,7 +10,7 @@ import {
 const faqs = [
   {
     question: "What specialties does MDcharts support?",
-    answer: "MDcharts supports a wide range of medical specialties including Dermatology, OB/GYN, Pediatrics, Family Medicine, Urology, Cardiology, Orthopedics, Ophthalmology, ENT, Gastroenterology, Neurology, and Psychiatry. Each specialty has tailored templates and workflows designed for specific clinical needs."
+    answer: "MDcharts supports popular medical specialties including Cardiology, Dermatology, Family Medicine, OB/GYN, Pediatrics, and Urology. Each specialty has tailored templates and workflows designed for specific clinical needs."
   },
   {
     question: "Does MDcharts meet regulatory requirements?",

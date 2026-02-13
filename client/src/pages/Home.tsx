@@ -56,7 +56,7 @@ export default function Home() {
               { icon: Pill, title: "e-Prescribing", desc: "EPCS-certified electronic prescribing with formulary checks, drug interactions, and pharmacy routing.", href: "/features/e-prescribing", color: "bg-rose-50 text-rose-600 border-rose-100" },
               { icon: FlaskConical, title: "Lab Integration", desc: "Bi-directional lab interfaces for seamless order entry and results delivery from major reference labs.", href: "/features/lab-integration", color: "bg-cyan-50 text-cyan-600 border-cyan-100" },
               { icon: Video, title: "Telehealth", desc: "HIPAA-compliant HD video visits with integrated scheduling, documentation, and billing.", href: "/features/telehealth", color: "bg-indigo-50 text-indigo-600 border-indigo-100" },
-              { icon: BarChart3, title: "Analytics & Reporting", desc: "Real-time dashboards, MIPS reporting, financial analytics, and custom report builder.", href: "/features/analytics", color: "bg-teal-50 text-teal-600 border-teal-100" },
+              { icon: BarChart3, title: "Analytics & Reporting", desc: "Real-time dashboards, financial analytics, and custom report builder.", href: "/features/analytics", color: "bg-teal-50 text-teal-600 border-teal-100" },
               { icon: ShieldCheck, title: "Compliance & Security", desc: "ONC 2015 Edition certified, HIPAA compliant, with audit trails, role-based access, and data encryption.", href: "/compliance", color: "bg-slate-50 text-slate-600 border-slate-200" },
             ].map((solution, i) => (
               <motion.div

@@ -32,8 +32,8 @@ const features = [
   },
   {
     icon: TrendingUp,
-    title: "Result Trending",
-    description: "Visual graphs and charts to track lab values over time for better clinical decisions"
+    title: "Result Comparison",
+    description: "Compare current results with prior values for better clinical decisions"
   },
   {
     icon: Clock,
@@ -160,9 +160,9 @@ export default function LabIntegration() {
             <div className="bg-white/10 rounded-2xl p-8">
               <div className="text-center">
                 <TrendingUp className="h-16 w-16 text-white mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">Smart Trending</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">Smart Results</h3>
                 <p className="text-white/80">
-                  Visualize lab values over time for better clinical insights.
+                  Compare lab values with prior results for better clinical insights.
                 </p>
               </div>
             </div>

@@ -12,7 +12,7 @@ const features = [
   {
     icon: Zap,
     title: "Lightning-Fast Charting",
-    description: "Complete notes in under 2 minutes with intelligent auto-population and voice dictation."
+    description: "Complete notes quickly with intelligent auto-population and voice dictation."
   },
   {
     icon: Layers,
@@ -37,13 +37,11 @@ const modules = [
   "Medication Management",
   "Allergy Documentation",
   "Lab Results Integration",
-  "Imaging Orders",
   "E-Prescribing (EPCS)",
   "Clinical Decision Support",
   "Progress Notes",
   "Visit Summaries",
-  "Immunization Records",
-  "Growth Charts"
+  "Immunization Records"
 ];
 
 export default function EHRPage() {
@@ -78,7 +76,7 @@ export default function EHRPage() {
               
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
                 A highly configurable, template-based EHR engine that adapts to your workflow. 
-                Create detailed clinical notes in seconds, not minutes.
+                Create detailed clinical notes quickly and efficiently.
               </p>
               
               <div className="flex flex-wrap gap-4">
@@ -140,7 +138,7 @@ export default function EHRPage() {
               </p>
               
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                From one central dashboard, complete all pending tasks with a single click, so you can focus on what matters most — treating patients.
+                From one central dashboard, manage all pending tasks efficiently, so you can focus on what matters most — treating patients.
               </p>
               
               <Link href="/book-demo">

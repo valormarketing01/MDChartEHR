@@ -23,7 +23,7 @@ const features = [
   {
     icon: Target,
     title: "Quality Measures",
-    description: "Monitor and report on MIPS, HEDIS, and other quality program requirements"
+    description: "Support for quality program reporting and compliance tracking"
   },
   {
     icon: FileText,
@@ -37,8 +37,8 @@ const features = [
   },
   {
     icon: Shield,
-    title: "Benchmarking",
-    description: "Compare your performance against industry standards and peers"
+    title: "Compliance Tracking",
+    description: "Monitor regulatory requirements and maintain compliance documentation"
   }
 ];
 

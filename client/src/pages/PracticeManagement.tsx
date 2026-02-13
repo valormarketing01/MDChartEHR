@@ -11,7 +11,7 @@ const features = [
   {
     icon: Calendar,
     title: "Smart Scheduling",
-    description: "Intelligent appointment booking with automated reminders and waitlist management."
+    description: "Appointment booking with automated reminders and waitlist management."
   },
   {
     icon: Users,
@@ -34,10 +34,10 @@ const capabilities = [
   { title: "Appointment Scheduling", desc: "Drag-and-drop calendar with multi-provider views" },
   { title: "Patient Check-In", desc: "Self-service kiosks and mobile check-in options" },
   { title: "Insurance Verification", desc: "Real-time eligibility and benefits verification" },
-  { title: "Referral Management", desc: "Track and manage incoming/outgoing referrals" },
   { title: "Document Management", desc: "Secure storage and retrieval of patient documents" },
   { title: "Task Management", desc: "Assign and track staff tasks and workflows" },
-  { title: "Reporting Suite", desc: "Customizable reports for operations and compliance" },
+  { title: "Reporting Suite", desc: "Customizable reports for practice operations" },
+  { title: "Billing & Superbills", desc: "Superbill management, EOB/EFT posting, and claims overview" },
   { title: "Multi-Location Support", desc: "Manage multiple practice locations seamlessly" }
 ];
 

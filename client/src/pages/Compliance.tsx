@@ -46,7 +46,7 @@ const complianceFeatures = [
   "Automated backup systems",
   "Business associate agreements",
   "EPCS certification",
-  "State reporting compliance"
+  "Regulatory compliance support"
 ];
 
 export default function CompliancePage() {
