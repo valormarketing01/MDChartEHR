@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "wouter";
 import { 
   Zap, Clock, Users, Shield, TrendingUp,
   Smartphone, MessageSquare, CreditCard, FileText, 
@@ -121,9 +122,11 @@ export default function WhyMDChartsPage() {
                 >
                   Schedule Free Demo <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button size="lg" variant="outline" className="h-14 px-8 text-base">
-                  View All Features
-                </Button>
+                <Link href="/ehr">
+                  <Button size="lg" variant="outline" className="h-14 px-8 text-base">
+                    View All Features
+                  </Button>
+                </Link>
               </div>
             </motion.div>
 

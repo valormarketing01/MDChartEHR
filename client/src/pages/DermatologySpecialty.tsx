@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { 
   Camera, Target, Syringe, Microscope, Calendar, Pill, 
-  Check, X, AlertTriangle, Star, ChevronRight, Play,
+  Check, X, AlertTriangle, Star, ChevronRight,
   Shield, Award, Clock, Users, FileCheck, Stethoscope,
   Facebook, Twitter, Linkedin, Instagram, ArrowRight
 } from "lucide-react";
@@ -261,13 +261,15 @@ export default function DermatologySpecialty() {
                     Book a Demo <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="h-14 px-8 border-2 border-slate-300 hover:border-primary hover:text-primary font-semibold"
-                >
-                  <Play className="mr-2 h-5 w-5" /> Watch Video Tour
-                </Button>
+                <Link href="/contact">
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="h-14 px-8 border-2 border-slate-300 hover:border-primary hover:text-primary font-semibold"
+                  >
+                    Request Documentation
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
             
@@ -639,12 +641,14 @@ export default function DermatologySpecialty() {
                 Schedule Your DermCharts Demo
               </Button>
             </Link>
-            <Button 
-              size="lg"
-              className="h-14 px-8 bg-transparent border-2 border-white/30 text-white hover:bg-white/10 font-semibold"
-            >
-              Download Dermatology Feature Guide
-            </Button>
+            <Link href="/contact">
+              <Button 
+                size="lg"
+                className="h-14 px-8 bg-transparent border-2 border-white/30 text-white hover:bg-white/10 font-semibold"
+              >
+                Request Feature Guide
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -211,15 +211,15 @@ export default function BlogPost() {
                   <div className="flex items-center gap-4">
                     <span className="text-sm font-medium text-slate-600">Share this article:</span>
                     <div className="flex gap-2">
-                      <button className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                      <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" data-testid="button-share-twitter">
                         <Twitter className="h-4 w-4" />
-                      </button>
-                      <button className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                      </a>
+                      <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" data-testid="button-share-facebook">
                         <Facebook className="h-4 w-4" />
-                      </button>
-                      <button className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                      </a>
+                      <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" data-testid="button-share-linkedin">
                         <Linkedin className="h-4 w-4" />
-                      </button>
+                      </a>
                     </div>
                   </div>
                   <Link href="/blog">

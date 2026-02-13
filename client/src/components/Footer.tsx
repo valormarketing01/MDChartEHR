@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import mdchartsLogo from "@assets/logo_1767448797855.png";
 
 export function Footer() {
@@ -18,13 +18,9 @@ export function Footer() {
             <p className="mb-6 max-w-sm text-slate-500 leading-relaxed">
               The all-in-one EHR, RCM, and Practice Management solution designed to help independent practices thrive in a complex healthcare environment.
             </p>
-            <div className="flex gap-4">
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="h-10 w-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
+            <Link href="/contact" className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition-colors">
+              Contact Us <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
           
           <div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "wouter";
 import { Shield, Award, FileCheck, Lock, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
@@ -89,9 +90,11 @@ export default function CompliancePage() {
                 >
                   Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button size="lg" variant="outline" className="h-12 px-8">
-                  Download Compliance Guide
-                </Button>
+                <Link href="/contact">
+                  <Button size="lg" variant="outline" className="h-12 px-8">
+                    Request Compliance Guide
+                  </Button>
+                </Link>
               </div>
             </motion.div>
 
