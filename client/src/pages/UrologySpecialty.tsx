@@ -75,7 +75,7 @@ export default function UrologySpecialty() {
               variants={slideIn}
               className="lg:col-span-5"
             >
-              <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-2 rounded-lg text-sm font-bold mb-6">
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-6">
                 <Activity className="h-4 w-4 text-primary" />
                 UROLOGY EHR SOFTWARE
               </div>

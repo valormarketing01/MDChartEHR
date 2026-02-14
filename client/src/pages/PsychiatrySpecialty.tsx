@@ -89,7 +89,7 @@ export default function PsychiatrySpecialty() {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-100 border border-teal-200 text-teal-800 text-sm font-semibold mb-6">
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-6">
                 <Heart className="h-4 w-4" />
                 Customizable Solution
               </div>
@@ -236,7 +236,7 @@ export default function PsychiatrySpecialty() {
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/20 border border-teal-400/30 text-teal-400 text-sm font-semibold mb-6">
+            <div className="inline-flex items-center gap-2 text-sm font-semibold text-teal-400 mb-6">
               <Lock className="h-4 w-4" />
               Enhanced Privacy
             </div>

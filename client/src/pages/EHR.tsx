@@ -61,11 +61,11 @@ export default function EHRPage() {
               animate={{ opacity: 1, y: 0 }}
             >
               <div className="flex flex-wrap gap-3 mb-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs font-bold uppercase tracking-wide">
+                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-amber-700">
                   <Shield className="h-4 w-4" />
                   ONC 2015 Edition Certified
                 </div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wide">
+                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-emerald-700">
                   <CheckCircle2 className="h-4 w-4" />
                   21st Century Cures Act Certified
                 </div>

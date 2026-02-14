@@ -86,7 +86,7 @@ export default function PatientEngagementPage() {
               animate={{ opacity: 1, y: 0 }}
               className="order-1 lg:order-2"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wide mb-6">
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-6">
                 <Video className="h-4 w-4" />
                 Telehealth Integration
               </div>

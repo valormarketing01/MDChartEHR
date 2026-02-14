@@ -99,7 +99,7 @@ export default function WhyMDChartsPage() {
               initial={{ opacity: 0.9, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wide mb-6">
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-6">
                 <Sparkles className="h-4 w-4" />
                 Why Choose MD Charts EHR
               </div>
@@ -287,7 +287,7 @@ export default function WhyMDChartsPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="bg-gradient-to-r from-primary to-blue-700 rounded-2xl p-8 md:p-12 text-white text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-wide mb-6">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-white mb-6">
               <Award className="h-4 w-4" />
               Trusted by Physicians
             </div>

@@ -38,7 +38,7 @@ export default function RCMPage() {
               className="lg:col-span-7"
             >
               {/* Highlighted TriZetto Integration */}
-              <div className="flex items-center gap-3 mb-6 bg-white border border-slate-200 rounded-full p-1 pr-4 shadow-sm w-fit">
+              <div className="flex items-center gap-3 mb-6 w-fit">
                  <div className="h-8 w-8 rounded-full overflow-hidden bg-slate-100 flex items-center justify-center">
                    <img src={trizettoBadge} alt="TriZetto" className="w-full h-full object-cover" loading="lazy" />
                  </div>

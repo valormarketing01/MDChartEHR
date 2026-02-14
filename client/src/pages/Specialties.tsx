@@ -33,7 +33,7 @@ export default function SpecialtiesPage() {
               initial={{ opacity: 0.9, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-100 text-amber-700 text-xs font-bold uppercase tracking-wide mb-6">
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-6">
                 <Stethoscope className="h-4 w-4" />
                 Medical Specialties
               </div>

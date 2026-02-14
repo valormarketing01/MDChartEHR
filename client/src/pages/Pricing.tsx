@@ -138,7 +138,7 @@ export default function Pricing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25 }}
           >
-            <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-4">
+            <div className="inline-flex items-center gap-2 mb-4">
               <Sparkles className="h-4 w-4 text-primary" />
               <span className="text-sm font-semibold text-primary">Simple, Transparent Pricing</span>
             </div>

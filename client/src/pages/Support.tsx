@@ -63,7 +63,7 @@ export default function Support() {
             variants={fadeIn}
             className="max-w-4xl mx-auto text-center"
           >
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-bold mb-6">
+            <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-6">
               <Headphones className="h-4 w-4" />
               WORLD-CLASS SUPPORT
             </div>

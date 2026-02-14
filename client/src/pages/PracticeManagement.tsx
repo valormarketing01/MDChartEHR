@@ -57,7 +57,7 @@ export default function PracticeManagementPage() {
               initial={{ opacity: 0.9, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wide mb-6">
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-6">
                 <ClipboardList className="h-4 w-4" />
                 Practice Management
               </div>

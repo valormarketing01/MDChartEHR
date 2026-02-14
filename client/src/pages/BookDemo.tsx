@@ -33,7 +33,7 @@ export default function BookDemo() {
                 variants={fadeIn}
                 className="lg:sticky lg:top-32"
               >
-                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-bold mb-6">
+                <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-6">
                   <Calendar className="h-4 w-4" />
                   SCHEDULE YOUR DEMO
                 </div>

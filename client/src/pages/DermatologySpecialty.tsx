@@ -222,7 +222,7 @@ export default function DermatologySpecialty() {
               animate="visible"
               variants={staggerContainer}
             >
-              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-bold mb-6">
+              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-6">
                 <Stethoscope className="h-4 w-4" />
                 DERMATOLOGY SPECIALTY
               </motion.div>

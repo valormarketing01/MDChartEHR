@@ -103,7 +103,7 @@ export default function CardiologySpecialty() {
         <div className="lg:w-1/2 bg-slate-900 text-white flex items-center py-32 lg:py-0">
           <div className="container mx-auto px-8 lg:px-16 max-w-2xl">
             <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-bold mb-8">
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-8">
                 <Heart className="h-4 w-4" />
                 CARDIOLOGY EHR SOLUTION
               </div>

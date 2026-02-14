@@ -66,7 +66,7 @@ export default function BlogPost() {
             transition={{ duration: 0.25 }}
             className="max-w-4xl"
           >
-            <div className="inline-block bg-primary/10 rounded-full px-4 py-1.5 mb-6">
+            <div className="inline-block mb-6">
               <span className="text-sm font-semibold text-primary">{post.categoryLabel}</span>
             </div>
             

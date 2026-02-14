@@ -80,7 +80,7 @@ export default function GastroenterologySpecialty() {
             </div>
             
             <div className="order-1 lg:order-2 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-sm font-semibold mb-6">
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-6">
                 <Activity className="h-4 w-4" />
                 Customizable Solution
               </div>

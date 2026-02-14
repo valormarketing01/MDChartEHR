@@ -46,7 +46,7 @@ export default function CaseStudies() {
       <section className="pt-28 pb-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+            <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-6">
               <FileText className="h-4 w-4" />
               Case Studies
             </div>
