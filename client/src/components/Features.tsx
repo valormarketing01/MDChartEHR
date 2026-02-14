@@ -25,7 +25,6 @@ const features = [
   { icon: ShieldCheck, title: "ONC Certified", desc: "2015 Cures Update", color: "bg-emerald-100 text-emerald-600" },
   { icon: Calendar, title: "Smart Schedule", desc: "Reduce no-shows", color: "bg-amber-100 text-amber-600" },
   { icon: MessageSquare, title: "Secure Text", desc: "Direct patient SMS", color: "bg-purple-100 text-purple-600" },
-  { icon: BarChart3, title: "Analytics", desc: "Real-time BI dashboard", color: "bg-primary/10 text-primary" },
   { icon: Stethoscope, title: "Telehealth", desc: "HD Video integrated", color: "bg-emerald-100 text-emerald-600" },
   { icon: Pill, title: "e-Prescribing", desc: "EPCS Certified", color: "bg-amber-100 text-amber-600" },
   { icon: ClipboardCheck, title: "Intake Forms", desc: "Digital paperless", color: "bg-purple-100 text-purple-600" }
