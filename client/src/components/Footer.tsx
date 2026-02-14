@@ -12,7 +12,7 @@ export function Footer() {
               <img 
                 src={mdchartsLogo} 
                 alt="MDcharts EHR" 
-                className="h-14 w-auto"
+                className="h-12 w-auto max-w-[200px]"
               />
             </Link>
             <p className="mb-6 max-w-sm text-slate-500 leading-relaxed">
