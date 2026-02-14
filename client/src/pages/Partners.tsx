@@ -94,7 +94,7 @@ export default function Partners() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-2">Trusted Integrations & Partners</h2>
