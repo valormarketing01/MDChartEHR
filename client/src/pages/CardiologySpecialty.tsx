@@ -364,7 +364,7 @@ export default function CardiologySpecialty() {
               Ready to Transform Your Cardiology Practice?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Join 500+ cardiology practices who document faster, bill smarter, and focus more on patient care.
+              Trusted by cardiology practices nationwide who document faster, bill smarter, and focus more on patient care.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/book-demo">

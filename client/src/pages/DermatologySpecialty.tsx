@@ -581,7 +581,7 @@ export default function DermatologySpecialty() {
             Start Saving Time and Increasing Revenue Today
           </h2>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            Join 500+ dermatology practices using DermCharts
+            Trusted by dermatology practices nationwide using DermCharts
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

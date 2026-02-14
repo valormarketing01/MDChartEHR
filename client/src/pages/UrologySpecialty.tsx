@@ -301,7 +301,7 @@ export default function UrologySpecialty() {
               Ready to Transform Your Urology Practice?
             </h2>
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Join 200+ urology practices using UroCharts for faster documentation and better revenue
+              Trusted by urology practices nationwide using UroCharts for faster documentation and better revenue
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/book-demo">

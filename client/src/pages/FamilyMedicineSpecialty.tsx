@@ -371,7 +371,7 @@ export default function FamilyMedicineSpecialty() {
               Ready to Transform Your Practice?
             </h2>
             <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-              Join 600+ family medicine practices using FamilyCharts for faster documentation and better revenue
+              Trusted by family medicine practices nationwide using FamilyCharts for faster documentation and better revenue
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/book-demo">
