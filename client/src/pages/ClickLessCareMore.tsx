@@ -19,7 +19,7 @@ const features = [
   {
     icon: Sparkles,
     title: "The Ultra-Customizable EHR",
-    description: "MD Charts adapts to your practice's workflow",
+    description: "MDCharts adapts to your practice's workflow",
     benefits: [
       "Notes designed to match your provider's requirements",
       "Customizable down to both role and user levels",
@@ -48,12 +48,12 @@ const features = [
   },
   {
     icon: Pill,
-    title: "E-Prescribe Made Simple",
+    title: "e-Prescribing Made Simple",
     description: "Reduce screen hopping with smart prescribing",
     benefits: [
-      "E-Prescribe from multiple locations on any note",
+      "e-Prescribe from multiple locations on any note",
       "Create and share favorites and most used medication lists",
-      "E-Prescribe/Refill from your mobile device or tablet"
+      "e-Prescribe/Refill from your mobile device or tablet"
     ]
   },
   {
@@ -123,6 +123,9 @@ export default function ClickLessCareMore() {
                   src={heroImage} 
                   alt="Doctor using tablet efficiently" 
                   className="w-full h-[400px] object-cover"
+                  loading="lazy"
+                  width="800"
+                  height="400"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 border border-slate-100">
@@ -179,7 +182,7 @@ export default function ClickLessCareMore() {
                 ClickLess CareMore Technology
               </h2>
               <p className="text-lg text-slate-600 mb-6">
-                MD Charts was designed with customization as a forethought and not an afterthought, resulting in an agile platform to meet your needs and adapt to your practice.
+                MDCharts was designed with customization as a forethought and not an afterthought, resulting in an agile platform to meet your needs and adapt to your practice.
               </p>
               <ul className="space-y-4">
                 {["Automation that saves hours daily", "Customization for every specialty", "Workflow optimization built-in"].map((item, idx) => (
@@ -201,6 +204,9 @@ export default function ClickLessCareMore() {
                 src={techImage} 
                 alt="Healthcare technology interface" 
                 className="w-full h-[350px] object-cover"
+                loading="lazy"
+                width="800"
+                height="350"
               />
             </motion.div>
           </div>

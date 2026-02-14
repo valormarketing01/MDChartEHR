@@ -44,11 +44,11 @@ export default function AboutUs() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
-              Click Less, <span className="text-primary">Care More</span>
+              Practice the way <span className="text-primary">you want</span>
             </h1>
             
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              MDcharts is dedicated to transforming healthcare technology with specialty-specific EHR and practice management solutions that let providers focus on what matters most - patient care.
+              MDCharts is dedicated to transforming healthcare technology with specialty-specific EHR and practice management solutions that let providers focus on what matters most - patient care.
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function AboutUs() {
                 We believe that healthcare technology should enhance the provider-patient relationship, not hinder it. Our mission is to create intuitive, specialty-specific tools that reduce administrative burden and improve clinical workflows.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
-                MDcharts was founded on the principle that every medical specialty deserves technology designed for its unique clinical and operational needs. We work closely with physicians and practice administrators to build solutions that truly work.
+                MDCharts was founded on the principle that every medical specialty deserves technology designed for its unique clinical and operational needs. We work closely with physicians and practice administrators to build solutions that truly work.
               </p>
             </div>
             <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl p-12">
@@ -108,10 +108,10 @@ export default function AboutUs() {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Join the MDcharts Family
+            Join the MDCharts Family
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Learn how MDcharts can transform your practice.
+            Learn how MDCharts can transform your practice.
           </p>
           <Link href="/book-demo">
             <Button size="lg" variant="secondary" className="h-12 px-8">

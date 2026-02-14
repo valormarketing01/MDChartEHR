@@ -68,7 +68,7 @@ export default function HIPAACompliance() {
             </h1>
             
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              MDcharts is committed to maintaining the highest standards of privacy and security for protected health information.
+              MDCharts is committed to maintaining the highest standards of privacy and security for protected health information.
             </p>
           </div>
         </div>

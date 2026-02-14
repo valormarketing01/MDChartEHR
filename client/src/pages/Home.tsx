@@ -21,7 +21,8 @@ import {
   Video,
   UserCircle,
   BarChart3,
-  ArrowRight
+  ArrowRight,
+  Sparkles
 } from "lucide-react";
 
 export default function Home() {
@@ -57,6 +58,7 @@ export default function Home() {
               { icon: FlaskConical, title: "Lab Integration", desc: "Bi-directional lab interfaces for seamless order entry and results delivery from major reference labs.", href: "/features/lab-integration", color: "bg-cyan-50 text-cyan-600 border-cyan-100" },
               { icon: Video, title: "Telehealth", desc: "HIPAA-compliant HD video visits with integrated scheduling, documentation, and billing.", href: "/features/telehealth", color: "bg-indigo-50 text-indigo-600 border-indigo-100" },
               { icon: BarChart3, title: "Analytics & Reporting", desc: "Real-time dashboards, financial analytics, and custom report builder.", href: "/features/analytics", color: "bg-teal-50 text-teal-600 border-teal-100" },
+              { icon: Sparkles, title: "AI-Powered Insights", desc: "Intelligent clinical assistance with smart documentation suggestions, coding recommendations, and predictive analytics.", href: "/ehr", color: "bg-violet-50 text-violet-600 border-violet-100" },
               { icon: ShieldCheck, title: "Compliance & Security", desc: "ONC 2015 Edition certified, HIPAA compliant, with audit trails, role-based access, and data encryption.", href: "/compliance", color: "bg-slate-50 text-slate-600 border-slate-200" },
             ].map((solution, i) => (
               <motion.div
@@ -131,7 +133,7 @@ export default function Home() {
             Ready to streamline your practice?
           </h2>
           <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            Join hundreds of high-performing practices that have switched to MDcharts EHR to save time, reduce burnout, and increase revenue.
+            Join hundreds of high-performing practices that have switched to MDCharts EHR to save time, reduce burnout, and increase revenue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book-demo">

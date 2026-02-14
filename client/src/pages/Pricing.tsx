@@ -30,7 +30,7 @@ const pricingPlans = [
       "Up to 3 users",
       "Basic scheduling",
       "Patient portal",
-      "E-prescribing",
+      "e-Prescribing",
       "Standard support",
       "Basic reporting",
       "HIPAA compliant",
@@ -108,7 +108,7 @@ const faqs = [
 const comparisonFeatures = [
   { name: "Electronic Health Records", starter: true, professional: true, enterprise: true },
   { name: "Patient Scheduling", starter: true, professional: true, enterprise: true },
-  { name: "E-Prescribing", starter: true, professional: true, enterprise: true },
+  { name: "e-Prescribing", starter: true, professional: true, enterprise: true },
   { name: "Patient Portal", starter: true, professional: true, enterprise: true },
   { name: "Telehealth", starter: false, professional: true, enterprise: true },
   { name: "Lab Integrations", starter: false, professional: true, enterprise: true },
@@ -256,7 +256,7 @@ export default function Pricing() {
                 <Users className="h-7 w-7 text-primary" />
               </div>
               <h4 className="font-bold text-slate-900 mb-1">Growing Practices</h4>
-              <p className="text-sm text-slate-600">Trust MDcharts daily</p>
+              <p className="text-sm text-slate-600">Trust MDCharts daily</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
@@ -391,7 +391,7 @@ export default function Pricing() {
               Ready to Transform Your Practice?
             </h2>
             <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              Join healthcare providers who trust MDcharts EHR. Schedule a demo to learn more.
+              Join healthcare providers who trust MDCharts EHR. Schedule a demo to learn more.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/book-demo">

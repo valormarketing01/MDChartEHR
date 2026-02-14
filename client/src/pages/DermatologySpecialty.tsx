@@ -68,8 +68,8 @@ const features = [
   },
   {
     icon: Pill,
-    title: "Quick E-Prescribing",
-    description: "E-prescribe from virtually any screen with favorites, smart-searching, and complete RX history access",
+    title: "Quick e-Prescribing",
+    description: "e-Prescribe from virtually any screen with favorites, smart-searching, and complete RX history access",
     color: "bg-indigo-500"
   }
 ];
@@ -186,7 +186,7 @@ const comparisonFeatures = [
   { name: "Integrated clearinghouse (TriZetto)", basic: false, generic: false, mdcharts: true },
   { name: "MIPs Made Easy℠ reporting", basic: false, generic: false, mdcharts: true },
   { name: "Smart Super Bill℠", basic: false, generic: false, mdcharts: true },
-  { name: "E-prescribing with RX history", basic: "limited", generic: true, mdcharts: true },
+  { name: "e-Prescribing with RX history", basic: "limited", generic: true, mdcharts: true },
 ];
 
 const showcaseImages = [
@@ -284,6 +284,9 @@ export default function DermatologySpecialty() {
                   src={heroTeamImage} 
                   alt="Three dermatologists treating patient" 
                   className="w-full h-[500px] object-cover"
+                  loading="lazy"
+                  width="800"
+                  height="500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
               </div>
@@ -400,7 +403,7 @@ export default function DermatologySpecialty() {
                   ))}
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src={drFoxStyleImage} alt="Medical dermatology workflow" className="w-full h-auto" />
+                  <img src={drFoxStyleImage} alt="Medical dermatology workflow" className="w-full h-auto" loading="lazy" />
                 </div>
               </div>
             </TabsContent>
@@ -418,7 +421,7 @@ export default function DermatologySpecialty() {
                   ))}
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src={laserTreatmentImage} alt="Surgical dermatology workflow" className="w-full h-auto" />
+                  <img src={laserTreatmentImage} alt="Surgical dermatology workflow" className="w-full h-auto" loading="lazy" />
                 </div>
               </div>
             </TabsContent>
@@ -436,7 +439,7 @@ export default function DermatologySpecialty() {
                   ))}
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src={happyPatientImage} alt="Cosmetic dermatology workflow" className="w-full h-auto" />
+                  <img src={happyPatientImage} alt="Cosmetic dermatology workflow" className="w-full h-auto" loading="lazy" />
                 </div>
               </div>
             </TabsContent>
@@ -473,6 +476,7 @@ export default function DermatologySpecialty() {
                     src={image.src} 
                     alt={image.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-3">
@@ -499,6 +503,7 @@ export default function DermatologySpecialty() {
                     src={image.src} 
                     alt={image.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-3">

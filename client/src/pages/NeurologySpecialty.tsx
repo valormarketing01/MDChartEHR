@@ -136,7 +136,7 @@ export default function NeurologySpecialty() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="absolute -inset-4 bg-slate-500/20 rounded-3xl blur-xl" />
-                <img src={neurologyHeroImage} alt="Neurologist analyzing brain scan" className="rounded-2xl shadow-2xl w-full relative z-10 ring-2 ring-slate-600/30" />
+                <img src={neurologyHeroImage} alt="Neurologist analyzing brain scan" className="rounded-2xl shadow-2xl w-full relative z-10 ring-2 ring-slate-600/30" loading="lazy" />
               </div>
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function NeurologySpecialty() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              How We Customize MDcharts for Your Practice
+              How We Customize MDCharts for Your Practice
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               We work closely with your team to configure an EHR solution that fits your unique neurology workflows.
@@ -277,7 +277,7 @@ export default function NeurologySpecialty() {
                 Tailored to Your Neurology Practice
               </h2>
               <p className="text-slate-300 text-lg mb-8">
-                From initial consultation to long-term disease management, we configure MDcharts with the tools you need for exceptional neurological care.
+                From initial consultation to long-term disease management, we configure MDCharts with the tools you need for exceptional neurological care.
               </p>
               <ul className="space-y-3">
                 {benefits.map((benefit, index) => (
@@ -310,7 +310,7 @@ export default function NeurologySpecialty() {
             Ready to Discuss Your Neurology Practice Needs?
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Schedule a consultation to explore how we can customize MDcharts for your neurological care delivery.
+            Schedule a consultation to explore how we can customize MDCharts for your neurological care delivery.
           </p>
           <Link href="/book-demo">
             <Button size="lg" className="h-12 px-8 bg-slate-700 hover:bg-slate-800">

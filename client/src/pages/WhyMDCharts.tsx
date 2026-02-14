@@ -101,7 +101,7 @@ export default function WhyMDChartsPage() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wide mb-6">
                 <Sparkles className="h-4 w-4" />
-                Why Choose MDcharts EHR
+                Why Choose MDCharts EHR
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6">
@@ -141,6 +141,9 @@ export default function WhyMDChartsPage() {
                   src={whyHeroImage} 
                   alt="Happy doctor in modern clinic" 
                   className="w-full h-[500px] object-cover"
+                  loading="lazy"
+                  width="800"
+                  height="500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
               </div>
@@ -289,10 +292,10 @@ export default function WhyMDChartsPage() {
               Trusted by Physicians
             </div>
             <blockquote className="text-xl md:text-2xl font-medium mb-6 max-w-3xl mx-auto">
-              "I have been a very satisfied user of MD Charts for over 9 years. 
+              "I have been a very satisfied user of MDCharts for over 9 years. 
               The program is user friendly for providers, MAs, front desk and billers."
             </blockquote>
-            <p className="text-blue-100">— Long-term MDcharts EHR Customer</p>
+            <p className="text-blue-100">— Long-term MDCharts EHR Customer</p>
           </div>
         </div>
       </section>
@@ -303,7 +306,7 @@ export default function WhyMDChartsPage() {
             Ready to experience the difference?
           </h2>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            Join thousands of providers who have transformed their practice with MDcharts EHR.
+            Join thousands of providers who have transformed their practice with MDCharts EHR.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button 

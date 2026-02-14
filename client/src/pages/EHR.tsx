@@ -38,7 +38,7 @@ const modules = [
   "Allergy Documentation",
   "Lab Results Integration",
   "Imaging Orders",
-  "E-Prescribing (EPCS)",
+  "e-Prescribing (EPCS)",
   "Clinical Decision Support",
   "Progress Notes",
   "Visit Summaries",
@@ -107,8 +107,9 @@ export default function EHRPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src={dermchartsSlide} 
-                  alt="MDcharts EHR specialty platforms" 
+                  alt="MDCharts EHR specialty platforms" 
                   className="w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </motion.div>
@@ -136,7 +137,7 @@ export default function EHRPage() {
               </p>
               
               <p className="text-lg text-slate-600 mb-4 leading-relaxed">
-                MDcharts handles this for you, with smart queues that organize unsigned items by category — from medications and MA notes to lab orders and superbills.
+                MDCharts handles this for you, with smart queues that organize unsigned items by category — from medications and MA notes to lab orders and superbills.
               </p>
               
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
@@ -160,8 +161,9 @@ export default function EHRPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white">
                 <img 
                   src={ehrDashboardImage} 
-                  alt="MDcharts EHR Dashboard showing unsigned items management" 
+                  alt="MDCharts EHR Dashboard showing unsigned items management" 
                   className="w-full h-auto"
+                  loading="lazy"
                 />
                 {/* Overlay to hide IP address, date and time */}
                 <div className="absolute bottom-0 left-[5%] w-[20%] h-[24%] bg-white"></div>
@@ -185,8 +187,9 @@ export default function EHRPage() {
               <div className="relative rounded-lg overflow-hidden shadow-2xl bg-white">
                 <img 
                   src={patientChartImage} 
-                  alt="MDcharts Patient Chart with comprehensive medical history" 
+                  alt="MDCharts Patient Chart with comprehensive medical history" 
                   className="w-full h-auto block"
+                  loading="lazy"
                 />
               </div>
             </motion.div>
@@ -202,7 +205,7 @@ export default function EHRPage() {
               </h2>
               
               <p className="text-base text-white/90 mb-3 leading-relaxed">
-                MDcharts' patient management system has been tailor-made to cater for the heavy documentation needs of medical patient workflows.
+                MDCharts' patient management system has been tailor-made to cater for the heavy documentation needs of medical patient workflows.
               </p>
               
               <p className="text-base text-white/90 mb-3 leading-relaxed">

@@ -117,6 +117,7 @@ export default function Blog() {
                       src={getBlogImage(featuredPost.slug)} 
                       alt={featuredPost.title}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-primary/5 to-cyan-50 flex items-center justify-center">
@@ -205,6 +206,7 @@ export default function Blog() {
                         src={getBlogImage(post.slug)} 
                         alt={post.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
                       />
                     ) : (
                       <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/5 to-cyan-50">
@@ -278,7 +280,7 @@ export default function Blog() {
               Ready to Transform Your Practice?
             </h2>
             <p className="text-slate-400 text-lg mb-10 leading-relaxed">
-              Discover how MDcharts EHR can streamline your workflows and boost revenue with a personalized demo.
+              Discover how MDCharts EHR can streamline your workflows and boost revenue with a personalized demo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/book-demo">

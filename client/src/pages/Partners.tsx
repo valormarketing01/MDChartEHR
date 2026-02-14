@@ -48,7 +48,7 @@ export default function Partners() {
             </h1>
             
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              MDcharts works with industry-leading partners to provide comprehensive solutions for medical practices.
+              MDCharts works with industry-leading partners to provide comprehensive solutions for medical practices.
             </p>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function Partners() {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Learn More About MDcharts
+            Learn More About MDCharts
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Discover how our integrated platform can benefit your practice.

@@ -40,7 +40,7 @@ export default function RCMPage() {
               {/* Highlighted TriZetto Integration */}
               <div className="flex items-center gap-3 mb-6 bg-white border border-slate-200 rounded-full p-1 pr-4 shadow-sm w-fit">
                  <div className="h-8 w-8 rounded-full overflow-hidden bg-slate-100 flex items-center justify-center">
-                   <img src={trizettoBadge} alt="TriZetto" className="w-full h-full object-cover" />
+                   <img src={trizettoBadge} alt="TriZetto" className="w-full h-full object-cover" loading="lazy" />
                  </div>
                  <span className="text-xs font-bold text-slate-700 uppercase tracking-wide">
                    Premier Clearinghouse Integration: <span className="text-blue-600">TriZetto Provider Solutions</span>
@@ -100,6 +100,7 @@ export default function RCMPage() {
                   src={rcmImage} 
                   alt="RCM Dashboard Analytics" 
                   className="w-full h-auto object-cover"
+                  loading="lazy"
                 />
                 
                 {/* Overlay Metrics */}

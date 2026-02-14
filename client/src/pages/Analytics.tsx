@@ -88,7 +88,7 @@ export default function Analytics() {
             </div>
             
             <div className="order-first lg:order-last">
-              <img src={analyticsHeroImage} alt="Healthcare analytics dashboard" className="rounded-2xl shadow-2xl w-full" />
+              <img src={analyticsHeroImage} alt="Healthcare analytics dashboard" className="rounded-2xl shadow-2xl w-full" loading="lazy" />
             </div>
           </div>
         </div>
@@ -163,7 +163,7 @@ export default function Analytics() {
             Unlock Your Practice Data
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            See how MDcharts analytics can help you optimize your practice performance.
+            See how MDCharts analytics can help you optimize your practice performance.
           </p>
           <Link href="/book-demo">
             <Button size="lg" className="h-12 px-8">

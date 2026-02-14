@@ -48,7 +48,7 @@ const solutionsLeft = [
 ];
 
 const solutionsRight = [
-  { title: "E-Prescribing", href: "/features/e-prescribing", icon: ClipboardList },
+  { title: "e-Prescribing", href: "/features/e-prescribing", icon: ClipboardList },
   { title: "Lab Integration", href: "/features/lab-integration", icon: FlaskConical },
   { title: "Telehealth", href: "/features/telehealth", icon: Video },
   { title: "Patient Portal", href: "/features/patient-portal", icon: Users },
@@ -151,7 +151,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center shrink-0 group relative z-50">
             <img 
               src={mdchartsLogo} 
-              alt="MDcharts EHR" 
+              alt="MDCharts EHR" 
               className="h-8 md:h-10 w-auto object-contain"
             />
           </Link>
@@ -353,7 +353,7 @@ export function Navbar() {
                       <div className="grid grid-cols-12 divide-x divide-slate-100">
                         {/* Left Column */}
                         <div className="col-span-6 p-6">
-                          <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">About MDcharts</h3>
+                          <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">About MDCharts</h3>
                           <div className="space-y-1">
                             {companyItems.map((item) => (
                               <NavLink

@@ -60,11 +60,11 @@ export default function EPrescribing() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
                 <Pill className="h-4 w-4" />
-                E-Prescribing
+                e-Prescribing
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
-                Safe, Fast <span className="text-primary">E-Prescribing</span>
+                Safe, Fast <span className="text-primary">e-Prescribing</span>
               </h1>
               
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
@@ -86,7 +86,7 @@ export default function EPrescribing() {
             </div>
             
             <div className="flex justify-center lg:justify-end">
-              <img src={eprescribingHeroImage} alt="E-prescribing on tablet device" className="rounded-2xl shadow-2xl w-full" />
+              <img src={eprescribingHeroImage} alt="e-Prescribing on tablet device" className="rounded-2xl shadow-2xl w-full" loading="lazy" />
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function EPrescribing() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Complete E-Prescribing Solution
+              Complete e-Prescribing Solution
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Everything you need for safe, efficient, and compliant medication prescribing.
@@ -131,7 +131,7 @@ export default function EPrescribing() {
                 Prescribe with Confidence
               </h2>
               <p className="text-white/90 text-lg mb-8">
-                Our e-prescribing module provides comprehensive safety features and regulatory compliance built into every prescription.
+                Our e-Prescribing module provides comprehensive safety features and regulatory compliance built into every prescription.
               </p>
               <ul className="space-y-3">
                 {benefits.map((benefit, index) => (
@@ -161,7 +161,7 @@ export default function EPrescribing() {
             Streamline Your Prescribing Workflow
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            See how MDcharts e-prescribing can improve medication safety and efficiency.
+            See how MDCharts e-Prescribing can improve medication safety and efficiency.
           </p>
           <Link href="/book-demo">
             <Button size="lg" className="h-12 px-8">

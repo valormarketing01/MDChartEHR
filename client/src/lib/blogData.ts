@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
     id: "1",
     slug: "ehr-healthcare-data-security",
     title: "Everything You Need To Know About EHR Healthcare Data Security",
-    excerpt: "MD Charts recommends healthcare data security, sealing every electronic health record with end-to-end encryption, continuous threat analytics, and HIPAA-aligned governance, giving clinicians confidence and patients peace of mind.",
+    excerpt: "MDCharts recommends healthcare data security, sealing every electronic health record with end-to-end encryption, continuous threat analytics, and HIPAA-aligned governance, giving clinicians confidence and patients peace of mind.",
     content: `
 ## Understanding the Importance of EHR Security
 
@@ -50,7 +50,7 @@ Highly customizable access controls decide who sees what, reinforcing data secur
 
 ### Compliance with Regulatory Standards
 
-Regulatory alignment proves a commitment to patient trust. MD Charts simplifies compliance by weaving standards into workflows, letting practices demonstrate the importance of data security in healthcare without drowning in paperwork.
+Regulatory alignment proves a commitment to patient trust. MDCharts simplifies compliance by weaving standards into workflows, letting practices demonstrate the importance of data security in healthcare without drowning in paperwork.
 
 - Automated audit trails, encryption, and breach-notification workflows satisfy HIPAA and HITECH mandates
 - Continuous benchmarking against the NIST Cybersecurity Framework and ISO 27001 keeps controls current
@@ -65,7 +65,7 @@ When it comes to selecting an EHR system for your practice, it's not only about 
 
 ### Reliable Technical Support for System Uptime
 
-At MD Charts, we take pride in offering unmatched personalized service and EHR support. Our dedicated support team is available from 7 a.m. to 10 p.m. ET. We are committed to ensuring that you have access to the assistance you need when you need it.
+At MDCharts, we take pride in offering unmatched personalized service and EHR support. Our dedicated support team is available from 7 a.m. to 10 p.m. ET. We are committed to ensuring that you have access to the assistance you need when you need it.
 
 ### Disaster Recovery and Data Backup Solutions
 
@@ -84,7 +84,7 @@ Security never stands still. Emerging technologies and regulations will redefine
     `,
     category: "ehr",
     categoryLabel: "EHR",
-    author: "MD Charts Team",
+    author: "MDCharts Team",
     date: "July 2, 2025",
     readTime: "8 min read",
     image: "/assets/generated_images/ehr_data_security_concept.png",
@@ -103,7 +103,7 @@ Dermatologists aren't just entering vitals and prescribing medications. They're 
 
 ### Specialty Software Isn't a Luxury—It's a Clinical Advantage
 
-The right dermatology EHR software doesn't just reduce clicks. It reshapes how a practice functions, from decision-making to documentation flow. With MD Charts, this looks like:
+The right dermatology EHR software doesn't just reduce clicks. It reshapes how a practice functions, from decision-making to documentation flow. With MDCharts, this looks like:
 
 - **Streamlined workflows** for scheduling, documentation, and billing
 - **Automated coding suggestions** minimize errors and accelerate reimbursements
@@ -155,7 +155,7 @@ Implementing an EHR for dermatology involves more than just the initial software
     `,
     category: "derm",
     categoryLabel: "Dermatology",
-    author: "MD Charts Team",
+    author: "MDCharts Team",
     date: "May 13, 2025",
     readTime: "7 min read",
     image: "/assets/generated_images/dermatology_ehr_tablet_usage.png",
@@ -209,11 +209,11 @@ Pediatric EHR systems can facilitate comprehensive care coordination. Children o
 
 ## Boosting Efficiency in Pediatric Practices
 
-MD Charts' Pediatric EHR system is specifically designed to boost efficiency and optimize workflows in pediatric practices.
+MDCharts' Pediatric EHR system is specifically designed to boost efficiency and optimize workflows in pediatric practices.
 
 ### Optimizing Workflows and Reducing Administrative Burden
 
-MD Charts provides the necessary tools to streamline documentation and support pediatric-focused workflows. By reducing manual processes and automating routine tasks, MD Charts enables pediatric practices to provide efficient and personalized care.
+MDCharts provides the necessary tools to streamline documentation and support pediatric-focused workflows. By reducing manual processes and automating routine tasks, MDCharts enables pediatric practices to provide efficient and personalized care.
 
 ### Enhancing Communication Among Healthcare Providers
 
@@ -241,7 +241,7 @@ The integration of telehealth within pediatric EHRs enables virtual consultation
     `,
     category: "pediatrics",
     categoryLabel: "Pediatrics",
-    author: "MD Charts Team",
+    author: "MDCharts Team",
     date: "February 17, 2025",
     readTime: "9 min read",
     image: "/assets/generated_images/pediatric_ehr_with_child.png",
@@ -254,7 +254,7 @@ The integration of telehealth within pediatric EHRs enables virtual consultation
     content: `
 ## Understanding the Data Migration Process
 
-The thought of EHR data migration can often be daunting. At MD Charts, we understand these concerns and are here to demystify the process for healthcare professionals.
+The thought of EHR data migration can often be daunting. At MDCharts, we understand these concerns and are here to demystify the process for healthcare professionals.
 
 ### Planning Phase
 
@@ -292,7 +292,7 @@ Timeline varies based on practice size and data complexity, but most migrations 
 
 ### What About Downtime?
 
-MD Charts works with practices to minimize disruption, often completing critical migrations during off-hours.
+MDCharts works with practices to minimize disruption, often completing critical migrations during off-hours.
 
 ## Best Practices for a Smooth Transition
 
@@ -304,7 +304,7 @@ MD Charts works with practices to minimize disruption, often completing critical
     `,
     category: "ehr",
     categoryLabel: "EHR",
-    author: "MD Charts Team",
+    author: "MDCharts Team",
     date: "January 12, 2024",
     readTime: "6 min read",
     image: "/assets/generated_images/medical_software_dashboard_mockup.png",
@@ -312,16 +312,16 @@ MD Charts works with practices to minimize disruption, often completing critical
   {
     id: "5",
     slug: "md-charts-top-12-dermatology-emr",
-    title: "MD Charts: A Top Choice in the 12 Best Dermatology EMR Shortlist",
-    excerpt: "MD Charts has been recognized as one of the Top 12 Dermatology EMR Systems, in recognition of our expertise in the field and commitment to dermatology-specific solutions.",
+    title: "MDCharts: A Top Choice in the 12 Best Dermatology EMR Shortlist",
+    excerpt: "MDCharts has been recognized as one of the Top 12 Dermatology EMR Systems, in recognition of our expertise in the field and commitment to dermatology-specific solutions.",
     content: `
-## Why MD Charts Stands Out in Dermatology
+## Why MDCharts Stands Out in Dermatology
 
 When it comes to your dermatology practice, the right Electronic Medical Record (EMR) system is not just a tool—it's a partner in delivering exceptional patient care.
 
 ### Purpose-Built for Dermatology
 
-Unlike general EMR systems that require extensive customization, MD Charts was designed from the ground up with dermatology workflows in mind:
+Unlike general EMR systems that require extensive customization, MDCharts was designed from the ground up with dermatology workflows in mind:
 
 - **Visual Documentation**: Built-in body mapping and image annotation tools
 - **Dermatology-Specific Templates**: Pre-built templates for common conditions and procedures
@@ -338,7 +338,7 @@ Unlike general EMR systems that require extensive customization, MD Charts was d
 
 ### Customer Support Excellence
 
-MD Charts provides dedicated support specifically trained in dermatology workflows, ensuring you get help that understands your specialty.
+MDCharts provides dedicated support specifically trained in dermatology workflows, ensuring you get help that understands your specialty.
 
 ### Continuous Innovation
 
@@ -359,7 +359,7 @@ Being named to the Top 12 list validates our commitment to:
     `,
     category: "derm",
     categoryLabel: "Dermatology",
-    author: "MD Charts Team",
+    author: "MDCharts Team",
     date: "January 12, 2024",
     readTime: "5 min read",
     image: "/assets/generated_images/dermatologist_examining_patient_skin.png",
@@ -367,8 +367,8 @@ Being named to the Top 12 list validates our commitment to:
   {
     id: "6",
     slug: "7-ways-md-charts-benefits-obgyn",
-    title: "7 Ways MD Charts Can Benefit Your OBGYN Practice",
-    excerpt: "MD Charts, a leading Electronic Health Record (EHR) system brings numerous benefits to OB/GYN practices. Its user-friendly interface and powerful features will bring your practice operations to a whole new level.",
+    title: "7 Ways MDCharts Can Benefit Your OBGYN Practice",
+    excerpt: "MDCharts, a leading Electronic Health Record (EHR) system brings numerous benefits to OB/GYN practices. Its user-friendly interface and powerful features will bring your practice operations to a whole new level.",
     content: `
 ## 1. Streamlined Prenatal Care Documentation
 
@@ -424,7 +424,7 @@ Stay compliant with:
     `,
     category: "obgyn",
     categoryLabel: "OB/GYN",
-    author: "MD Charts Team",
+    author: "MDCharts Team",
     date: "August 29, 2023",
     readTime: "5 min read",
     image: "/assets/generated_images/obgyn_prenatal_ehr_review.png",
@@ -500,7 +500,7 @@ Your EHR should seamlessly handle:
     `,
     category: "obgyn",
     categoryLabel: "OB/GYN",
-    author: "MD Charts Team",
+    author: "MDCharts Team",
     date: "August 9, 2023",
     readTime: "6 min read",
     image: "/assets/generated_images/prenatal_ultrasound_examination.png",
@@ -808,7 +808,7 @@ Key metrics to track:
     `,
     category: "obgyn",
     categoryLabel: "OB/GYN",
-    author: "MD Charts Team",
+    author: "MDCharts Team",
     date: "June 8, 2023",
     readTime: "5 min read",
     image: "/assets/generated_images/obgyn_with_new_mother_and_baby.png",
@@ -894,7 +894,7 @@ Practices that leverage technology during downturns often emerge stronger, with:
     `,
     category: "derm",
     categoryLabel: "Dermatology",
-    author: "MD Charts Team",
+    author: "MDCharts Team",
     date: "June 20, 2023",
     readTime: "7 min read",
     image: "/assets/generated_images/dermatology_skin_care_illustration.png",

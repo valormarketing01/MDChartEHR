@@ -48,7 +48,7 @@ const benefits = [
   "E-visit and asynchronous messaging",
   "Patient consent management",
   "Visit recording options",
-  "Integrated e-prescribing"
+  "Integrated e-Prescribing"
 ];
 
 export default function Telehealth() {
@@ -88,7 +88,7 @@ export default function Telehealth() {
             </div>
             
             <div className="order-first lg:order-last">
-              <img src={telehealthHeroImage} alt="Telehealth video consultation" className="rounded-2xl shadow-2xl w-full" />
+              <img src={telehealthHeroImage} alt="Telehealth video consultation" className="rounded-2xl shadow-2xl w-full" loading="lazy" />
             </div>
           </div>
         </div>
@@ -163,7 +163,7 @@ export default function Telehealth() {
             Ready to Offer Virtual Visits?
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            See how MDcharts telehealth can help you reach more patients.
+            See how MDCharts telehealth can help you reach more patients.
           </p>
           <Link href="/book-demo">
             <Button size="lg" className="h-12 px-8">

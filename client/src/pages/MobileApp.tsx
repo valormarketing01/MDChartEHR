@@ -88,7 +88,7 @@ export default function MobileApp() {
             </div>
             
             <div className="order-first lg:order-last">
-              <img src={mobileAppHeroImage} alt="Mobile EHR app usage" className="rounded-2xl shadow-2xl w-full" />
+              <img src={mobileAppHeroImage} alt="Mobile EHR app usage" className="rounded-2xl shadow-2xl w-full" loading="lazy" />
             </div>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function MobileApp() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Take MDcharts On The Go
+            Take MDCharts On The Go
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
             See how our mobile app can keep you connected to your practice.

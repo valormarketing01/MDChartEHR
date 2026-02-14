@@ -75,7 +75,7 @@ export default function GastroenterologySpecialty() {
             <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
               <div className="relative">
                 <div className="absolute -inset-4 bg-emerald-500/10 rounded-3xl blur-xl" />
-                <img src={gastroHeroImage} alt="Gastroenterologist reviewing scan" className="rounded-2xl shadow-2xl w-full relative z-10 border-4 border-white" />
+                <img src={gastroHeroImage} alt="Gastroenterologist reviewing scan" className="rounded-2xl shadow-2xl w-full relative z-10 border-4 border-white" loading="lazy" />
               </div>
             </div>
             
@@ -165,7 +165,7 @@ export default function GastroenterologySpecialty() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              How We Customize MDcharts for Your Practice
+              How We Customize MDCharts for Your Practice
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               We work closely with your team to configure an EHR solution that fits your unique gastroenterology workflows.
@@ -207,7 +207,7 @@ export default function GastroenterologySpecialty() {
               Configure Features for Your GI Practice
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              From office visits to ambulatory surgery centers, customize MDcharts to support your complete practice.
+              From office visits to ambulatory surgery centers, customize MDCharts to support your complete practice.
             </p>
           </div>
           
@@ -241,7 +241,7 @@ export default function GastroenterologySpecialty() {
                 Tailored to Your GI Practice
               </h2>
               <p className="text-emerald-100 text-lg mb-8">
-                We configure MDcharts to streamline every aspect of gastroenterology practice, from initial consultation to procedure and follow-up.
+                We configure MDCharts to streamline every aspect of gastroenterology practice, from initial consultation to procedure and follow-up.
               </p>
               <ul className="space-y-3">
                 {benefits.map((benefit, index) => (
@@ -274,7 +274,7 @@ export default function GastroenterologySpecialty() {
             Ready to Discuss Your GI Practice Needs?
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Schedule a consultation to explore how we can customize MDcharts for your gastroenterology workflows.
+            Schedule a consultation to explore how we can customize MDCharts for your gastroenterology workflows.
           </p>
           <Link href="/book-demo">
             <Button size="lg" className="h-12 px-8 bg-emerald-600 hover:bg-emerald-700">

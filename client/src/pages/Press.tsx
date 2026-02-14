@@ -9,12 +9,12 @@ import {
 
 const pressReleases = [
   {
-    title: "MDcharts Announces Enhanced Specialty EHR Solutions",
+    title: "MDCharts Announces Enhanced Specialty EHR Solutions",
     date: "Recent",
     summary: "Expanded specialty-specific templates and workflows for improved clinical documentation."
   },
   {
-    title: "MDcharts Continues Commitment to Regulatory Compliance",
+    title: "MDCharts Continues Commitment to Regulatory Compliance",
     date: "Recent",
     summary: "Ongoing focus on meeting federal health IT standards and regulations."
   },
@@ -24,7 +24,7 @@ const pressReleases = [
     summary: "Integrated video visits and virtual care tools help practices expand patient access."
   },
   {
-    title: "MDcharts Launches Enhanced Patient Portal",
+    title: "MDCharts Launches Enhanced Patient Portal",
     date: "Recent",
     summary: "New patient engagement features improve communication and satisfaction."
   }
@@ -44,11 +44,11 @@ export default function Press() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
-              MDcharts <span className="text-primary">Newsroom</span>
+              MDCharts <span className="text-primary">Newsroom</span>
             </h1>
             
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              Stay up to date with the latest news and announcements from MDcharts EHR.
+              Stay up to date with the latest news and announcements from MDCharts EHR.
             </p>
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function Press() {
                 </div>
               </div>
               <p className="text-slate-600 mb-6">
-                Members of the media can contact our communications team for information about MDcharts, interview requests, or other press-related inquiries.
+                Members of the media can contact our communications team for information about MDCharts, interview requests, or other press-related inquiries.
               </p>
               <Link href="/contact">
                 <Button className="h-12 px-6">
@@ -107,7 +107,7 @@ export default function Press() {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Learn More About MDcharts
+            Learn More About MDCharts
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Discover how our EHR and practice management solutions can transform your practice.

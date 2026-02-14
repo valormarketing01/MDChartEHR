@@ -109,6 +109,9 @@ export default function CompliancePage() {
                   src={complianceHeroImage} 
                   alt="Healthcare data security" 
                   className="w-full h-[450px] object-cover"
+                  loading="lazy"
+                  width="800"
+                  height="450"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-600/20 to-transparent" />
               </div>

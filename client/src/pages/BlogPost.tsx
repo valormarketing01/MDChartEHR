@@ -115,6 +115,7 @@ export default function BlogPost() {
                   src={getBlogImage(post.slug)} 
                   alt={post.title}
                   className="w-full h-64 md:h-96 object-cover"
+                  loading="lazy"
                 />
               </div>
             </motion.div>
@@ -238,7 +239,7 @@ export default function BlogPost() {
                 <div className="bg-gradient-to-br from-primary to-blue-700 rounded-2xl p-6 text-white">
                   <h3 className="text-xl font-bold mb-3">Ready to Transform Your Practice?</h3>
                   <p className="text-blue-100 text-sm mb-6">
-                    See how MDcharts can streamline your workflows and boost revenue.
+                    See how MDCharts can streamline your workflows and boost revenue.
                   </p>
                   <Link href="/book-demo">
                     <Button variant="secondary" className="w-full" data-testid="button-sidebar-demo">
@@ -327,6 +328,7 @@ export default function BlogPost() {
                       src={articleImage} 
                       alt={article.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">

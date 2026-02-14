@@ -163,6 +163,7 @@ export default function CardiologySpecialty() {
               src={heroTeamImage} 
               alt="Cardiology team" 
               className="w-full h-full object-cover min-h-[500px] lg:min-h-screen"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-transparent lg:from-slate-900/30"></div>
             
@@ -234,6 +235,9 @@ export default function CardiologySpecialty() {
                       src={workflow.image} 
                       alt={workflow.title} 
                       className="w-full h-[400px] object-cover"
+                      loading="lazy"
+                      width="800"
+                      height="400"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
                     <div className="absolute bottom-6 left-6 right-6">

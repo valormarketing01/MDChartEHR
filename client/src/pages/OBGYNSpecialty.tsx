@@ -66,7 +66,7 @@ const stats = [
 ];
 
 const integrations = [
-  "TriZetto Clearinghouse", "DrFirst ePrescribing", "Quest Diagnostics", 
+  "TriZetto Clearinghouse", "DrFirst e-Prescribing", "Quest Diagnostics", 
   "LabCorp", "Surescripts", "Immunization Registries"
 ];
 
@@ -165,7 +165,7 @@ export default function OBGYNSpecialty() {
             className="relative max-w-5xl mx-auto"
           >
             <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <img src={heroImage} alt="OB/GYN team with patient" className="w-full h-[500px] object-cover" />
+              <img src={heroImage} alt="OB/GYN team with patient" className="w-full h-[500px] object-cover" loading="lazy" width="800" height="500" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
             </div>
             
@@ -254,7 +254,7 @@ export default function OBGYNSpecialty() {
               viewport={{ once: true }}
               className="relative rounded-2xl overflow-hidden shadow-xl"
             >
-              <img src={ultrasoundImage} alt="Prenatal ultrasound" className="w-full h-[350px] object-cover" />
+              <img src={ultrasoundImage} alt="Prenatal ultrasound" className="w-full h-[350px] object-cover" loading="lazy" width="800" height="350" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent flex items-end p-6">
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Imaging Integration</h3>
@@ -270,7 +270,7 @@ export default function OBGYNSpecialty() {
               transition={{ duration: 0.15 }}
               className="relative rounded-2xl overflow-hidden shadow-xl"
             >
-              <img src={postpartumImage} alt="Postpartum care" className="w-full h-[350px] object-cover" />
+              <img src={postpartumImage} alt="Postpartum care" className="w-full h-[350px] object-cover" loading="lazy" width="800" height="350" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent flex items-end p-6">
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Faster Patient Flow</h3>

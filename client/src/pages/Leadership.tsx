@@ -11,7 +11,7 @@ const leaders = [
   {
     name: "Executive Leadership",
     role: "Guiding Company Vision",
-    description: "Our executive team brings together decades of experience in healthcare technology, medical practice management, and software development to drive MDcharts' mission forward."
+    description: "Our executive team brings together decades of experience in healthcare technology, medical practice management, and software development to drive MDCharts' mission forward."
   },
   {
     name: "Product Development",
@@ -21,7 +21,7 @@ const leaders = [
   {
     name: "Customer Success",
     role: "Partnering with Practices",
-    description: "Our customer success team is dedicated to ensuring every practice gets the most from their MDcharts investment through training, support, and ongoing optimization."
+    description: "Our customer success team is dedicated to ensuring every practice gets the most from their MDCharts investment through training, support, and ongoing optimization."
   },
   {
     name: "Engineering",
@@ -48,7 +48,7 @@ export default function Leadership() {
             </h1>
             
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              Meet the teams driving innovation and excellence at MDcharts EHR.
+              Meet the teams driving innovation and excellence at MDCharts EHR.
             </p>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function Leadership() {
             Our Commitment
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-3xl mx-auto">
-            Every member of the MDcharts team is committed to our mission of helping medical practices deliver exceptional patient care. We believe in building long-term partnerships with our customers and continuously improving our solutions based on their feedback.
+            Every member of the MDCharts team is committed to our mission of helping medical practices deliver exceptional patient care. We believe in building long-term partnerships with our customers and continuously improving our solutions based on their feedback.
           </p>
         </div>
       </section>

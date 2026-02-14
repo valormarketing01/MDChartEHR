@@ -1,0 +1,89 @@
+Here's the comprehensive prompt for the Replit Agent:
+
+---
+
+**Prompt for Replit Agent:**
+
+"I need multiple updates across the website. Please implement the following changes:
+
+**1. Add New AI Feature:**
+Add a new feature item under the FEATURES section called "AI-Powered Insights" (or "AI-Enabled Documentation" or "AI Clinical Assistant"). This should:
+- Follow the same design pattern as existing features (icon + text)
+- Be placed logically within the features list
+- Use an appropriate AI/brain/sparkle icon consistent with the existing icon style
+- Include a brief description if the other features have descriptions
+
+**2. Fix Terminology Inconsistency - e-Prescribing:**
+Search the entire website and standardize all variations of e-prescribing terminology to consistently use "e-Prescribing" (with capital P). Currently we have inconsistent usage:
+- Some places say "e-Prescribe" 
+- Some places say "E-Prescribing"
+- Some places say "e-Priscribe"
+
+Replace ALL instances sitewide with: **"e-Prescribing"**
+
+**3. Fix Brand Name Inconsistency - MDCharts:**
+Ensure "MDCharts" is written consistently across the entire site as one word with no space. Currently seeing variations like:
+- "MD Charts" (with space)
+- "MDcharts" (lowercase c)
+- "Mdcharts"
+
+Standardize ALL instances to: **"MDCharts"** (capital MD, capital C, no space)
+
+**4. Optimize Image Loading Performance:**
+High-resolution images are loading too slowly. Please implement:
+- Convert images to WebP format with JPG/PNG fallback
+- Implement lazy loading for images below the fold (loading="lazy")
+- Add proper width/height attributes to prevent layout shift
+- Use responsive images with srcset for different screen sizes
+- Compress images without quality loss
+- Add progressive loading or blur-up placeholders
+- Consider CDN implementation if available
+
+**5. Fix Cursor on Buttons (Critical UX Issue):**
+All buttons and clickable elements across the site should show a pointer cursor (hand icon) on hover. Currently they don't. Add `cursor: pointer` to:
+- All <button> elements
+- All clickable links styled as buttons
+- All interactive elements (cards, CTAs, etc.)
+Apply this globally via CSS to ensure consistent user experience.
+
+**6. About Us Page - Update Headline:**
+Change the headline text from "Click less care more" to **"Practice the way you want"**
+
+**7. Careers Page - Replace Job Listings:**
+Remove the current list of open positions and replace with a generic careers message. Suggested content:
+
+"**Join Our Team**
+
+We're always looking for talented individuals who are passionate about healthcare technology and improving patient care. If you're interested in joining the MDCharts team, we'd love to hear from you.
+
+**Current Opportunities**
+
+We welcome applications for various roles across engineering, product, sales, and customer success. Whether you're an experienced professional or just starting your career in health tech, we encourage you to reach out.
+
+**How to Apply**
+
+Please send your resume and a brief cover letter to: **hr@mdchartehr.com**
+
+Tell us about your experience, what excites you about MDCharts, and how you'd like to contribute to our mission of transforming healthcare delivery.
+
+We review all applications and will reach out if there's a potential fit for our team."
+
+Please implement all these changes across the website."
+
+---
+
+**Alternative Shorter Prompt:**
+
+"Make these 7 changes sitewide:
+
+1. Add AI feature ('AI-Powered Insights') to Features section with icon
+2. Fix e-prescribing inconsistency → use 'e-Prescribing' everywhere
+3. Fix brand name → use 'MDCharts' (no space, capital C) everywhere
+4. Optimize images: lazy loading, WebP format, compression, srcset for faster loading
+5. Add cursor: pointer to ALL buttons and clickable elements (currently missing hand icon on hover)
+6. About Us page: change 'Click less care more' to 'Practice the way you want'
+7. Careers page: remove job listings, add generic message with hr@mdchartehr.com and welcoming content inviting candidates to apply"
+
+---
+
+This comprehensive prompt covers all your requirements and should give Replit Agent clear instructions for all the updates!

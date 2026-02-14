@@ -63,7 +63,7 @@ const stats = [
 ];
 
 const integrations = [
-  "TriZetto Clearinghouse", "DrFirst ePrescribing", "State Immunization Registries", 
+  "TriZetto Clearinghouse", "DrFirst e-Prescribing", "State Immunization Registries", 
   "Quest Diagnostics", "LabCorp", "Surescripts"
 ];
 
@@ -174,7 +174,7 @@ export default function PediatricsSpecialty() {
               className="relative"
             >
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                <img src={heroImage} alt="Pediatricians with child" className="w-full h-[500px] object-cover" />
+                <img src={heroImage} alt="Pediatricians with child" className="w-full h-[500px] object-cover" loading="lazy" width="800" height="500" />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-xl">
                 <div className="flex items-center gap-3">
@@ -261,7 +261,7 @@ export default function PediatricsSpecialty() {
               className="space-y-6"
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={vaccinationImage} alt="Pediatric vaccination" className="w-full h-[300px] object-cover" />
+                <img src={vaccinationImage} alt="Pediatric vaccination" className="w-full h-[300px] object-cover" loading="lazy" width="800" height="300" />
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Vaccine Management Made Easy</h3>
@@ -281,7 +281,7 @@ export default function PediatricsSpecialty() {
                 <p className="text-slate-600">TriZetto clearinghouse integration means faster payments, fewer denials, and no separate billing software needed.</p>
               </div>
               <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={growthImage} alt="Growth assessment" className="w-full h-[300px] object-cover" />
+                <img src={growthImage} alt="Growth assessment" className="w-full h-[300px] object-cover" loading="lazy" width="800" height="300" />
               </div>
             </motion.div>
           </div>

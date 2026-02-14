@@ -12,7 +12,7 @@ const caseStudies = [
     icon: Building2,
     title: "Multi-Specialty Practice",
     category: "Practice Management",
-    summary: "A multi-location practice streamlined operations and improved care coordination across specialties using MDcharts integrated platform.",
+    summary: "A multi-location practice streamlined operations and improved care coordination across specialties using MDCharts integrated platform.",
     results: ["Improved workflow efficiency", "Enhanced care coordination", "Streamlined operations"]
   },
   {
@@ -56,7 +56,7 @@ export default function CaseStudies() {
             </h1>
             
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              Discover how medical practices across specialties have transformed their operations with MDcharts EHR.
+              Discover how medical practices across specialties have transformed their operations with MDCharts EHR.
             </p>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function CaseStudies() {
             Ready to Write Your Success Story?
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Join practices across the country that have transformed their operations with MDcharts.
+            Join practices across the country that have transformed their operations with MDCharts.
           </p>
           <Link href="/book-demo">
             <Button size="lg" variant="secondary" className="h-12 px-8">

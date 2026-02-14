@@ -32,7 +32,7 @@ export function RCMSection() {
                  </div>
                  <div>
                    <p className="font-medium text-emerald-100 italic">
-                     "One clinic grew from <span className="text-white font-bold">$300k</span> to over <span className="text-white font-bold">$1 million</span> in annual collections after switching to MD Charts RCM."
+                     "One clinic grew from <span className="text-white font-bold">$300k</span> to over <span className="text-white font-bold">$1 million</span> in annual collections after switching to MDCharts RCM."
                    </p>
                    <p className="text-[10px] text-slate-400 mt-2">*Individual results vary based on organizational size, specialty, payer mix, and implementation factors.</p>
                  </div>
@@ -70,7 +70,7 @@ export function RCMSection() {
              className="relative"
           >
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
-              <img src={rcmImage} alt="Financial Analytics" className="w-full h-auto" />
+              <img src={rcmImage} alt="Financial Analytics" className="w-full h-auto" loading="lazy" />
             </div>
           </motion.div>
         </div>

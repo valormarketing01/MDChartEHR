@@ -95,6 +95,9 @@ export default function PracticeManagementPage() {
                   src={pmHeroImage} 
                   alt="Medical receptionist helping patient" 
                   className="w-full h-[450px] object-cover"
+                  loading="lazy"
+                  width="800"
+                  height="450"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-600/20 to-transparent" />
               </div>

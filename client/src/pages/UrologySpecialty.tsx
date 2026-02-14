@@ -56,7 +56,7 @@ const keyFeatures = [
 ];
 
 const integrations = [
-  "TriZetto Clearinghouse", "DrFirst ePrescribing", "Quest Diagnostics", 
+  "TriZetto Clearinghouse", "DrFirst e-Prescribing", "Quest Diagnostics", 
   "LabCorp", "Imaging Centers", "Hospital Systems"
 ];
 
@@ -133,7 +133,7 @@ export default function UrologySpecialty() {
             >
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
-                  <img src={heroImage} alt="Urology team" className="w-full h-[550px] object-cover" />
+                  <img src={heroImage} alt="Urology team" className="w-full h-[550px] object-cover" loading="lazy" width="800" height="550" />
                 </div>
                 <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-5 shadow-xl border border-slate-100">
                   <div className="flex items-center gap-4">
@@ -247,10 +247,10 @@ export default function UrologySpecialty() {
               className="space-y-6"
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={diagnosticImage} alt="Diagnostic review" className="w-full h-[280px] object-cover" />
+                <img src={diagnosticImage} alt="Diagnostic review" className="w-full h-[280px] object-cover" loading="lazy" width="800" height="280" />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={teamImage} alt="Treatment planning" className="w-full h-[280px] object-cover" />
+                <img src={teamImage} alt="Treatment planning" className="w-full h-[280px] object-cover" loading="lazy" width="800" height="280" />
               </div>
             </motion.div>
           </div>
