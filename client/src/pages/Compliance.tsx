@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactModal } from "@/components/ContactModal";
-import complianceHeroImage from "@assets/stock_images/doctor_holding_digit_1e5c4a1a.jpg";
+import complianceHeroImage from "@assets/compliance_us_hero.png";
 
 const certifications = [
   {
