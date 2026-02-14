@@ -622,19 +622,6 @@ export default function DermatologySpecialty() {
             Join 500+ dermatology practices using DermCharts
           </p>
           
-          <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-4 mb-8 border border-white/20">
-            <span className="text-white text-sm">Starting at</span>
-            <div className="text-4xl font-bold text-white">$190<span className="text-lg font-normal">/provider/month</span></div>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-8 text-white text-sm">
-            <div className="flex items-center gap-2"><Check className="h-4 w-4" /> All dermatology-specific templates</div>
-            <div className="flex items-center gap-2"><Check className="h-4 w-4" /> Unlimited photo storage</div>
-            <div className="flex items-center gap-2"><Check className="h-4 w-4" /> 24/7 technical support</div>
-            <div className="flex items-center gap-2"><Check className="h-4 w-4" /> Free training</div>
-            <div className="flex items-center gap-2"><Check className="h-4 w-4" /> ONC 2015 certified</div>
-          </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book-demo">
               <Button 
