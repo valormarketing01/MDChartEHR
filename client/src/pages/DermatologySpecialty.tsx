@@ -611,7 +611,7 @@ export default function DermatologySpecialty() {
       </section>
 
       {/* Pricing CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary to-blue-700 relative overflow-hidden">
+      <section className="py-20 bg-[#2da0c7] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
