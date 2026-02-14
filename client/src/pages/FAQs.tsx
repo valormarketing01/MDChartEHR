@@ -9,12 +9,12 @@ import {
 
 const faqs = [
   {
-    question: "What specialties does MDCharts support?",
-    answer: "MDCharts supports popular medical specialties including Cardiology, Dermatology, Family Medicine, OB/GYN, Pediatrics, and Urology. Each specialty has tailored templates and workflows designed for specific clinical needs."
+    question: "What specialties does MD Charts support?",
+    answer: "MD Charts supports popular medical specialties including Cardiology, Dermatology, Family Medicine, OB/GYN, Pediatrics, and Urology. Each specialty has tailored templates and workflows designed for specific clinical needs."
   },
   {
-    question: "Does MDCharts meet regulatory requirements?",
-    answer: "Yes, MDCharts is designed to meet federal EHR requirements. Our system is built to support Meaningful Use, MIPS, and current regulatory standards, helping your practice stay compliant."
+    question: "Does MD Charts meet regulatory requirements?",
+    answer: "Yes, MD Charts is designed to meet federal EHR requirements. Our system is built to support Meaningful Use, MIPS, and current regulatory standards, helping your practice stay compliant."
   },
   {
     question: "How long does implementation take?",
@@ -25,20 +25,20 @@ const faqs = [
     answer: "Yes, we provide comprehensive training for all users. This includes initial onboarding training, role-based training sessions, and ongoing education resources. Our support team is also available to answer questions as they arise."
   },
   {
-    question: "Can MDCharts integrate with our existing systems?",
-    answer: "MDCharts offers integration capabilities with many healthcare systems including laboratory networks, imaging centers, health information exchanges, and clearinghouses. Our team can discuss your specific integration needs during a consultation."
+    question: "Can MD Charts integrate with our existing systems?",
+    answer: "MD Charts offers integration capabilities with many healthcare systems including laboratory networks, imaging centers, health information exchanges, and clearinghouses. Our team can discuss your specific integration needs during a consultation."
   },
   {
     question: "Is there a patient portal?",
-    answer: "Yes, MDCharts includes a full-featured patient portal that allows patients to schedule appointments, view health records, communicate with your practice, pay bills, and complete pre-visit paperwork online."
+    answer: "Yes, MD Charts includes a full-featured patient portal that allows patients to schedule appointments, view health records, communicate with your practice, pay bills, and complete pre-visit paperwork online."
   },
   {
     question: "How is my data protected?",
-    answer: "MDCharts employs enterprise-grade security measures including encryption, access controls, audit logging, and regular security assessments. We are fully HIPAA compliant and take data protection seriously."
+    answer: "MD Charts employs enterprise-grade security measures including encryption, access controls, audit logging, and regular security assessments. We are fully HIPAA compliant and take data protection seriously."
   },
   {
     question: "Do you offer telehealth capabilities?",
-    answer: "Yes, MDCharts includes integrated HIPAA-compliant telehealth functionality. Providers can conduct video visits directly within the EHR, and patients can join without downloading any apps."
+    answer: "Yes, MD Charts includes integrated HIPAA-compliant telehealth functionality. Providers can conduct video visits directly within the EHR, and patients can join without downloading any apps."
   }
 ];
 
@@ -60,7 +60,7 @@ export default function FAQs() {
             </h1>
             
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              Find answers to common questions about MDCharts EHR and our services.
+              Find answers to common questions about MD Charts EHR and our services.
             </p>
           </div>
         </div>

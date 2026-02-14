@@ -53,6 +53,7 @@ const solutionsRight = [
   { title: "Telehealth", href: "/features/telehealth", icon: Video },
   { title: "Patient Portal", href: "/features/patient-portal", icon: Users },
   { title: "Analytics & Reports", href: "/features/analytics", icon: BarChart3 },
+  { title: "AI-Powered Insights", href: "/ehr", icon: Zap },
 ];
 
 const specialtiesCol1 = [
@@ -151,7 +152,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center shrink-0 group relative z-50">
             <img 
               src={mdchartsLogo} 
-              alt="MDCharts EHR" 
+              alt="MD Charts EHR" 
               className="h-8 md:h-10 w-auto object-contain"
             />
           </Link>
@@ -353,7 +354,7 @@ export function Navbar() {
                       <div className="grid grid-cols-12 divide-x divide-slate-100">
                         {/* Left Column */}
                         <div className="col-span-6 p-6">
-                          <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">About MDCharts</h3>
+                          <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">About MD Charts</h3>
                           <div className="space-y-1">
                             {companyItems.map((item) => (
                               <NavLink

@@ -11,7 +11,7 @@ export function Footer() {
             <Link href="/" className="flex items-center mb-6">
               <img 
                 src={mdchartsLogo} 
-                alt="MDCharts EHR" 
+                alt="MD Charts EHR" 
                 className="h-8 w-auto object-contain"
                 loading="lazy"
               />
@@ -61,7 +61,7 @@ export function Footer() {
         </div>
         
         <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>© 2026 MDCharts EHR. All rights reserved.</p>
+          <p>© 2026 MD Charts EHR. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/terms-of-service" className="hover:text-white">Terms of Service</Link>
             <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link>

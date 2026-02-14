@@ -96,7 +96,7 @@ const whitePapers: WhitePaper[] = [
       "CONCLUSION",
       "The right EHR can transform your practice operations, improve patient care, and position you for success in value-based healthcare. Take time to thoroughly evaluate options and involve key stakeholders in the decision process.",
       "",
-      "© 2026 MDCharts EHR. All rights reserved.",
+      "© 2026 MD Charts EHR. All rights reserved.",
       "www.mdchartsehr.com"
     ]
   },
@@ -178,7 +178,7 @@ const whitePapers: WhitePaper[] = [
       "CONCLUSION",
       "A well-optimized revenue cycle requires attention to every stage from scheduling to final payment. Invest in training, technology, and continuous process improvement to maximize your practice's financial performance.",
       "",
-      "© 2026 MDCharts EHR. All rights reserved.",
+      "© 2026 MD Charts EHR. All rights reserved.",
       "www.mdchartsehr.com"
     ]
   },
@@ -261,7 +261,7 @@ const whitePapers: WhitePaper[] = [
       "CONCLUSION",
       "Digital patient engagement tools are essential for modern healthcare. When implemented thoughtfully, they enhance the care experience for both patients and providers while driving operational efficiency.",
       "",
-      "© 2026 MDCharts EHR. All rights reserved.",
+      "© 2026 MD Charts EHR. All rights reserved.",
       "www.mdchartsehr.com"
     ]
   },
@@ -350,7 +350,7 @@ const whitePapers: WhitePaper[] = [
       "CONCLUSION",
       "Telehealth extends your practice's reach and provides convenient access to care. Success requires thoughtful implementation, ongoing optimization, and commitment to delivering high-quality virtual care.",
       "",
-      "© 2026 MDCharts EHR. All rights reserved.",
+      "© 2026 MD Charts EHR. All rights reserved.",
       "www.mdchartsehr.com"
     ]
   },
@@ -452,7 +452,7 @@ const whitePapers: WhitePaper[] = [
       "CONCLUSION",
       "Cloud-based healthcare solutions can be fully HIPAA compliant when proper safeguards are implemented. Partner with vendors who prioritize security and maintain robust internal compliance programs.",
       "",
-      "© 2026 MDCharts EHR. All rights reserved.",
+      "© 2026 MD Charts EHR. All rights reserved.",
       "www.mdchartsehr.com"
     ]
   },
@@ -560,7 +560,7 @@ const whitePapers: WhitePaper[] = [
       "CONCLUSION",
       "Specialty practices deserve EHR solutions designed for their unique needs. Investing in a specialty-specific system pays dividends in clinical efficiency, revenue capture, and provider satisfaction.",
       "",
-      "© 2026 MDCharts EHR. All rights reserved.",
+      "© 2026 MD Charts EHR. All rights reserved.",
       "www.mdchartsehr.com"
     ]
   }
@@ -635,7 +635,7 @@ export default function WhitePapers() {
     doc.setFont("helvetica", "bold");
     doc.setFontSize(10);
     doc.setTextColor(0, 150, 180);
-    doc.text("MDCharts EHR", margin, yPosition);
+    doc.text("MD Charts EHR", margin, yPosition);
     doc.text("www.mdchartsehr.com", pageWidth - margin, yPosition, { align: "right" });
     yPosition += 15;
     
@@ -814,10 +814,10 @@ export default function WhitePapers() {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to See MDCharts in Action?
+            Ready to See MD Charts in Action?
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Schedule a personalized demo to see how MDCharts can transform your practice.
+            Schedule a personalized demo to see how MD Charts can transform your practice.
           </p>
           <Link href="/book-demo">
             <Button size="lg" variant="secondary" className="h-12 px-8" data-testid="button-schedule-demo">

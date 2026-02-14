@@ -163,7 +163,7 @@ export default function Telehealth() {
             Ready to Offer Virtual Visits?
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            See how MDCharts telehealth can help you reach more patients.
+            See how MD Charts telehealth can help you reach more patients.
           </p>
           <Link href="/book-demo">
             <Button size="lg" className="h-12 px-8">

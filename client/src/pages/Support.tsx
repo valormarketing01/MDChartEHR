@@ -73,7 +73,7 @@ export default function Support() {
             </h1>
             
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              MDCharts prides itself on providing world-class support to each and every client. Our team is here to help you succeed.
+              MD Charts prides itself on providing world-class support to each and every client. Our team is here to help you succeed.
             </p>
           </motion.div>
 
@@ -209,7 +209,7 @@ export default function Support() {
               Additional Resources
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Get the most out of your MDCharts EHR system with our training resources
+              Get the most out of your MD Charts EHR system with our training resources
             </p>
           </motion.div>
 
@@ -260,7 +260,7 @@ export default function Support() {
               Need Help Getting Started?
             </h2>
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Schedule a demo and see how MDCharts EHR can transform your practice
+              Schedule a demo and see how MD Charts EHR can transform your practice
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/book-demo">

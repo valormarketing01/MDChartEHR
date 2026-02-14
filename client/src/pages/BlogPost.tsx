@@ -239,7 +239,7 @@ export default function BlogPost() {
                 <div className="bg-gradient-to-br from-primary to-blue-700 rounded-2xl p-6 text-white">
                   <h3 className="text-xl font-bold mb-3">Ready to Transform Your Practice?</h3>
                   <p className="text-blue-100 text-sm mb-6">
-                    See how MDCharts can streamline your workflows and boost revenue.
+                    See how MD Charts can streamline your workflows and boost revenue.
                   </p>
                   <Link href="/book-demo">
                     <Button variant="secondary" className="w-full" data-testid="button-sidebar-demo">

@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
           <div className="max-w-3xl mx-auto prose prose-slate">
             <h2>Introduction</h2>
             <p>
-              MDCharts EHR ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.
+              MD Charts EHR ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.
             </p>
 
             <h2>Information We Collect</h2>

@@ -174,7 +174,7 @@ export default function OrthopedicsSpecialty() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              How We Customize MDCharts for Your Practice
+              How We Customize MD Charts for Your Practice
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               We work closely with your team to configure an EHR solution that fits your unique orthopedic workflows.
@@ -257,7 +257,7 @@ export default function OrthopedicsSpecialty() {
                 Tailored to Your Orthopedic Practice
               </h2>
               <p className="text-slate-300 text-lg mb-8">
-                From initial consultation to post-operative follow-up, we configure MDCharts to support every aspect of your orthopedic care delivery.
+                From initial consultation to post-operative follow-up, we configure MD Charts to support every aspect of your orthopedic care delivery.
               </p>
               <ul className="space-y-3">
                 {benefits.map((benefit, index) => (
@@ -290,7 +290,7 @@ export default function OrthopedicsSpecialty() {
             Ready to Discuss Your Orthopedic Practice Needs?
           </h2>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Schedule a consultation to explore how we can customize MDCharts for your orthopedic workflows.
+            Schedule a consultation to explore how we can customize MD Charts for your orthopedic workflows.
           </p>
           <Link href="/book-demo">
             <Button size="lg" className="h-12 px-8 bg-cyan-500 hover:bg-cyan-600">

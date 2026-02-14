@@ -106,7 +106,7 @@ const cosmeticFeatures = [
 
 const testimonials = [
   {
-    quote: "MDCharts has transformed our practice. The dermatology-specific templates save us hours every day, and the visual documentation tools are exactly what we need for accurate patient care and medical-legal protection.",
+    quote: "MD Charts has transformed our practice. The dermatology-specific templates save us hours every day, and the visual documentation tools are exactly what we need for accurate patient care and medical-legal protection.",
     name: "Joshua Fox, M.D., F.A.A.D.",
     practice: "Founder & Director, Advanced Dermatology, P.C. and the Center for Laser and Cosmetic Surgery",
     rating: 5
@@ -329,7 +329,7 @@ export default function DermatologySpecialty() {
         </div>
       </section>
 
-      {/* Why Dermatologists Choose MDCharts */}
+      {/* Why Dermatologists Choose MD Charts */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -340,7 +340,7 @@ export default function DermatologySpecialty() {
             className="text-center mb-16"
           >
             <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Dermatologists Choose MDCharts
+              Why Dermatologists Choose MD Charts
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-lg text-slate-600 max-w-2xl mx-auto">
               Purpose-built features that understand dermatology workflows
@@ -574,7 +574,7 @@ export default function DermatologySpecialty() {
                   <th className="text-left py-4 px-4 font-bold text-slate-900">Feature</th>
                   <th className="text-center py-4 px-4 font-bold text-slate-500">Basic EHR</th>
                   <th className="text-center py-4 px-4 font-bold text-slate-500">Generic Derm EMR</th>
-                  <th className="text-center py-4 px-4 font-bold text-primary bg-primary/5 rounded-t-lg">MDCharts DermCharts</th>
+                  <th className="text-center py-4 px-4 font-bold text-primary bg-primary/5 rounded-t-lg">MD Charts DermCharts</th>
                 </tr>
               </thead>
               <tbody>

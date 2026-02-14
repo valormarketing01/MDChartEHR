@@ -44,7 +44,7 @@ export default function Contact() {
     
     toast({
       title: "Message Sent!",
-      description: "An MDCharts representative will contact you shortly.",
+      description: "An MD Charts representative will contact you shortly.",
     });
     
     setFormData({
@@ -84,7 +84,7 @@ export default function Contact() {
             </h1>
             
             <p className="text-xl text-slate-600 leading-relaxed">
-              Fill in and submit the form below, and an MDCharts representative will contact you shortly.
+              Fill in and submit the form below, and an MD Charts representative will contact you shortly.
             </p>
           </motion.div>
 
@@ -122,7 +122,7 @@ export default function Contact() {
               <div>
                 <h2 className="text-2xl font-bold text-slate-900 mb-6">Contact Information</h2>
                 <p className="text-slate-600">
-                  Have questions about MDCharts EHR? We're here to help you find the right solution for your practice.
+                  Have questions about MD Charts EHR? We're here to help you find the right solution for your practice.
                 </p>
               </div>
 

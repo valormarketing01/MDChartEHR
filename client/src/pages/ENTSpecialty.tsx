@@ -144,7 +144,7 @@ export default function ENTSpecialty() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              How We Customize MDCharts for Your Practice
+              How We Customize MD Charts for Your Practice
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               We work closely with your team to configure an EHR solution that fits your unique ENT workflows.
@@ -248,7 +248,7 @@ export default function ENTSpecialty() {
                 Tailored to Your ENT Practice
               </h2>
               <p className="text-amber-100 text-lg mb-8">
-                We configure MDCharts with specialized tools for every aspect of otolaryngology care, from pediatric ear tubes to complex oncology cases.
+                We configure MD Charts with specialized tools for every aspect of otolaryngology care, from pediatric ear tubes to complex oncology cases.
               </p>
               <ul className="space-y-3">
                 {benefits.map((benefit, index) => (
@@ -281,7 +281,7 @@ export default function ENTSpecialty() {
             Ready to Discuss Your ENT Practice Needs?
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Schedule a consultation to explore how we can customize MDCharts for your otolaryngology workflows.
+            Schedule a consultation to explore how we can customize MD Charts for your otolaryngology workflows.
           </p>
           <Link href="/book-demo">
             <Button size="lg" className="h-12 px-8 bg-amber-600 hover:bg-amber-700">

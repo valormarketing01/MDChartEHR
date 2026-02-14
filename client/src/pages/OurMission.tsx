@@ -53,7 +53,7 @@ export default function OurMission() {
             >
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-bold mb-6">
                 <Target className="h-4 w-4" />
-                ABOUT MDCharts EHR
+                ABOUT MD Charts EHR
               </div>
               
               <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
@@ -61,7 +61,7 @@ export default function OurMission() {
               </h1>
               
               <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                MDCharts, designed by physicians and top-level software system architects, is dedicated to improving your practice. We offer a bold new approach to EHR & Practice Management.
+                MD Charts, designed by physicians and top-level software system architects, is dedicated to improving your practice. We offer a bold new approach to EHR & Practice Management.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -138,7 +138,7 @@ export default function OurMission() {
                 The result is a system that can be fully customized to fit the needs of the basic user to even the most astute user.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
-                Engineered to maximize care to patients and improve profitability for practices, MDCharts' unique approach to reducing the time required to take notes or e-prescribe medication as well as superior Practice Management tools can help your practice no matter its size or specialty.
+                Engineered to maximize care to patients and improve profitability for practices, MD Charts' unique approach to reducing the time required to take notes or e-prescribe medication as well as superior Practice Management tools can help your practice no matter its size or specialty.
               </p>
             </motion.div>
           </div>
@@ -201,7 +201,7 @@ export default function OurMission() {
             </div>
             
             <blockquote className="text-2xl md:text-3xl font-medium leading-relaxed mb-10">
-              "MDCharts transformed our practice. Documentation that used to take 15 minutes now takes 5. Our staff loves it and our patients notice the difference."
+              "MD Charts transformed our practice. Documentation that used to take 15 minutes now takes 5. Our staff loves it and our patients notice the difference."
             </blockquote>
             
             <div>
@@ -220,7 +220,7 @@ export default function OurMission() {
               Ready to Transform Your Practice?
             </h2>
             <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-              See how MDCharts EHR can help you click less and care more
+              See how MD Charts EHR can help you click less and care more
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/book-demo">

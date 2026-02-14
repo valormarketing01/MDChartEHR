@@ -161,7 +161,7 @@ export default function EPrescribing() {
             Streamline Your Prescribing Workflow
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            See how MDCharts e-Prescribing can improve medication safety and efficiency.
+            See how MD Charts e-Prescribing can improve medication safety and efficiency.
           </p>
           <Link href="/book-demo">
             <Button size="lg" className="h-12 px-8">

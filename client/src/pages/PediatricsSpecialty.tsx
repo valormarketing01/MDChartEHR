@@ -204,7 +204,7 @@ export default function PediatricsSpecialty() {
         </div>
       </section>
 
-      {/* How MDCharts Helps */}
+      {/* How MD Charts Helps */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div

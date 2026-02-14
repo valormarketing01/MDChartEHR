@@ -133,7 +133,7 @@ export default function Home() {
             Ready to streamline your practice?
           </h2>
           <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            Join hundreds of high-performing practices that have switched to MDCharts EHR to save time, reduce burnout, and increase revenue.
+            Join hundreds of high-performing practices that have switched to MD Charts EHR to save time, reduce burnout, and increase revenue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book-demo">

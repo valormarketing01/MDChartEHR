@@ -21,13 +21,13 @@ const teamMembers = [
     name: "Aaron Wachspress",
     title: "CTO",
     image: aaronImage,
-    bio: "Harnessing his experience as Founder and CTO at Universal EHR Solutions, Aaron brings his expertise of electronic health records technologies to MDCharts. Under his leadership, MDCharts has developed partnerships with numerous industry-leading healthcare systems, with the vision to simplify the complex and often poorly integrated healthcare systems used in most medical practices today."
+    bio: "Harnessing his experience as Founder and CTO at Universal EHR Solutions, Aaron brings his expertise of electronic health records technologies to MD Charts. Under his leadership, MD Charts has developed partnerships with numerous industry-leading healthcare systems, with the vision to simplify the complex and often poorly integrated healthcare systems used in most medical practices today."
   },
   {
     name: "Maitry Shah",
     title: "IT Project Manager",
     image: maitryImage,
-    bio: "As the IT Project Manager, Maitry is focused on MDCharts' product and technology strategy in support of the company's goals and vision. She brings extensive experience in developing and leading technology integration teams, defining strategic product vision and roadmaps, and developing a customer-focused culture."
+    bio: "As the IT Project Manager, Maitry is focused on MD Charts' product and technology strategy in support of the company's goals and vision. She brings extensive experience in developing and leading technology integration teams, defining strategic product vision and roadmaps, and developing a customer-focused culture."
   },
   {
     name: "Daniel Sticca",
@@ -71,7 +71,7 @@ export default function Management() {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-              MDCharts Key Management
+              MD Charts Key Management
             </h1>
             
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">

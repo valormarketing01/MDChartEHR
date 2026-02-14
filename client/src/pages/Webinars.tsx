@@ -9,8 +9,8 @@ import {
 
 const upcomingWebinars = [
   {
-    title: "Getting Started with MDCharts EHR",
-    description: "An introduction to the MDCharts platform and its core features for new users.",
+    title: "Getting Started with MD Charts EHR",
+    description: "An introduction to the MD Charts platform and its core features for new users.",
     date: "Regular Sessions Available",
     duration: "Brief session"
   },
@@ -65,7 +65,7 @@ export default function Webinars() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
-              Learn with <span className="text-primary">MDCharts</span>
+              Learn with <span className="text-primary">MD Charts</span>
             </h1>
             
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">

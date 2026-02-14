@@ -14,7 +14,7 @@ const testimonials = [
     specialty: "Multi-Specialty Practice"
   },
   {
-    quote: "Switching to MDCharts was one of the best decisions we made for our practice. The support team has been exceptional.",
+    quote: "Switching to MD Charts was one of the best decisions we made for our practice. The support team has been exceptional.",
     name: "Office Manager",
     specialty: "Family Medicine"
   },
@@ -58,7 +58,7 @@ export default function Testimonials() {
             </h1>
             
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              Hear from practices across the country about their experience with MDCharts EHR.
+              Hear from practices across the country about their experience with MD Charts EHR.
             </p>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function Testimonials() {
             Join Our Growing Community
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            See why practices trust MDCharts for their EHR and practice management needs.
+            See why practices trust MD Charts for their EHR and practice management needs.
           </p>
           <Link href="/book-demo">
             <Button size="lg" variant="secondary" className="h-12 px-8">

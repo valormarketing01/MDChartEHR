@@ -280,7 +280,7 @@ export default function Blog() {
               Ready to Transform Your Practice?
             </h2>
             <p className="text-slate-400 text-lg mb-10 leading-relaxed">
-              Discover how MDCharts EHR can streamline your workflows and boost revenue with a personalized demo.
+              Discover how MD Charts EHR can streamline your workflows and boost revenue with a personalized demo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/book-demo">

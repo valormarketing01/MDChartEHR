@@ -164,7 +164,7 @@ export default function UrologySpecialty() {
         </div>
       </section>
 
-      {/* How MDCharts Helps - Grid */}
+      {/* How MD Charts Helps - Grid */}
       <section className="py-20 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div

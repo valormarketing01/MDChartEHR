@@ -165,7 +165,7 @@ export default function PsychiatrySpecialty() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              How We Customize MDCharts for Your Practice
+              How We Customize MD Charts for Your Practice
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               We work closely with your team to configure an EHR solution that fits your unique behavioral health workflows.
@@ -275,7 +275,7 @@ export default function PsychiatrySpecialty() {
                 Tailored to Your Behavioral Health Practice
               </h2>
               <p className="text-teal-100 text-lg mb-8">
-                From initial intake to ongoing treatment, we configure MDCharts to support the full spectrum of mental health care delivery.
+                From initial intake to ongoing treatment, we configure MD Charts to support the full spectrum of mental health care delivery.
               </p>
               <ul className="space-y-3">
                 {benefits.map((benefit, index) => (
@@ -299,7 +299,7 @@ export default function PsychiatrySpecialty() {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Patient-Centered Design</div>
-                  <div className="text-teal-200 text-sm">MDCharts Implementation Team</div>
+                  <div className="text-teal-200 text-sm">MD Charts Implementation Team</div>
                 </div>
               </div>
             </div>
@@ -314,7 +314,7 @@ export default function PsychiatrySpecialty() {
             Ready to Discuss Your Behavioral Health Practice Needs?
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Schedule a consultation to explore how we can customize MDCharts for your mental health workflows.
+            Schedule a consultation to explore how we can customize MD Charts for your mental health workflows.
           </p>
           <Link href="/book-demo">
             <Button size="lg" className="h-12 px-8 bg-teal-600 hover:bg-teal-700">

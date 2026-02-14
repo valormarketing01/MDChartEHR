@@ -19,7 +19,7 @@ const features = [
   {
     icon: Sparkles,
     title: "The Ultra-Customizable EHR",
-    description: "MDCharts adapts to your practice's workflow",
+    description: "MD Charts adapts to your practice's workflow",
     benefits: [
       "Notes designed to match your provider's requirements",
       "Customizable down to both role and user levels",
@@ -182,7 +182,7 @@ export default function ClickLessCareMore() {
                 ClickLess CareMore Technology
               </h2>
               <p className="text-lg text-slate-600 mb-6">
-                MDCharts was designed with customization as a forethought and not an afterthought, resulting in an agile platform to meet your needs and adapt to your practice.
+                MD Charts was designed with customization as a forethought and not an afterthought, resulting in an agile platform to meet your needs and adapt to your practice.
               </p>
               <ul className="space-y-4">
                 {["Automation that saves hours daily", "Customization for every specialty", "Workflow optimization built-in"].map((item, idx) => (

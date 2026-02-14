@@ -178,7 +178,7 @@ export default function LabIntegration() {
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Bi-directional interfaces with major national and regional laboratories. 
-              MDCharts integrates with virtually any HL7-compatible lab.
+              MD Charts integrates with virtually any HL7-compatible lab.
             </p>
           </div>
           
@@ -211,7 +211,7 @@ export default function LabIntegration() {
           </div>
           
           <p className="text-center text-slate-500 text-sm mt-8">
-            Don't see your lab? MDCharts integrates with virtually any HL7-compatible laboratory. 
+            Don't see your lab? MD Charts integrates with virtually any HL7-compatible laboratory. 
             <Link href="/contact" className="text-primary font-medium ml-1 hover:underline">Contact us</Link> to add your lab.
           </p>
         </div>

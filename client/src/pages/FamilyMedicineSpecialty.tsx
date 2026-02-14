@@ -210,7 +210,7 @@ export default function FamilyMedicineSpecialty() {
         </div>
       </section>
 
-      {/* How MDCharts Helps */}
+      {/* How MD Charts Helps */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div

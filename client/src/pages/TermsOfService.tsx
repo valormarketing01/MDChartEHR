@@ -26,7 +26,7 @@ export default function TermsOfService() {
           <div className="max-w-3xl mx-auto prose prose-slate">
             <h2>Acceptance of Terms</h2>
             <p>
-              By accessing or using MDCharts EHR services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.
+              By accessing or using MD Charts EHR services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.
             </p>
 
             <h2>Use of Services</h2>
@@ -42,7 +42,7 @@ export default function TermsOfService() {
 
             <h2>Intellectual Property</h2>
             <p>
-              The MDCharts EHR platform, including all content, features, and functionality, is owned by MDCharts and is protected by copyright, trademark, and other intellectual property laws.
+              The MD Charts EHR platform, including all content, features, and functionality, is owned by MD Charts and is protected by copyright, trademark, and other intellectual property laws.
             </p>
 
             <h2>User Responsibilities</h2>
@@ -58,7 +58,7 @@ export default function TermsOfService() {
 
             <h2>Limitation of Liability</h2>
             <p>
-              MDCharts shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the services.
+              MD Charts shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the services.
             </p>
 
             <h2>Modifications</h2>

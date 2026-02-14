@@ -39,12 +39,12 @@ export default function BookDemo() {
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                  See MDCharts
+                  See MD Charts
                   <span className="text-primary"> in Action</span>
                 </h1>
                 
                 <p className="text-xl text-slate-600 mb-8">
-                  Book a personalized demo and discover how MDCharts can help your practice document faster, get paid sooner, and focus on patient care.
+                  Book a personalized demo and discover how MD Charts can help your practice document faster, get paid sooner, and focus on patient care.
                 </p>
 
                 <div className="space-y-4 mb-8">
@@ -63,7 +63,7 @@ export default function BookDemo() {
                   <ul className="space-y-2 text-sm text-slate-600">
                     <li className="flex items-start gap-2">
                       <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                      Overview of MDCharts EHR & Practice Management
+                      Overview of MD Charts EHR & Practice Management
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
