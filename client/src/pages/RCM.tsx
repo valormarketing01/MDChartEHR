@@ -253,7 +253,12 @@ export default function RCMPage() {
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
             Let us handle the billing so you can focus on what matters most—your patients.
           </p>
-          <Button size="lg" variant="secondary" className="h-14 px-8 text-primary font-bold shadow-xl">
+          <Button 
+            size="lg" 
+            variant="secondary" 
+            className="h-14 px-8 text-primary font-bold shadow-xl"
+            onClick={() => setModalState({ isOpen: true, type: "demo", title: "Schedule RCM Consultation" })}
+          >
             Schedule Your RCM Consultation
           </Button>
         </div>
