@@ -42,7 +42,7 @@ export default function Home() {
       <section className="py-20 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-14">
-            <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-2">Our Solutions</h2>
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Our Solutions</p>
             <h3 className="text-3xl md:text-4xl font-extrabold font-heading text-slate-900">
               Everything Your Practice Needs
             </h3>

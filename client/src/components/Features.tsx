@@ -36,7 +36,7 @@ export function Features() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
           <div className="max-w-2xl">
-             <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-2">Platform Capabilities</h2>
+             <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Platform Capabilities</p>
             <h2 className="text-3xl font-extrabold font-heading text-slate-900">
               Complete Practice OS
             </h2>
