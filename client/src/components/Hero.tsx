@@ -48,7 +48,7 @@ export function Hero() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-slate-900 leading-[1.1] mb-4 tracking-tight">
                 Practice the way <br />
                 <span className="text-primary">
-                  you want.
+                  you want
                 </span>
               </h1>
               
