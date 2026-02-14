@@ -383,6 +383,60 @@ export default function OBGYNSpecialty() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              OBGYNs Love This Comprehensive, All-in-One Solution
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm"
+            >
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <p className="text-slate-600 mb-6 leading-relaxed italic text-lg">
+                "OBGYN Charts lets me spend less time on the computer and more time with my patients."
+              </p>
+              <div>
+                <div className="font-bold text-slate-900">Jason Applebaum, MD</div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm"
+            >
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <p className="text-slate-600 mb-6 leading-relaxed italic text-lg">
+                "With advanced KPI Reporting, I get the pulse of my practice in a heartbeat."
+              </p>
+              <div>
+                <div className="font-bold text-slate-900">TJ Barrett</div>
+                <div className="text-sm text-slate-500">Administrator</div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 text-center">
