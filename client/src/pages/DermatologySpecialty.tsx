@@ -238,16 +238,16 @@ export default function DermatologySpecialty() {
               
               <motion.div variants={fadeInUp} className="grid grid-cols-3 gap-4 mb-8">
                 <div className="bg-white rounded-xl p-4 shadow-lg border border-slate-100">
-                  <div className="text-2xl font-bold text-primary">Many</div>
-                  <div className="text-xs text-slate-500 font-medium">Dermatology Templates</div>
+                  <div className="text-2xl font-bold text-primary">AI-Powered</div>
+                  <div className="text-xs text-slate-500 font-medium">Skin Assessments</div>
                 </div>
                 <div className="bg-white rounded-xl p-4 shadow-lg border border-slate-100">
-                  <div className="text-2xl font-bold text-emerald-600">Fast</div>
-                  <div className="text-xs text-slate-500 font-medium">Avg Documentation</div>
+                  <div className="text-2xl font-bold text-emerald-600">Integrated</div>
+                  <div className="text-xs text-slate-500 font-medium">Pathology Tracking</div>
                 </div>
                 <div className="bg-white rounded-xl p-4 shadow-lg border border-slate-100">
-                  <div className="text-2xl font-bold text-amber-600">High</div>
-                  <div className="text-xs text-slate-500 font-medium">Clean Claim Rate</div>
+                  <div className="text-2xl font-bold text-amber-600">Real-Time</div>
+                  <div className="text-xs text-slate-500 font-medium">Insurance Eligibility</div>
                 </div>
               </motion.div>
               
