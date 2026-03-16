@@ -64,6 +64,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Popular Specialties Scroll */}
+      <section className="py-6 bg-slate-50 border-b border-slate-100 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6 mb-4">
+          <p className="text-center text-xs font-semibold text-slate-400 uppercase tracking-widest">Popular Specialties</p>
+        </div>
+        <div className="relative">
+          <div className="flex animate-scroll gap-6 whitespace-nowrap">
+            {[...Array(2)].map((_, setIndex) => (
+              <div key={setIndex} className="flex gap-6 shrink-0">
+                {[
+                  { name: "Cardiology", href: "/specialties/cardiology", icon: "❤️" },
+                  { name: "Dermatology", href: "/specialties/dermatology", icon: "🔬" },
+                  { name: "Family Medicine", href: "/specialties/family-medicine", icon: "👨‍👩‍👧‍👦" },
+                  { name: "OB/GYN", href: "/specialties/obgyn", icon: "🤱" },
+                  { name: "Pediatrics", href: "/specialties/pediatrics", icon: "👶" },
+                  { name: "Urology", href: "/specialties/urology", icon: "🏥" },
+                  { name: "Gastroenterology", href: "/specialties/gastroenterology", icon: "🩺" },
+                  { name: "Neurology", href: "/specialties/neurology", icon: "🧠" },
+                  { name: "Ophthalmology", href: "/specialties/ophthalmology", icon: "👁️" },
+                  { name: "Psychiatry", href: "/specialties/psychiatry", icon: "🧘" },
+                ].map((specialty, i) => (
+                  <Link key={i} href={specialty.href}>
+                    <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-slate-200 rounded-lg hover:border-primary hover:shadow-md transition-all cursor-pointer group" data-testid={`scroll-specialty-${specialty.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                      <span className="text-lg">{specialty.icon}</span>
+                      <span className="text-sm font-semibold text-slate-700 group-hover:text-primary transition-colors">{specialty.name}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Partner Logos */}
       <section className="py-8 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4">
