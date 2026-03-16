@@ -136,29 +136,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Value Propositions Banner */}
-      <div className="bg-[#2da0c7] mt-16">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/20">
-            {[
-              { icon: FileText, title: "EHR", subtitle: "Electronic Health Records" },
-              { icon: DollarSign, title: "RCM", subtitle: "Revenue Cycle Management" },
-              { icon: Users, title: "PM", subtitle: "Practice Management" },
-              { icon: UserCircle, title: "Portal", subtitle: "Patient Engagement" },
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 py-5 px-4 md:px-6 justify-center" data-testid={`banner-solution-${i}`}>
-                <div className="h-10 w-10 rounded-full bg-white/15 flex items-center justify-center shrink-0">
-                  <item.icon className="h-5 w-5 text-white" />
-                </div>
-                <div className="whitespace-nowrap">
-                  <p className="text-white font-bold text-sm leading-tight">{item.title}</p>
-                  <p className="text-white font-semibold text-xs">{item.subtitle}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
           </section>
   );
 }
