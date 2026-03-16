@@ -150,7 +150,6 @@ export default function Home() {
 
       <Features />
       <RCMSection />
-      <Specialties />
       <ComplianceSection />
       <BlogSection />
       
