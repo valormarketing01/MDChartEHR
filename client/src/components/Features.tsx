@@ -22,13 +22,13 @@ const features = [
   { icon: CreditCard, title: "RCM & Billing", desc: "High first-pass rate", color: "bg-amber-100 text-amber-600", href: "/rcm" },
   { icon: Users, title: "Patient Portal", desc: "Self-service scheduling", color: "bg-purple-100 text-purple-600", href: "/features/patient-portal" },
   { icon: Sparkles, title: "AI-Powered Insights", desc: "Smart clinical assistance", color: "bg-violet-100 text-violet-600", href: "/ehr" },
-  { icon: Smartphone, title: "Mobile Access", desc: "Responsive web access", color: "bg-primary/10 text-primary", href: "/features/mobile-app" },
   { icon: ShieldCheck, title: "ONC Certified", desc: "2015 Cures Update", color: "bg-emerald-100 text-emerald-600", href: "/compliance" },
   { icon: Calendar, title: "Smart Schedule", desc: "Reduce no-shows", color: "bg-amber-100 text-amber-600", href: "/practice-management" },
   { icon: MessageSquare, title: "Secure Text", desc: "Direct patient SMS", color: "bg-purple-100 text-purple-600", href: "/patient-engagement" },
   { icon: Stethoscope, title: "Telehealth", desc: "HD Video integrated", color: "bg-emerald-100 text-emerald-600", href: "/features/telehealth" },
   { icon: Pill, title: "e-Prescribing", desc: "EPCS Certified", color: "bg-amber-100 text-amber-600", href: "/features/e-prescribing" },
-  { icon: ClipboardCheck, title: "Intake Forms", desc: "Digital paperless", color: "bg-purple-100 text-purple-600", href: "/patient-engagement" }
+  { icon: ClipboardCheck, title: "Intake Forms", desc: "Digital paperless", color: "bg-purple-100 text-purple-600", href: "/patient-engagement" },
+  { icon: BarChart3, title: "Lab Integration", desc: "Bi-directional results", color: "bg-cyan-100 text-cyan-600", href: "/features/lab-integration" }
 ];
 
 export function Features() {
