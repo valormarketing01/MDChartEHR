@@ -38,6 +38,32 @@ export default function Home() {
       <Navbar />
       <Hero />
 
+      {/* Category Navigation Bar */}
+      <section className="bg-[#2da0c7]">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {[
+              { icon: FileText, abbr: "EHR", title: "Electronic Health Records", href: "/ehr" },
+              { icon: DollarSign, abbr: "RCM", title: "Revenue Cycle Management", href: "/rcm" },
+              { icon: Users, abbr: "PM", title: "Practice Management", href: "/practice-management" },
+              { icon: UserCircle, abbr: "Portal", title: "Patient Engagement", href: "/patient-engagement" },
+            ].map((item, i) => (
+              <Link key={i} href={item.href}>
+                <div className="flex items-center gap-3 px-6 py-5 text-white hover:bg-white/10 transition-colors cursor-pointer border-r border-white/20 last:border-r-0" data-testid={`nav-category-${item.abbr.toLowerCase()}`}>
+                  <div className="h-10 w-10 rounded-lg bg-white/15 flex items-center justify-center shrink-0">
+                    <item.icon className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-base font-bold leading-tight">{item.abbr}</p>
+                    <p className="text-xs text-white/80 leading-tight">{item.title}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Solutions Showcase */}
       <section className="py-20 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4 md:px-6">
