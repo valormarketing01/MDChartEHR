@@ -38,7 +38,7 @@ export function Features() {
           <div className="max-w-2xl">
              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Platform Capabilities</p>
             <h2 className="text-3xl font-extrabold font-heading text-slate-900">
-              Complete Practice OS
+              Your Complete Practice Suite
             </h2>
           </div>
           <div className="flex items-center gap-2 text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded">
