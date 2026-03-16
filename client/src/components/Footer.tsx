@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
-import mdchartsLogo from "@assets/MDCharts_LKogo_1771059106411.png";
+import mdchartsLogo from "@assets/logo_v2_option4.png";
 
 export function Footer() {
   return (
@@ -12,7 +12,7 @@ export function Footer() {
               <img 
                 src={mdchartsLogo} 
                 alt="MD Charts EHR" 
-                className="h-10 w-auto object-contain"
+                className="h-[60px] w-auto object-contain"
                 loading="lazy"
               />
             </Link>

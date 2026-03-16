@@ -8,7 +8,7 @@ import {
   Smartphone, BarChart3, FlaskConical, Briefcase, Newspaper,
   HelpCircle, Star, Handshake
 } from "lucide-react";
-import mdchartsLogo from "@assets/MDCharts_LKogo_1771059106411.png";
+import mdchartsLogo from "@assets/logo_v2_option4.png";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import {
@@ -153,7 +153,7 @@ export function Navbar() {
             <img 
               src={mdchartsLogo} 
               alt="MD Charts EHR" 
-              className="h-8 md:h-10 w-auto object-contain"
+              className="h-12 md:h-[60px] w-auto object-contain"
             />
           </Link>
 
