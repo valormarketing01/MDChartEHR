@@ -5,7 +5,6 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { RCMSection } from "@/components/RCMSection";
-import { Specialties } from "@/components/Specialties";
 import { ComplianceSection } from "@/components/ComplianceSection";
 import { BlogSection } from "@/components/BlogSection";
 import { ContactModal } from "@/components/ContactModal";
@@ -29,8 +28,21 @@ import {
   Stethoscope,
   Baby,
   SmilePlus,
-  Activity
+  Activity,
+  CheckCircle,
+  Star,
+  Calendar,
+  ClipboardList,
+  MonitorSmartphone,
+  Headphones,
+  TrendingUp,
+  Quote
 } from "lucide-react";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+};
 
 export default function Home() {
   const [modalState, setModalState] = useState<{
@@ -101,6 +113,144 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Welcome to MD Charts */}
+      <section className="py-20 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
+              <motion.p variants={fadeInUp} className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Welcome to MD Charts</motion.p>
+              <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-extrabold font-heading text-slate-900 mb-4">
+                Focus on what matters: providing the best care for your patients
+              </motion.h2>
+              <motion.p variants={fadeInUp} className="text-lg text-slate-600 mb-8 leading-relaxed">
+                We want you to work smarter, not harder. MD Charts is a user-friendly EHR system and Practice Management solution designed by doctors, for doctors.
+              </motion.p>
+              <motion.div variants={fadeInUp} className="space-y-4">
+                {[
+                  "Intuitive system, quick to learn",
+                  "Document notes in less than 2 minutes",
+                  "Custom accelerators and templates to speed up documentation",
+                  "AutoConsult Letters\u2122 for seamless referral communication",
+                  "Remote Check-in\u2122 for contactless patient intake",
+                  "Customized reporting for actionable insights",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3" data-testid={`welcome-feature-${i}`}>
+                    <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-slate-700 font-medium">{item}</span>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="grid grid-cols-2 gap-4">
+              {[
+                { value: "See More", label: "Patients Daily", color: "text-primary" },
+                { value: "< 2 min", label: "Note Documentation", color: "text-emerald-600" },
+                { value: "99%", label: "First-Pass Claim Rate", color: "text-amber-600" },
+                { value: "4.8", label: "Software Advice Rating", color: "text-violet-600", icon: true },
+              ].map((stat, i) => (
+                <div key={i} className="bg-slate-50 rounded-xl p-6 border border-slate-100" data-testid={`welcome-stat-${i}`}>
+                  <div className="flex items-center gap-1 mb-1">
+                    <span className={`text-2xl font-bold ${stat.color}`}>{stat.value}</span>
+                    {stat.icon && <Star className="h-5 w-5 text-amber-400 fill-amber-400" />}
+                  </div>
+                  <span className="text-xs text-slate-500 font-medium">{stat.label}</span>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose MD Charts */}
+      <section className="py-20 bg-slate-50 border-b border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-14">
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Why MD Charts</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-slate-900 mb-3">
+              Why Choose MD Charts?
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              With so many EHR systems available, here's what sets MD Charts apart
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: Sparkles, title: "Complete Solution", desc: "MD Charts simplifies your workflow and enhances patient care with a multi-specialty EHR system. From scheduling to billing, we've got you covered." },
+              { icon: MonitorSmartphone, title: "User-Friendly Interface", desc: "Quick and easy to use, so you can see more patients and spend less time on documentation. Click Less, Care More\u2122." },
+              { icon: ClipboardList, title: "Highly Customizable", desc: "Tailor the system to fit your practice perfectly, with fully customizable template objects and workflow configurations." },
+              { icon: Headphones, title: "World-Class Support", desc: "Training and troubleshooting are always available\u2014just a message or call away. Customer-focused, friendly and professional." },
+              { icon: TrendingUp, title: "Reliable and Scalable", desc: "A dependable system that grows with your practice, adapting as your needs evolve with 99.9% uptime." },
+              { icon: ShieldCheck, title: "ONC Certified & Secure", desc: "ONC 2015 Edition certified, HIPAA compliant with secure patient data, Direct Messaging, and integration with national emergency databases." },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="bg-white rounded-xl p-8 border border-slate-200 hover:shadow-lg transition-shadow"
+                data-testid={`why-card-${i}`}
+              >
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
+                  <item.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/why-mdcharts">
+              <Button size="lg" className="h-12 px-8 font-semibold" data-testid="button-learn-why">
+                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Our Clients Love */}
+      <section className="py-20 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-14">
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Platform Features</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-slate-900 mb-3">
+              Features Our Clients Love
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { icon: Calendar, title: "Appointment Scheduling", desc: "Schedule and manage appointments online. Send reminders via text or email. Launch telehealth visits with a single text\u2014no app required." },
+              { icon: DollarSign, title: "Billing & Payment", desc: "Streamline your complete billing process and accept payments online. Go paperless with our electronic billing system and save on costs." },
+              { icon: ClipboardList, title: "Electronic Patient Intake", desc: "Save time by allowing patients to fill out forms electronically and upload them directly into the patient\u2019s note." },
+              { icon: FileText, title: "Charting", desc: "Our intuitive interface lets you quickly document patient visits. Use BiopsyMapping\u2122 and InstaPath\u2120 technology to visually track patient history." },
+              { icon: BarChart3, title: "Customized Reporting", desc: "Create reports tailored to your specific needs. Track MIPS scores to maximize reimbursement rates with 100+ out-of-the-box reports." },
+              { icon: MonitorSmartphone, title: "Mobile App & Image Upload", desc: "High-quality mobile photo capture, QR code chart uploads, and allow patients to upload photos, insurance cards and licenses." },
+            ].map((feature, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="group"
+                data-testid={`feature-loved-${i}`}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="h-11 w-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-1">
+                    <feature.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-slate-900 mb-2">{feature.title}</h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">{feature.desc}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Partner Logos */}
       <section className="py-8 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4">
@@ -150,17 +300,91 @@ export default function Home() {
 
       <Features />
       <RCMSection />
+
+      {/* Testimonials */}
+      <section className="py-20 bg-slate-50 border-y border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-14">
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Testimonials</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-slate-900 mb-3">
+              What Our Clients Say
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { quote: "I have been very satisfied user of MD Charts for over 9 years. Program is user friendly for providers, MA's, front desk and billers. Unlike most EHR programs, my providers actually see more patients a day due to the ease of use and customization of the program.", name: "Kerri", role: "Practice Administrator" },
+              { quote: "Makes my job so much easier. Reports are there when you need it. Also support team can help with reports of any type.", name: "TJ Barrett", role: "Office Manager, Great Neck OB GYN" },
+              { quote: "I highly recommend the team at MD Charts! They have consistently gone above and beyond for us. MD Charts has been extremely knowledgeable, professional, friendly, pleasant, timely, and patient while working with us. Not to mention the fantastic value for the money.", name: "Progressive Medical Group", role: "Multi-Specialty Practice" },
+              { quote: "I like the reports I'm able to run. I have to print and print to disk all different areas of a chart for record releases. Appreciate the flexibility of this software.", name: "Pamela", role: "Medical Records" },
+              { quote: "The help and support has been great. Very responsive team that goes above and beyond to help resolve any issues.", name: "Tikva", role: "Office Staff" },
+              { quote: "MD Charts has transformed our practice workflow completely. The customizable templates save us hours every day, and the billing integration has significantly improved our collections.", name: "Jason Applebaum, MD", role: "Dermatology Practice" },
+            ].map((testimonial, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="bg-white rounded-xl p-6 border border-slate-200 hover:shadow-md transition-shadow flex flex-col"
+                data-testid={`testimonial-${i}`}
+              >
+                <Quote className="h-8 w-8 text-primary/20 mb-3" />
+                <p className="text-sm text-slate-600 leading-relaxed flex-1 mb-4">"{testimonial.quote}"</p>
+                <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-sm font-bold text-primary">{testimonial.name[0]}</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-slate-900">{testimonial.name}</p>
+                    <p className="text-xs text-slate-500">{testimonial.role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/resources/testimonials">
+              <Button variant="outline" size="lg" className="h-12 px-8 font-semibold" data-testid="button-all-testimonials">
+                View All Testimonials <ArrowRight className="h-4 w-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Award Badge */}
+      <section className="py-10 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+            <div className="flex items-center gap-3 bg-slate-50 rounded-xl px-6 py-4 border border-slate-200">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 text-amber-400 fill-amber-400" />
+                ))}
+              </div>
+              <div>
+                <p className="text-lg font-bold text-slate-900">4.8</p>
+                <p className="text-xs text-slate-500">Software Advice Rating</p>
+              </div>
+            </div>
+            <div className="bg-slate-50 rounded-xl px-6 py-4 border border-slate-200">
+              <p className="text-sm font-bold text-slate-900">MD Charts: A Top Choice in the Best Dermatology EMR Shortlist</p>
+              <p className="text-xs text-slate-500 mt-1">Recognized by The Medical Practice for excellence in dermatology EHR</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <ComplianceSection />
       <BlogSection />
       
       {/* CTA Section */}
       <section className="py-24 bg-primary relative overflow-hidden">
-        {/* Abstract pattern overlay */}
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-            Ready to streamline your practice?
+            Still have questions or want to book a demo?
           </h2>
           <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
             Join hundreds of high-performing practices that have switched to MD Charts EHR to save time, reduce burnout, and increase revenue.
@@ -173,17 +397,18 @@ export default function Home() {
                 className="h-14 px-8 text-primary font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
                 data-testid="button-schedule-demo"
               >
-                Schedule a Demo
+                Book a Demo
               </Button>
             </Link>
-            <Button 
-              size="lg" 
-              className="h-14 px-8 bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white font-semibold text-lg"
-              onClick={() => setModalState({ isOpen: true, type: "contact", title: "Contact Sales" })}
-              data-testid="button-contact-sales"
-            >
-              Contact Sales
-            </Button>
+            <Link href="/resources/faqs">
+              <Button 
+                size="lg" 
+                className="h-14 px-8 bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white font-semibold text-lg"
+                data-testid="button-explore-faqs"
+              >
+                Explore Our FAQs
+              </Button>
+            </Link>
           </div>
           <p className="mt-6 text-blue-200 text-sm">No credit card required. Free migration assistance.</p>
         </div>
