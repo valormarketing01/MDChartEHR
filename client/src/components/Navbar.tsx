@@ -81,11 +81,14 @@ const resourcesRight = [
 ];
 
 const companyItems = [
+  { title: "Why MD Charts", href: "/why-mdcharts", description: "What sets us apart", icon: Award },
   { title: "About Us", href: "/about", description: "Our mission and values", icon: Heart },
   { title: "Management", href: "/about/management", description: "Meet our team", icon: Users },
 ];
 
 const companyLinks = [
+  { title: "Our Mission", href: "/about/our-mission", icon: Building2 },
+  { title: "Click Less Care More", href: "/about/click-less-care-more", icon: Zap },
   { title: "Careers", href: "/careers", icon: Briefcase },
   { title: "Partners", href: "/partners", icon: Handshake },
   { title: "Press & News", href: "/press", icon: Newspaper },
