@@ -64,58 +64,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Solutions Showcase */}
-      <section className="py-20 bg-white border-b border-slate-100">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-14">
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Our Solutions</p>
-            <h3 className="text-3xl md:text-4xl font-extrabold font-heading text-slate-900">
-              Everything Your Practice Needs
-            </h3>
-            <p className="text-slate-500 mt-3 max-w-2xl mx-auto text-lg">
-              A fully integrated suite of tools designed for modern medical practices.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: FileText, title: "Electronic Health Records", desc: "Configurable, template-based EHR with smart charting, clinical decision support, and specialty-specific workflows.", href: "/ehr", color: "bg-blue-50 text-blue-600 border-blue-100" },
-              { icon: DollarSign, title: "Revenue Cycle Management", desc: "End-to-end billing, claims management, denial tracking, and automated payment posting for maximum collections.", href: "/rcm", color: "bg-emerald-50 text-emerald-600 border-emerald-100" },
-              { icon: Users, title: "Practice Management", desc: "Scheduling, patient registration, insurance verification, and front-office workflow automation.", href: "/practice-management", color: "bg-purple-50 text-purple-600 border-purple-100" },
-              { icon: UserCircle, title: "Patient Engagement", desc: "Patient portal, online scheduling, automated reminders, and secure messaging to keep patients connected.", href: "/patient-engagement", color: "bg-amber-50 text-amber-600 border-amber-100" },
-              { icon: Pill, title: "e-Prescribing", desc: "EPCS-certified electronic prescribing with formulary checks, drug interactions, and pharmacy routing.", href: "/features/e-prescribing", color: "bg-rose-50 text-rose-600 border-rose-100" },
-              { icon: FlaskConical, title: "Lab Integration", desc: "Bi-directional lab interfaces for seamless order entry and results delivery from major reference labs.", href: "/features/lab-integration", color: "bg-cyan-50 text-cyan-600 border-cyan-100" },
-              { icon: Video, title: "Telehealth", desc: "HIPAA-compliant HD video visits with integrated scheduling, documentation, and billing.", href: "/features/telehealth", color: "bg-indigo-50 text-indigo-600 border-indigo-100" },
-              { icon: BarChart3, title: "Analytics & Reporting", desc: "Real-time dashboards, financial analytics, and custom report builder.", href: "/features/analytics", color: "bg-teal-50 text-teal-600 border-teal-100" },
-              { icon: Sparkles, title: "AI-Powered Insights", desc: "Intelligent clinical assistance with smart documentation suggestions, coding recommendations, and predictive analytics.", href: "/ehr", color: "bg-violet-50 text-violet-600 border-violet-100" },
-              { icon: ShieldCheck, title: "Compliance & Security", desc: "ONC 2015 Edition certified, HIPAA compliant, with audit trails, role-based access, and data encryption.", href: "/compliance", color: "bg-slate-50 text-slate-600 border-slate-200" },
-              { icon: Lock, title: "HIPAA & Data Security", desc: "Enterprise-grade encryption, secure cloud hosting, automatic backups, and comprehensive access controls to protect patient data.", href: "/compliance", color: "bg-orange-50 text-orange-600 border-orange-100" },
-              { icon: HelpCircle, title: "Dedicated Support", desc: "Personal account manager, 24/7 technical support, free training, and guided onboarding for a seamless transition.", href: "/support", color: "bg-pink-50 text-pink-600 border-pink-100" },
-            ].map((solution, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05, duration: 0.4 }}
-              >
-                <Link href={solution.href}>
-                  <div className={`group p-6 rounded-xl border ${solution.color.split(' ')[2]} bg-white hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer h-full`} data-testid={`card-solution-${i}`}>
-                    <div className={`h-12 w-12 rounded-lg ${solution.color.split(' ')[0]} flex items-center justify-center mb-4`}>
-                      <solution.icon className={`h-6 w-6 ${solution.color.split(' ')[1]}`} />
-                    </div>
-                    <h4 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">{solution.title}</h4>
-                    <p className="text-sm text-slate-500 leading-relaxed mb-3">{solution.desc}</p>
-                    <span className="inline-flex items-center text-sm font-semibold text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                      Learn more <ArrowRight className="h-4 w-4 ml-1" />
-                    </span>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Partner Logos */}
       <section className="py-8 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4">
