@@ -136,8 +136,8 @@ export default function Home() {
                   "Document notes in less than 2 minutes",
                   "AI-Powered Charting with Ambient Scribe technology",
                   "Custom accelerators and templates to speed up documentation",
-                  "AutoConsult Letters\u2122 for seamless referral communication",
-                  "Remote Check-in\u2122 for contactless patient intake",
+                  "AutoConsult Letters for seamless referral communication",
+                  "Remote Check-in for contactless patient intake",
                   "Customized reporting for actionable insights",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3" data-testid={`welcome-feature-${i}`}>
