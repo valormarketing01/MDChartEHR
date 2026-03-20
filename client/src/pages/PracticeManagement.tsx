@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { ContactModal } from "@/components/ContactModal";
 import { Footer } from "@/components/Footer";
-import pmHeroImage from "@assets/stock_images/medical_receptionist_ec5e8f75.jpg";
+import pmHeroImage from "@assets/pm_doctors_wall_schedule.png";
 
 const features = [
   {
