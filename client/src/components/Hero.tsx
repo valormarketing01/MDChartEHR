@@ -5,7 +5,7 @@ import { Link } from "wouter";
 import heroImage from "@assets/generated_images/futuristic_glass_medical_interface_abstract_3d.png";
 import oncSeal from "@assets/generated_images/onc_certified_health_it_seal_3d_gold_and_blue.png";
 import doctorPortrait from "@assets/generated_images/friendly_doctor_portrait.png";
-import clinicInterior from "@assets/generated_images/modern_clinic_interior.png";
+import clinicInterior from "@assets/generated_images/diverse_doctors_hallway_patient_2.png";
 import doctorTablet from "@assets/generated_images/doctor_using_tablet.png";
 import medicalTeam from "@assets/generated_images/medical_team_collaboration.png";
 
