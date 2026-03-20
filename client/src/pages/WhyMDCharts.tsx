@@ -26,7 +26,7 @@ const keyFeatures = [
   { 
     icon: FileText, 
     title: "EHR & Charting", 
-    items: ["Intuitive charting interface", "Customizable templates", "Real-time patient records", "End-to-end encryption"]
+    items: ["Intuitive charting interface", "Customizable templates"]
   },
   { 
     icon: MessageSquare, 
@@ -61,7 +61,7 @@ const keyFeatures = [
   { 
     icon: BarChart3, 
     title: "Analytics", 
-    items: ["Custom reporting", "KPI tracking", "Revenue analytics", "Quality measures"]
+    items: ["KPI tracking", "Revenue analytics", "Quality measures"]
   },
 ];
 
