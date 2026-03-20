@@ -36,12 +36,12 @@ const keyFeatures = [
   { 
     icon: CreditCard, 
     title: "Billing & Payments", 
-    items: ["Integrated MDCPay", "Online patient payments", "Paperless billing", "Real-time eligibility"]
+    items: ["Integrated Calipay", "Online patient payments", "Paperless billing", "Real-time eligibility"]
   },
   { 
     icon: Stethoscope, 
     title: "Lab Integration", 
-    items: ["20+ lab interfaces", "Bi-directional HL7", "Auto result syncing", "HIE compatible"]
+    items: ["20+ lab interfaces", "Bi-directional HL7", "Auto result syncing"]
   },
   { 
     icon: Video, 
