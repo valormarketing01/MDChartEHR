@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Link } from "wouter";
-import ehrDashboardImage from "@assets/image_1773986744766.png";
+import ehrDashboardImage from "@assets/image_1773987891246.png";
 import patientChartImage from "@assets/image_1767434643508.png";
 import dermchartsSlide from "@assets/mdcharts_dermcharts_slide.png";
 
