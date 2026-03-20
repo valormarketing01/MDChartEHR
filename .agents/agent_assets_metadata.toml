@@ -24,3 +24,27 @@ id = "4rqZ-68ZmsBzsV0Zr6Rgs"
 uri = "file://attached_assets/stock_images/african_patient_laptop_results.jpg"
 type = "image"
 title = "Option 4 — African man reviewing medical results on laptop"
+
+[[outputs]]
+id = "QbanTxBTTiTdBxvrNFeEw"
+uri = "file://attached_assets/stock_images/indian_woman_doctor_ehr_computer.jpg"
+type = "image"
+title = "Option 1 — Indian woman doctor using EHR on computer"
+
+[[outputs]]
+id = "pzRBcN-zdHSsKNskByq5b"
+uri = "file://attached_assets/stock_images/black_doctor_patient_data_tablet.jpg"
+type = "image"
+title = "Option 2 — African American doctor with patient data on tablet"
+
+[[outputs]]
+id = "A1QGLcR2W4n-ZrsOtOKiD"
+uri = "file://attached_assets/stock_images/multicultural_medical_team_screen.jpg"
+type = "image"
+title = "Option 3 — Diverse medical team reviewing data on screen"
+
+[[outputs]]
+id = "9m7ocUeIXqiXBlasFVOU0"
+uri = "file://attached_assets/stock_images/diverse_doctors_lab_monitor.jpg"
+type = "image"
+title = "Option 4 — Indian and African doctors reviewing lab results on monitor"
