@@ -335,9 +335,9 @@ export default function Home() {
               },
               {
                 icon: Zap,
-                title: "Smart Clinical Workflows",
-                desc: "AI surfaces the right information at the right time — flagging documentation gaps, suggesting next steps, and keeping your practice running efficiently.",
-                badge: "Workflow Intelligence"
+                title: "Auto-Updated SOAP Notes",
+                desc: "AI listens to the patient encounter and automatically populates your SOAP notes — Subjective, Objective, Assessment, and Plan — ready for your review the moment the visit ends.",
+                badge: "SOAP Documentation"
               },
             ].map((item, i) => (
               <motion.div
