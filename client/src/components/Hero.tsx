@@ -73,10 +73,10 @@ export function Hero() {
                 {[
                   { label: "Platform Uptime", value: "99.9%" },
                   { label: "Fully Compliant", value: "HIPAA Secure" },
-                  { label: "Intelligence", value: "AI Powered" },
+                  { label: "Smart Charting", value: "AI Powered" },
                 ].map((stat, i) => (
                   <div key={i} className="flex flex-col">
-                    <span className="text-2xl font-bold text-slate-900 leading-none">{stat.value}</span>
+                    <span className="text-[23px] font-bold text-slate-900 leading-none">{stat.value}</span>
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">{stat.label}</span>
                   </div>
                 ))}
