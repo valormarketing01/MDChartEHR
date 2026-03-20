@@ -1,5 +1,6 @@
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Smartphone, MessageSquare, Calendar, CreditCard, ArrowRight, Heart, Video, CheckCircle } from "lucide-react";
+import { Smartphone, MessageSquare, Calendar, CreditCard, ArrowRight, Heart, Video, CheckCircle, Pause, Play, PhoneOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -44,6 +45,36 @@ const portalFeatures = [
 ];
 
 export default function PatientEngagementPage() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const [disconnected, setDisconnected] = useState(false);
+
+  const handlePause = () => {
+    if (!videoRef.current) return;
+    if (isPaused) {
+      videoRef.current.play();
+      setIsPaused(false);
+    } else {
+      videoRef.current.pause();
+      setIsPaused(true);
+    }
+  };
+
+  const handleDisconnect = () => {
+    if (!videoRef.current) return;
+    videoRef.current.pause();
+    videoRef.current.currentTime = 0;
+    setDisconnected(true);
+    setIsPaused(true);
+    setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.play();
+        setDisconnected(false);
+        setIsPaused(false);
+      }
+    }, 3000);
+  };
+
   return (
     <div className="min-h-screen bg-background font-sans">
       <Navbar />
@@ -58,8 +89,14 @@ export default function PatientEngagementPage() {
               animate={{ opacity: 1, y: 0 }}
               className="order-2 lg:order-1"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200">
-                <video 
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 group">
+                {disconnected && (
+                  <div className="absolute inset-0 bg-slate-900 flex items-center justify-center z-20">
+                    <p className="text-white text-lg font-medium">Call Ended</p>
+                  </div>
+                )}
+                <video
+                  ref={videoRef}
                   src={telehealthVideo}
                   autoPlay
                   loop
@@ -67,6 +104,23 @@ export default function PatientEngagementPage() {
                   playsInline
                   className="w-full h-auto object-cover"
                 />
+                {/* Two-button overlay */}
+                <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-4 pb-5 pt-10 bg-gradient-to-t from-black/50 to-transparent">
+                  <button
+                    onClick={handlePause}
+                    className="flex items-center gap-2 bg-white/90 hover:bg-white text-slate-800 font-semibold px-5 py-2.5 rounded-full shadow-lg transition-all text-sm"
+                  >
+                    {isPaused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
+                    {isPaused ? "Resume" : "Pause"}
+                  </button>
+                  <button
+                    onClick={handleDisconnect}
+                    className="flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg transition-all text-sm"
+                  >
+                    <PhoneOff className="h-4 w-4" />
+                    Disconnect
+                  </button>
+                </div>
               </div>
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4 border border-slate-100">
                 <div className="flex items-center gap-3">
