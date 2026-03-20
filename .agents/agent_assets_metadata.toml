@@ -120,3 +120,27 @@ id = "JQ5gMLN7MO8J2Opz5uUmo"
 uri = "file://attached_assets/stock_images/multicultural_doctors_patient_consultation.jpg"
 type = "image"
 title = "Option 4 — Multicultural doctors team consulting with patient"
+
+[[outputs]]
+id = "HDBKFI_o2QQj2vqZoMJZR"
+uri = "file://attached_assets/generated_images/diverse_doctors_hallway_patient_1.png"
+type = "image"
+title = "Option 1 — African & Indian doctors talking with Hispanic patient, bright hallway"
+
+[[outputs]]
+id = "RgN4pQi4Wc_sStUsdVECU"
+uri = "file://attached_assets/generated_images/diverse_doctors_hallway_patient_2.png"
+type = "image"
+title = "Option 2 — African female & Indian male doctors with Latino patient, airy corridor"
+
+[[outputs]]
+id = "d0_PwfBWeQUL_FSpchTOj"
+uri = "file://attached_assets/generated_images/diverse_doctors_hallway_patient_3.png"
+type = "image"
+title = "Option 3 — Two diverse doctors consulting Mexican patient, sunlit hallway"
+
+[[outputs]]
+id = "rlGshbGUggoROHIPUUPRn"
+uri = "file://attached_assets/generated_images/diverse_doctors_hallway_patient_4.png"
+type = "image"
+title = "Option 4 — African & Indian doctors in white coats with patient, clean clinic hallway"
