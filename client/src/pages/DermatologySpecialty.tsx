@@ -38,13 +38,13 @@ const staggerContainer = {
 const features = [
   {
     icon: Camera,
-    title: "BiopsyMapping™ Technology",
+    title: "BiopsyMapping℠ Technology",
     description: "Visualize multiple biopsy results on one page with our proprietary body mapping and lesion tracking system",
     color: "bg-primary"
   },
   {
     icon: Target,
-    title: "Peak Charge Capture™",
+    title: "Peak Charge Capture℠",
     description: "Built-in charge capture with accurate ICD-10 coding and auto-suggested CPT codes for biopsies, excisions, and Mohs surgery",
     color: "bg-emerald-500"
   },
@@ -90,8 +90,8 @@ const surgicalFeatures = [
   "InstaPath℠ biopsy tracking with pathology integration",
   "Pre-operative consent forms with e-signature",
   "Post-operative care instructions",
-  "Peak Charge Capture™ for surgical coding",
-  "BiopsyMapping™ photo documentation"
+  "Peak Charge Capture℠ for surgical coding",
+  "BiopsyMapping℠ photo documentation"
 ];
 
 const cosmeticFeatures = [
@@ -172,16 +172,16 @@ const faqs = [
   },
   {
     question: "Do you support Mohs surgery documentation?",
-    answer: "Absolutely! We have specialized Mohs surgery templates with stage-by-stage documentation, BiopsyMapping™ visualization, margin mapping, and defect measurement tools."
+    answer: "Absolutely! We have specialized Mohs surgery templates with stage-by-stage documentation, BiopsyMapping℠ visualization, margin mapping, and defect measurement tools."
   }
 ];
 
 const comparisonFeatures = [
   { name: "Total body skin exam templates", basic: false, generic: "limited", mdcharts: true },
-  { name: "BiopsyMapping™ lesion tracking", basic: false, generic: false, mdcharts: true },
+  { name: "BiopsyMapping℠ lesion tracking", basic: false, generic: false, mdcharts: true },
   { name: "InstaPath℠ biopsy tracking", basic: false, generic: false, mdcharts: true },
   { name: "Customizable body diagrams", basic: false, generic: false, mdcharts: true },
-  { name: "Peak Charge Capture™ coding", basic: false, generic: "limited", mdcharts: true },
+  { name: "Peak Charge Capture℠ coding", basic: false, generic: "limited", mdcharts: true },
   { name: "Medical vs. cosmetic separation", basic: false, generic: false, mdcharts: true },
   { name: "Integrated clearinghouse (TriZetto)", basic: false, generic: false, mdcharts: true },
   { name: "MIPs Made Easy℠ reporting", basic: false, generic: false, mdcharts: true },

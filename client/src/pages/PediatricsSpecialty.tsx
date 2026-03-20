@@ -23,7 +23,7 @@ const softwareBenefits = [
   { 
     icon: Clock, 
     title: "Quick Well-Child Notes", 
-    desc: "KidsCharts™ auto-populates growth percentiles, immunization status, and developmental milestones. Complete a full well-child note before the patient leaves the room.",
+    desc: "KidsCharts℠ auto-populates growth percentiles, immunization status, and developmental milestones. Complete a full well-child note before the patient leaves the room.",
     highlight: "Fast"
   },
   { 
@@ -69,24 +69,24 @@ const integrations = [
 
 const faqs = [
   {
-    question: "Why should I choose KidsCharts™ for my pediatric practice?",
-    answer: "KidsCharts™ was built specifically for pediatrics with features like automatic growth chart plotting, immunization tracking with state registry submission, and AAP Bright Futures-aligned workflows."
+    question: "Why should I choose KidsCharts℠ for my pediatric practice?",
+    answer: "KidsCharts℠ was built specifically for pediatrics with features like automatic growth chart plotting, immunization tracking with state registry submission, and AAP Bright Futures-aligned workflows."
   },
   {
-    question: "How long does it take to implement KidsCharts™?",
+    question: "How long does it take to implement KidsCharts℠?",
     answer: "Most pediatric practices are fully operational quickly, including data migration, staff training, and workflow customization tailored to your practice."
   },
   {
-    question: "Does KidsCharts™ integrate with state immunization registries?",
-    answer: "Yes! KidsCharts™ offers one-click submission to state immunization registries, saving significant time on manual data entry and ensuring compliance with state requirements."
+    question: "Does KidsCharts℠ integrate with state immunization registries?",
+    answer: "Yes! KidsCharts℠ offers one-click submission to state immunization registries, saving significant time on manual data entry and ensuring compliance with state requirements."
   },
   {
     question: "Is my patient data secure and HIPAA compliant?",
-    answer: "Absolutely. KidsCharts™ uses end-to-end encryption, secure cloud storage with daily encrypted backups, and is fully compliant with all HIPAA and privacy regulations."
+    answer: "Absolutely. KidsCharts℠ uses end-to-end encryption, secure cloud storage with daily encrypted backups, and is fully compliant with all HIPAA and privacy regulations."
   },
   {
-    question: "Can KidsCharts™ handle VFC (Vaccines for Children) program requirements?",
-    answer: "Yes, KidsCharts™ includes VFC-compliant vaccine ordering with automatic lot tracking, consent forms, and Vaccine Information Statement (VIS) documentation."
+    question: "Can KidsCharts℠ handle VFC (Vaccines for Children) program requirements?",
+    answer: "Yes, KidsCharts℠ includes VFC-compliant vaccine ordering with automatic lot tracking, consent forms, and Vaccine Information Statement (VIS) documentation."
   },
   {
     question: "What type of support can I expect after signing up?",
@@ -94,18 +94,18 @@ const faqs = [
   },
   {
     question: "When is support available?",
-    answer: "KidsCharts™ support is available during regular business hours on weekdays, excluding national holidays. Emergency support is available outside standard hours."
+    answer: "KidsCharts℠ support is available during regular business hours on weekdays, excluding national holidays. Emergency support is available outside standard hours."
   },
   {
     question: "Can I submit electronic claims to insurance companies?",
-    answer: "Yes, KidsCharts™ integrates with TriZetto clearinghouse to submit claims to thousands of insurers including Medicare, Medicaid, Blue Cross Blue Shield, and major national insurers."
+    answer: "Yes, KidsCharts℠ integrates with TriZetto clearinghouse to submit claims to thousands of insurers including Medicare, Medicaid, Blue Cross Blue Shield, and major national insurers."
   },
   {
     question: "Can I import my existing patient data?",
-    answer: "Yes, our Data Services team can help import patient demographics, immunization records, and visit history from your current system into KidsCharts™."
+    answer: "Yes, our Data Services team can help import patient demographics, immunization records, and visit history from your current system into KidsCharts℠."
   },
   {
-    question: "Does KidsCharts™ include a parent portal?",
+    question: "Does KidsCharts℠ include a parent portal?",
     answer: "Yes! The secure parent portal allows parents to view immunization records, schedule appointments, complete intake forms, and communicate securely with your practice."
   }
 ];
@@ -126,12 +126,12 @@ export default function PediatricsSpecialty() {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                KidsCharts™
+                KidsCharts℠
                 <span className="block text-primary">Click Less, Care More</span>
               </h1>
               
               <p className="text-xl text-slate-600 mb-8">
-                KidsCharts™ helps pediatric practices document faster, get paid sooner, and spend more time with patients - not paperwork.
+                KidsCharts℠ helps pediatric practices document faster, get paid sooner, and spend more time with patients - not paperwork.
               </p>
 
               {/* Stats Cards */}
@@ -215,7 +215,7 @@ export default function PediatricsSpecialty() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              How KidsCharts™ Transforms Your Pediatric Practice
+              How KidsCharts℠ Transforms Your Pediatric Practice
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Real solutions to the daily challenges pediatricians face
@@ -265,7 +265,7 @@ export default function PediatricsSpecialty() {
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Vaccine Management Made Easy</h3>
-                <p className="text-slate-600">One-click ordering, automatic lot tracking, and instant registry submission. KidsCharts™ handles the paperwork so you can focus on patients.</p>
+                <p className="text-slate-600">One-click ordering, automatic lot tracking, and instant registry submission. KidsCharts℠ handles the paperwork so you can focus on patients.</p>
               </div>
             </motion.div>
             
@@ -341,7 +341,7 @@ export default function PediatricsSpecialty() {
             </div>
             
             <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-8">
-              "KidsCharts™ has been a game-changer. Our well-child visits take significantly less time to document, the vaccine tracking is flawless, and our revenue has increased since switching. Parents love the portal too!"
+              "KidsCharts℠ has been a game-changer. Our well-child visits take significantly less time to document, the vaccine tracking is flawless, and our revenue has increased since switching. Parents love the portal too!"
             </blockquote>
             
             <div>
@@ -361,7 +361,7 @@ export default function PediatricsSpecialty() {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Everything you need to know about KidsCharts™
+              Everything you need to know about KidsCharts℠
             </p>
           </div>
           
@@ -394,7 +394,7 @@ export default function PediatricsSpecialty() {
               Ready to Transform Your Pediatric Practice?
             </h2>
             <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-              Join pediatric practices nationwide using KidsCharts™ for faster documentation and better revenue
+              Join pediatric practices nationwide using KidsCharts℠ for faster documentation and better revenue
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/book-demo">
