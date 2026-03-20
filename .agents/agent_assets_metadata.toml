@@ -192,3 +192,27 @@ id = "Jtjr8NkKQMYEAx1lw25-l"
 uri = "file://attached_assets/generated_images/pm_administrator_billing.png"
 type = "image"
 title = "Option 4 — Practice administrator reviewing billing & scheduling on dual monitors"
+
+[[outputs]]
+id = "lannvNOMDx_Xq13fk9IqC"
+uri = "file://attached_assets/generated_images/pm_hero_checkin.png"
+type = "image"
+title = "Option 1 — Receptionist checking in patient, scheduling calendar on screen"
+
+[[outputs]]
+id = "p8bL5W0fSXon2rYqU3Kjt"
+uri = "file://attached_assets/generated_images/pm_hero_billing.png"
+type = "image"
+title = "Option 2 — Billing specialist reviewing insurance & financial documents"
+
+[[outputs]]
+id = "tlVJGORV06z54zXNLVtAq"
+uri = "file://attached_assets/generated_images/pm_hero_team_scheduling.png"
+type = "image"
+title = "Option 3 — Practice team reviewing appointment schedules on tablet"
+
+[[outputs]]
+id = "iGRAe4A5owNNIQBu5VtEH"
+uri = "file://attached_assets/generated_images/pm_hero_workspace.png"
+type = "image"
+title = "Option 4 — Practice management workspace with stethoscope, calendar & documents"
