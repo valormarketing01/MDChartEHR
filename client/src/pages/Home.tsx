@@ -36,7 +36,12 @@ import {
   MonitorSmartphone,
   Headphones,
   TrendingUp,
-  Quote
+  Quote,
+  Brain,
+  Mic2,
+  Wand2,
+  Bot,
+  Zap
 } from "lucide-react";
 
 const fadeInUp = {
@@ -129,6 +134,7 @@ export default function Home() {
                 {[
                   "Intuitive system, quick to learn",
                   "Document notes in less than 2 minutes",
+                  "AI-Powered Charting with Ambient Scribe technology",
                   "Custom accelerators and templates to speed up documentation",
                   "AutoConsult Letters\u2122 for seamless referral communication",
                   "Remote Check-in\u2122 for contactless patient intake",
@@ -175,7 +181,7 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Sparkles, title: "Complete Solution", desc: "MD Charts simplifies your workflow and enhances patient care with a multi-specialty EHR system. From scheduling to billing, we've got you covered." },
+              { icon: Brain, title: "AI-Powered Platform", desc: "MD Charts embeds AI throughout your workflow — from Ambient Scribe charting to AI Medical Coding — so your team spends less time on admin and more time on care." },
               { icon: MonitorSmartphone, title: "User-Friendly Interface", desc: "Quick and easy to use, so you can see more patients and spend less time on documentation. Click Less, Care More\u2122." },
               { icon: ClipboardList, title: "Highly Customizable", desc: "Tailor the system to fit your practice perfectly, with fully customizable template objects and workflow configurations." },
               { icon: Headphones, title: "World-Class Support", desc: "Training and troubleshooting are always available\u2014just a message or call away. Customer-focused, friendly and professional." },
@@ -223,7 +229,7 @@ export default function Home() {
               { icon: Calendar, title: "Appointment Scheduling", desc: "Schedule and manage appointments online. Send reminders via text or email. Launch telehealth visits with a single text\u2014no app required." },
               { icon: DollarSign, title: "Billing & Payment", desc: "Streamline your complete billing process and accept payments online. Go paperless with our electronic billing system and save on costs." },
               { icon: ClipboardList, title: "Electronic Patient Intake", desc: "Save time by allowing patients to fill out forms electronically and upload them directly into the patient\u2019s note." },
-              { icon: FileText, title: "Charting", desc: "Our intuitive interface lets you quickly document patient visits. Use BiopsyMapping\u2122 and InstaPath\u2120 technology to visually track patient history." },
+              { icon: Mic2, title: "Ambient AI Scribe", desc: "Let AI listen and document while you focus on your patient. Ambient Scribe captures conversations and generates structured clinical notes automatically." },
               { icon: BarChart3, title: "Customized Reporting", desc: "Create reports tailored to your specific needs. Track MIPS scores to maximize reimbursement rates with 100+ out-of-the-box reports." },
               { icon: MonitorSmartphone, title: "Mobile App & Image Upload", desc: "High-quality mobile photo capture, QR code chart uploads, and allow patients to upload photos, insurance cards and licenses." },
             ].map((feature, i) => (
@@ -294,6 +300,72 @@ export default function Home() {
               </div>
               <span className="text-xl font-bold text-slate-700">Labcorp</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Highlight Strip */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800 border-y border-slate-700">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4">
+              <Sparkles className="h-3.5 w-3.5" />
+              AI-Powered
+            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
+              Smarter Care Starts with Smarter Tools
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+              MD Charts integrates AI at every step — reducing administrative burden so your team can focus on what matters most.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Mic2,
+                title: "Ambient AI Scribe",
+                desc: "Listens during patient visits and automatically generates structured clinical notes — no typing required.",
+                badge: "Live Transcription"
+              },
+              {
+                icon: Wand2,
+                title: "AI Medical Coding",
+                desc: "Analyzes visit notes and suggests accurate ICD-10 and CPT codes instantly, reducing claim errors and speeding up billing.",
+                badge: "Coding Intelligence"
+              },
+              {
+                icon: Bot,
+                title: "AI Call Assistant",
+                desc: "Handles routine patient inquiries, appointment reminders, and follow-up calls — 24/7 without staff involvement.",
+                badge: "Always Available"
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white/5 border border-white/10 rounded-xl p-7 hover:bg-white/10 transition-colors"
+                data-testid={`ai-feature-${i}`}
+              >
+                <div className="flex items-center justify-between mb-5">
+                  <div className="h-12 w-12 rounded-xl bg-primary/20 flex items-center justify-center">
+                    <item.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary/80 bg-primary/10 px-2.5 py-1 rounded-full">{item.badge}</span>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          <div className="flex justify-center mt-10">
+            <Link href="/ehr">
+              <Button size="lg" className="h-12 px-8 font-semibold bg-primary hover:bg-primary/90" data-testid="button-explore-ai">
+                <Brain className="h-4 w-4 mr-2" /> Explore AI Features <ArrowRight className="h-4 w-4 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
