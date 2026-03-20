@@ -72,7 +72,7 @@ export function Hero() {
               <div className="flex items-center gap-8 border-t border-slate-200 pt-6">
                 {[
                   { label: "Platform Uptime", value: "99.9%" },
-                  { label: "Revenue Cycle", value: "Built-In" },
+                  { label: "Fully Compliant", value: "HIPAA Secure" },
                   { label: "Intelligence", value: "AI Powered" },
                 ].map((stat, i) => (
                   <div key={i} className="flex flex-col">
