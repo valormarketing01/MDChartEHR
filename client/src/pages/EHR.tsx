@@ -37,7 +37,7 @@ const modules = [
   "Medication Management",
   "Allergy Documentation",
   "Lab Results Integration",
-  "Imaging Orders",
+  "Ambient Scribe",
   "e-Prescribing (EPCS)",
   "Clinical Decision Support",
   "Progress Notes",
