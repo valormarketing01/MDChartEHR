@@ -96,3 +96,27 @@ id = "nWy7aPl5GmGta3bO-K-zn"
 uri = "file://attached_assets/stock_images/black_woman_waiting_room_health_app.jpg"
 type = "image"
 title = "Option 4 — Black woman in waiting room using health app on phone"
+
+[[outputs]]
+id = "Yd6tTuDUWurciqE_pp_TM"
+uri = "file://attached_assets/stock_images/african_indian_doctors_mexican_patient.jpg"
+type = "image"
+title = "Option 1 — African & Indian doctors talking to Hispanic patient in hallway"
+
+[[outputs]]
+id = "IJcGKbG3-2_ds1miiXu4e"
+uri = "file://attached_assets/stock_images/diverse_doctors_hispanic_patient_standing.jpg"
+type = "image"
+title = "Option 2 — Diverse doctors consulting with Hispanic patient standing"
+
+[[outputs]]
+id = "jqCDvWBOo9hM2t-NaEJHe"
+uri = "file://attached_assets/stock_images/black_asian_doctor_latino_patient.jpg"
+type = "image"
+title = "Option 3 — Black & South Asian doctor speaking with Latino patient"
+
+[[outputs]]
+id = "JQ5gMLN7MO8J2Opz5uUmo"
+uri = "file://attached_assets/stock_images/multicultural_doctors_patient_consultation.jpg"
+type = "image"
+title = "Option 4 — Multicultural doctors team consulting with patient"
