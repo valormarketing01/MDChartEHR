@@ -26,11 +26,6 @@ const features = [
     description: "Support for quality program reporting and compliance tracking"
   },
   {
-    icon: FileText,
-    title: "Custom Reports",
-    description: "Build and schedule custom reports tailored to your practice needs"
-  },
-  {
     icon: Clock,
     title: "Operational Insights",
     description: "Analyze wait times, no-show rates, and appointment utilization"

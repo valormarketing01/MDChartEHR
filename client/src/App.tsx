@@ -59,6 +59,7 @@ import TermsOfServicePage from "@/pages/TermsOfService";
 import HIPAACompliancePage from "@/pages/HIPAACompliance";
 import SecurityPage from "@/pages/Security";
 import AdminLeadsPage from "@/pages/AdminLeads";
+import AdminLoginPage from "@/pages/AdminLogin";
 
 import { usePageTracker } from "@/hooks/use-page-tracker";
 
@@ -137,6 +138,7 @@ function Router() {
         <Route path="/security" component={SecurityPage} />
         
         <Route path="/admin" component={() => { window.location.href = "/admin/leads"; return null; }} />
+        <Route path="/admin/login" component={AdminLoginPage} />
         <Route path="/admin/leads" component={AdminLeadsPage} />
         
         <Route component={NotFound} />

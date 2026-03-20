@@ -8,6 +8,12 @@ import memoize from "memoizee";
 import connectPg from "connect-pg-simple";
 import { authStorage } from "./storage";
 
+declare module "express-session" {
+  interface SessionData {
+    isAdmin?: boolean;
+  }
+}
+
 const getOidcConfig = memoize(
   async () => {
     return await client.discovery(
@@ -68,6 +74,30 @@ export async function setupAuth(app: Express) {
 
   // Replit OAuth is only available when running on Replit
   if (!process.env.REPL_ID) {
+    // Local username/password auth for Azure/non-Replit environments
+    app.post("/api/auth/login", (req, res) => {
+      const { username, password } = req.body;
+      if (
+        username === process.env.ADMIN_USERNAME &&
+        password === process.env.ADMIN_PASSWORD
+      ) {
+        req.session.isAdmin = true;
+        res.json({ success: true });
+      } else {
+        res.status(401).json({ message: "Invalid credentials" });
+      }
+    });
+
+    app.get("/api/login", (_req, res) => {
+      res.redirect("/admin/login");
+    });
+
+    app.get("/api/logout", (req, res) => {
+      req.session.destroy(() => {
+        res.redirect("/");
+      });
+    });
+
     return;
   }
 
@@ -136,6 +166,14 @@ export async function setupAuth(app: Express) {
 }
 
 export const isAuthenticated: RequestHandler = async (req, res, next) => {
+  // Local session auth for Azure/non-Replit environments
+  if (!process.env.REPL_ID) {
+    if (req.session.isAdmin) {
+      return next();
+    }
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+
   const user = req.user as any;
 
   if (!req.isAuthenticated() || !user.expires_at) {
