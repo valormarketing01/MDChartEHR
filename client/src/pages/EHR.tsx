@@ -45,8 +45,7 @@ const modules = [
   "Clinical Decision Support",
   "Progress Notes",
   "Visit Summaries",
-  "Immunization Records",
-  "Growth Charts"
+  "Immunization Records"
 ];
 
 export default function EHRPage() {
