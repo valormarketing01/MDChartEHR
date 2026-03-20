@@ -234,3 +234,9 @@ id = "BtMvNZI82iZ07jWipiv4E"
 uri = "file://attached_assets/generated_images/pm_doctors_wall_schedule_2.png"
 type = "image"
 title = "Option 2 — Female & African male doctor, full wall schedule projection"
+
+[[outputs]]
+id = "Ck6LuFO5HuLWZ5y6HTRLA"
+uri = "file://attached_assets/generated_videos/telehealth_doctor_patient_call.mp4"
+type = "video"
+title = "Telehealth video — 60-year-old female doctor & 35-year-old male patient"
