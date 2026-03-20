@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\" -maxdepth 2 -type f -o -type d)",
+      "Bash(find 'C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions' -name server* -type f)",
+      "Bash(ls -la \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\")",
+      "Bash(ls -la 'C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\\\\.local')",
+      "Bash(find \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\" -maxdepth 1 -type d)",
+      "Bash(find \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions/client\" -maxdepth 2 -type f -o -type d)",
+      "Bash(find \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions/server\" -maxdepth 2 -type f -o -type d)",
+      "Bash(find \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions/.github\" -type f)",
+      "Bash(find \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\\\\server\" -name \"*.ts\" -type f)",
+      "Bash(ls -la \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\\\\client\")",
+      "Bash(find \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions/script\" -type f)",
+      "Bash(ls -la 'C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\\\\dist')",
+      "Bash(find \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\" -maxdepth 1 -type f -name \".*\")",
+      "Bash(ls -la \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\\\\dist\\\\public\")",
+      "Bash(find \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\\\\.local\\\\skills\" -name \"SKILL.md\" -type f)",
+      "Bash(find \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\\\\dist\\\\public\" -name \"index.html\")",
+      "Bash(xargs head:*)",
+      "Bash(ls \"C:\\\\Users\\\\abhic\\\\Downloads\\\\EHR-RCM-Solutions \\(2\\)\\\\EHR-RCM-Solutions\\\\client\\\\src\")"
+    ]
+  }
+}

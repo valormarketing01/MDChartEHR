@@ -1,0 +1,35 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K7:12:37 AM [express] serving on port 5000
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+7:12:39 AM [express] GET /api/config/ga 304 in 2ms :: {"gaId":""}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:12:42 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/WhyMDCharts.tsx, /src/index.css[22m
+7:14:28 AM [express] GET /api/config/ga 304 in 1ms :: {"gaId":""}
+7:15:09 AM [express] POST /api/page-view 201 in 109ms :: {"success":true}
+[RUNTIME_ERROR]{"type":"runtime-error","timestamp":1773990911678,"name":"Error","message":"t.$_Tawk.i18next is not a function","stack":"\n\n\n\n\n    at Array.forEach (<anonymous>)\n\n\n\n"}
+[1G[0K⠙[1G[0K

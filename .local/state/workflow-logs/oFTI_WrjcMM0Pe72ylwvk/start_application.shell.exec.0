@@ -1,0 +1,17 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K7:30:08 AM [express] serving on port 5000
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+7:30:11 AM [express] GET /api/config/ga 304 in 1ms :: {"gaId":""}
+[2m7:30:11 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@assets/pm_doctors_wall_schedule.png" from "client/src/pages/Management.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/client/src/pages/Management.tsx[39m:7:22
+[33m  6  |  import { Footer } from "@/components/Footer";
+  7  |  import { Users, ArrowRight } from "lucide-react";
+  8  |  import heroImage from "@assets/pm_doctors_wall_schedule.png";
+     |                         ^
+  9  |  import aaronImage from "@assets/Gemini_Generated_Image_7ejgbg7ejgbg7ejg_1770827867393.png";
+  10 |  import maitryImage from "@assets/Gemini_Generated_Image_4s1te44s1te44s1t_1770827529031.png";[39m
+[1G[0K⠙[1G[0K

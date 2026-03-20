@@ -1,0 +1,67 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K7:30:17 AM [express] serving on port 5000
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+7:30:20 AM [express] GET /api/config/ga 304 in 2ms :: {"gaId":""}
+7:30:29 AM [express] POST /api/page-view 201 in 92ms :: {"success":true}
+7:30:33 AM [express] POST /api/page-view 201 in 28ms :: {"success":true}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:31:40 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/PracticeManagement.tsx, /src/index.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:31:44 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Management.tsx, /src/index.css[22m
+7:32:03 AM [express] GET /api/config/ga 304 in 1ms :: {"gaId":""}
+7:32:14 AM [express] POST /api/page-view 201 in 110ms :: {"success":true}
+7:32:17 AM [express] POST /api/page-view 201 in 44ms :: {"success":true}
+7:32:48 AM [express] POST /api/page-view 201 in 90ms :: {"success":true}
+7:38:32 AM [express] GET /api/config/ga 304 in 1ms :: {"gaId":""}
+7:38:50 AM [express] POST /api/page-view 201 in 109ms :: {"success":true}
+7:39:03 AM [express] POST /api/page-view 201 in 64ms :: {"success":true}
+7:39:18 AM [express] POST /api/page-view 201 in 65ms :: {"success":true}
+7:39:47 AM [express] GET /api/config/ga 304 in 1ms :: {"gaId":""}
+7:39:57 AM [express] POST /api/page-view 201 in 90ms :: {"success":true}

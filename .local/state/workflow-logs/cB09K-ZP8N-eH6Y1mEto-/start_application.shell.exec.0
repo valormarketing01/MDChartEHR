@@ -1,0 +1,12 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K8:14:39 AM [express] serving on port 5000
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+8:14:40 AM [express] GET /api/config/ga 304 in 3ms :: {"gaId":""}
+8:14:42 AM [express] GET /api/config/ga 304 in 1ms :: {"gaId":""}
+8:14:44 AM [express] GET /api/config/ga 200 in 0ms :: {"gaId":""}
+8:14:45 AM [express] POST /api/page-view 201 in 114ms :: {"success":true}
+8:14:51 AM [express] POST /api/page-view 201 in 40ms :: {"success":true}
+8:14:58 AM [express] POST /api/page-view 201 in 34ms :: {"success":true}
