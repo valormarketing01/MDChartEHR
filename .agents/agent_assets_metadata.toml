@@ -144,3 +144,27 @@ id = "rlGshbGUggoROHIPUUPRn"
 uri = "file://attached_assets/generated_images/diverse_doctors_hallway_patient_4.png"
 type = "image"
 title = "Option 4 — African & Indian doctors in white coats with patient, clean clinic hallway"
+
+[[outputs]]
+id = "k3F7QcAyJMbGgLRcOxfHz"
+uri = "file://attached_assets/generated_images/patients_portal_mobile_1.png"
+type = "image"
+title = "Option 1 — Indian woman & African American man in waiting room on patient portal"
+
+[[outputs]]
+id = "MdJf1hk1TugXK00XwU4Hc"
+uri = "file://attached_assets/generated_images/patients_portal_mobile_2.png"
+type = "image"
+title = "Option 2 — Three diverse patients viewing portal app in bright waiting area"
+
+[[outputs]]
+id = "1L6gzy7V3t3ufdwajVHoc"
+uri = "file://attached_assets/generated_images/patients_portal_mobile_3.png"
+type = "image"
+title = "Option 3 — South Asian woman & Black man in modern waiting room on mobile portal"
+
+[[outputs]]
+id = "R6CJyyHtpqutDGxt2j5K1"
+uri = "file://attached_assets/generated_images/patients_portal_mobile_4.png"
+type = "image"
+title = "Option 4 — Three diverse patients (Indian, African, Latino) on patient portal in clinic"
