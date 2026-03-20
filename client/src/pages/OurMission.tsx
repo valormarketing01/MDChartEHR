@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Target, Users, Heart, TrendingUp, Star, ArrowRight, CheckCircle } from "lucide-react";
+import { Target, Users, Heart, TrendingUp, Star, ArrowRight, CheckCircle, FileText, DollarSign, CalendarDays, UserCircle } from "lucide-react";
 import heroImage from "@assets/generated_images/healthcare_team_mission_image.png";
 import patientCareImage from "@assets/generated_images/caring_doctor_patient_consultation.png";
 
@@ -101,6 +101,100 @@ export default function OurMission() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4 Products Section */}
+      <section className="py-16 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="text-center mb-12"
+          >
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Our Platform</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+              A Complete Suite for Modern Practices
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              From clinical documentation to revenue cycle, every tool your practice needs — integrated in one platform.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                icon: FileText,
+                title: "EHR & Charting",
+                href: "/ehr",
+                color: "bg-cyan-50 border-cyan-200",
+                iconBg: "bg-cyan-100",
+                iconColor: "text-primary",
+                desc: "Specialty-specific templates, AI-powered Ambient Scribe, e-Prescribing, and intuitive clinical documentation built to help physicians click less and care more.",
+                features: ["Ambient AI Scribe", "e-Prescribing", "Custom templates", "AI Medical Coding"]
+              },
+              {
+                icon: DollarSign,
+                title: "Revenue Cycle Management",
+                href: "/rcm",
+                color: "bg-emerald-50 border-emerald-200",
+                iconBg: "bg-emerald-100",
+                iconColor: "text-emerald-600",
+                desc: "End-to-end billing support from charge capture to payment posting. Our RCM experts handle claims, denials, ERA, and EOB reconciliation on your behalf.",
+                features: ["Electronic ERA & EOB", "Denial management", "Superbill scrubbing", "Eligibility verification"]
+              },
+              {
+                icon: CalendarDays,
+                title: "Practice Management",
+                href: "/practice-management",
+                color: "bg-violet-50 border-violet-200",
+                iconBg: "bg-violet-100",
+                iconColor: "text-violet-600",
+                desc: "Streamline scheduling, front-desk workflows, and operational reporting so your team runs efficiently and your patients experience a seamless visit.",
+                features: ["Appointment scheduling", "Online check-in", "Reporting & analytics", "Multi-provider support"]
+              },
+              {
+                icon: UserCircle,
+                title: "Patient Engagement",
+                href: "/patient-engagement",
+                color: "bg-amber-50 border-amber-200",
+                iconBg: "bg-amber-100",
+                iconColor: "text-amber-600",
+                desc: "Keep patients connected with a secure portal, telehealth video visits, automated reminders, and two-way messaging — all without a separate app.",
+                features: ["Secure patient portal", "Telehealth video visits", "Automated reminders", "Two-way messaging"]
+              }
+            ].map((product, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`rounded-2xl border p-6 ${product.color} hover:shadow-lg transition-all flex flex-col`}
+              >
+                <div className={`h-12 w-12 rounded-xl ${product.iconBg} flex items-center justify-center mb-4`}>
+                  <product.icon className={`h-6 w-6 ${product.iconColor}`} />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{product.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed mb-4 flex-1">{product.desc}</p>
+                <ul className="space-y-1.5 mb-5">
+                  {product.features.map((f, fi) => (
+                    <li key={fi} className="flex items-center gap-2 text-xs text-slate-700">
+                      <CheckCircle className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link href={product.href}>
+                  <Button variant="outline" size="sm" className="w-full text-xs font-semibold">
+                    Learn More <ArrowRight className="h-3 w-3 ml-1" />
+                  </Button>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
