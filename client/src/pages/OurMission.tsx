@@ -61,7 +61,7 @@ export default function OurMission() {
               </h1>
               
               <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                MD Charts, designed by physicians and top-level software system architects, is dedicated to improving your practice. We offer a bold new approach to EHR & Practice Management.
+                MD Charts, designed by physicians and top-level software system architects, is dedicated to improving your practice. We offer a bold new approach to EHR, Revenue Cycle Management, Practice Management, and Patient Engagement.
               </p>
 
               <div className="flex flex-wrap gap-4">
