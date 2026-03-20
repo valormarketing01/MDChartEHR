@@ -130,7 +130,7 @@ export default function RCMPage() {
               <h2 className="text-2xl font-bold font-heading text-slate-900">
                 RCM Workflow Modules
               </h2>
-              <p className="text-sm text-slate-500 font-medium">End-to-end financial management suite</p>
+              <p className="text-sm text-slate-500 font-medium">End-to-end financial management suite — streamlined from charge capture to final payment</p>
             </div>
           </div>
 
@@ -160,10 +160,11 @@ export default function RCMPage() {
             />
             <ServiceCard 
               icon={DollarSign}
-              title="Payments & Accounts"
+              title="Payments & ERA/EOB"
               items={[
-                "ERA posting",
-                "Payment reconciliation",
+                "Electronic ERA processing",
+                "EOB reconciliation",
+                "Automated payment posting",
                 "Refund processing",
                 "Credit resolution"
               ]}
@@ -173,6 +174,7 @@ export default function RCMPage() {
               icon={ShieldCheck}
               title="Patient & Practice Support"
               items={[
+                "Electronic EOB review",
                 "Electronic statements",
                 "Paper statements",
                 "Performance reporting",
