@@ -91,7 +91,7 @@ export default function EHRPage() {
                     Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                <a href="#features">
+                <a href="#clinical-modules">
                   <Button size="lg" variant="outline" className="h-12 px-8" data-testid="button-view-features">
                     View Features
                   </Button>
@@ -251,7 +251,7 @@ export default function EHRPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-slate-50">
+      <section id="clinical-modules" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
