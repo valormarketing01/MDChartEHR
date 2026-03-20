@@ -222,3 +222,15 @@ id = "MPq-eAuTi7_KsnXh3-Zaf"
 uri = "file://attached_assets/generated_images/pm_doctors_booked_dashboard.png"
 type = "image"
 title = "American & African doctors smiling at fully booked scheduling dashboard"
+
+[[outputs]]
+id = "GhyYOMSLDyzwY4ZRSFbCx"
+uri = "file://attached_assets/generated_images/pm_doctors_wall_schedule.png"
+type = "image"
+title = "Option 1 — American & African male doctors, wall-projected booked schedule"
+
+[[outputs]]
+id = "BtMvNZI82iZ07jWipiv4E"
+uri = "file://attached_assets/generated_images/pm_doctors_wall_schedule_2.png"
+type = "image"
+title = "Option 2 — Female & African male doctor, full wall schedule projection"
