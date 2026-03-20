@@ -216,3 +216,9 @@ id = "iGRAe4A5owNNIQBu5VtEH"
 uri = "file://attached_assets/generated_images/pm_hero_workspace.png"
 type = "image"
 title = "Option 4 — Practice management workspace with stethoscope, calendar & documents"
+
+[[outputs]]
+id = "MPq-eAuTi7_KsnXh3-Zaf"
+uri = "file://attached_assets/generated_images/pm_doctors_booked_dashboard.png"
+type = "image"
+title = "American & African doctors smiling at fully booked scheduling dashboard"
