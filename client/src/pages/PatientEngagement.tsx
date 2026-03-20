@@ -151,14 +151,14 @@ export default function PatientEngagementPage() {
               
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 Provide face-to-face consultations from anywhere. Our integrated telehealth platform 
-                enables seamless video visits with full EHR integration, automated documentation, 
+                enables seamless video visits with full EHR integration, real-time chart access, 
                 and secure patient communication.
               </p>
               
               <div className="space-y-3 mb-8">
                 {[
                   "HD video consultations with screen sharing",
-                  "Automatic visit documentation and billing",
+                  "Post-visit summaries sent directly to patient portal",
                   "Integrated with patient portal for easy access",
                   "HIPAA-compliant and fully encrypted",
                   "Works on desktop, tablet, and mobile"
