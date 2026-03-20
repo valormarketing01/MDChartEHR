@@ -48,3 +48,27 @@ id = "9m7ocUeIXqiXBlasFVOU0"
 uri = "file://attached_assets/stock_images/diverse_doctors_lab_monitor.jpg"
 type = "image"
 title = "Option 4 — Indian and African doctors reviewing lab results on monitor"
+
+[[outputs]]
+id = "pshus_p6Czkxz7Sz_wQ_S"
+uri = "file://attached_assets/stock_images/indian_patient_health_portal_screen.jpg"
+type = "image"
+title = "Option 1 — Indian woman patient viewing health portal on large screen"
+
+[[outputs]]
+id = "vcD1HzrNVQhKD3g8sDD0O"
+uri = "file://attached_assets/stock_images/african_patient_big_screen_records.jpg"
+type = "image"
+title = "Option 2 — African American man viewing medical records on big screen"
+
+[[outputs]]
+id = "TapLnFYbbbhJQSSYD4-Vl"
+uri = "file://attached_assets/stock_images/south_asian_woman_patient_portal_home.jpg"
+type = "image"
+title = "Option 3 — South Asian woman reviewing patient portal on large monitor"
+
+[[outputs]]
+id = "geZqrqzyfe6u5YvXlHOXZ"
+uri = "file://attached_assets/stock_images/black_woman_patient_lab_screen.jpg"
+type = "image"
+title = "Option 4 — Black woman patient reviewing lab results on screen"
