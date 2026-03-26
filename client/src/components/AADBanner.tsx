@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { X, MapPin, Calendar } from "lucide-react";
 
-const CONF_END = new Date("2026-04-01T00:00:00");
-const CONF_START = new Date("2026-03-27T00:00:00");
+// Locked to EST (UTC-5): Mar 27 9am show, Apr 1 midnight hide
+const CONF_START = new Date("2026-03-27T09:00:00-05:00");
+const CONF_END   = new Date("2026-04-01T00:00:00-05:00");
 
 export function AADBanner() {
   const [dismissed, setDismissed] = useState(false);
