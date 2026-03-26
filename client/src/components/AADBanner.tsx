@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { X, MapPin, Calendar } from "lucide-react";
+import { X, MapPin, Calendar, Star } from "lucide-react";
 
-// Locked to EST (UTC-5): Mar 27 9am show, Apr 1 midnight hide
+// EST: show from Mar 27 9am, hide after Mar 29 midnight
 const CONF_START = new Date("2026-03-27T09:00:00-05:00");
-const CONF_END   = new Date("2026-04-01T00:00:00-05:00");
+const CONF_END   = new Date("2026-03-30T00:00:00-05:00");
 
 export function AADBanner() {
   const [dismissed, setDismissed] = useState(false);
@@ -13,89 +13,126 @@ export function AADBanner() {
     if (sessionStorage.getItem("aad-banner-dismissed") === "true") {
       setDismissed(true);
     }
-    const now = new Date();
-    setIsLive(now >= CONF_START);
+    setIsLive(new Date() >= CONF_START);
   }, []);
 
-  const now = new Date();
-  if (now >= CONF_END) return null;
+  if (new Date() >= CONF_END) return null;
   if (dismissed) return null;
 
-  const handleDismiss = () => {
-    sessionStorage.setItem("aad-banner-dismissed", "true");
-    setDismissed(true);
-  };
-
   return (
-    <div
-      className="w-full z-40 relative"
-      style={{
-        background: "linear-gradient(90deg, #0a1628 0%, #0f2347 40%, #1a3a6b 70%, #0a1628 100%)",
-        borderBottom: "2px solid #c9a227",
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between gap-4">
+    <>
+      {/* Shimmer keyframe */}
+      <style>{`
+        @keyframes shimmer {
+          0%   { background-position: -400px 0; }
+          100% { background-position: 400px 0; }
+        }
+        @keyframes glow-pulse {
+          0%, 100% { box-shadow: 0 0 8px 2px rgba(201,162,39,0.5), 0 0 20px 4px rgba(201,162,39,0.2); }
+          50%       { box-shadow: 0 0 16px 4px rgba(201,162,39,0.9), 0 0 40px 8px rgba(201,162,39,0.4); }
+        }
+      `}</style>
 
-        {/* Left: badge */}
-        <div className="flex items-center gap-2 shrink-0">
-          <span
-            className="text-xs font-bold tracking-widest uppercase px-2 py-0.5 rounded"
-            style={{ background: "#c9a227", color: "#0a1628" }}
-          >
-            AAD 2026
-          </span>
-          {isLive && (
+      <div
+        className="w-full z-40 relative overflow-hidden"
+        style={{
+          background: "linear-gradient(90deg, #060e1f 0%, #0d1f40 30%, #1a3566 50%, #0d1f40 70%, #060e1f 100%)",
+          borderTop: "2px solid #c9a227",
+          borderBottom: "2px solid #c9a227",
+          animation: "glow-pulse 2.5s ease-in-out infinite",
+          padding: "10px 0",
+        }}
+      >
+        {/* Shimmer overlay */}
+        <div
+          style={{
+            position: "absolute", inset: 0, pointerEvents: "none",
+            background: "linear-gradient(105deg, transparent 30%, rgba(255,220,100,0.07) 50%, transparent 70%)",
+            backgroundSize: "800px 100%",
+            animation: "shimmer 3s linear infinite",
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4 relative">
+
+          {/* Left badges */}
+          <div className="flex items-center gap-2 shrink-0">
             <span
-              className="text-xs font-bold tracking-widest uppercase px-2 py-0.5 rounded animate-pulse"
-              style={{ background: "#22c55e", color: "#fff" }}
+              className="font-black tracking-widest uppercase px-3 py-1 rounded text-sm"
+              style={{
+                background: "linear-gradient(135deg, #c9a227, #f0d060, #c9a227)",
+                color: "#060e1f",
+                boxShadow: "0 0 12px rgba(201,162,39,0.6)",
+              }}
             >
-              LIVE NOW
+              AAD 2026
             </span>
-          )}
-        </div>
+            {isLive && (
+              <span
+                className="text-xs font-bold tracking-widest uppercase px-2 py-1 rounded animate-pulse"
+                style={{ background: "#16a34a", color: "#fff", boxShadow: "0 0 8px rgba(34,197,94,0.6)" }}
+              >
+                LIVE NOW
+              </span>
+            )}
+          </div>
 
-        {/* Centre: message */}
-        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-center flex-1 min-w-0">
+          {/* Centre */}
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-center flex-1 min-w-0">
 
-          <span className="text-white font-semibold text-sm whitespace-nowrap">
-            {isLive
-              ? "We are live at AAD! Come and visit us at Booth #1741"
-              : "Join us at AAD Annual Meeting — Come and visit us at Booth #1741"}
-          </span>
+            <Star className="w-4 h-4 hidden sm:block" style={{ color: "#c9a227" }} fill="#c9a227" />
 
-          <span className="hidden sm:flex items-center gap-1 text-sm" style={{ color: "#f0d080" }}>
-            <MapPin className="w-3.5 h-3.5 shrink-0" />
-            Denver, CO
-          </span>
+            <span
+              className="font-bold whitespace-nowrap"
+              style={{
+                color: "#ffffff",
+                fontSize: "1rem",
+                letterSpacing: "0.01em",
+                textShadow: "0 0 20px rgba(201,162,39,0.4)",
+              }}
+            >
+              {isLive
+                ? "We are LIVE at AAD! Come and visit us at"
+                : "Join us at the AAD Annual Meeting — Come visit us at"}
+              &nbsp;
+              <span style={{ color: "#f0d060", fontWeight: 900 }}>Booth #1741</span>
+            </span>
 
-          <span className="hidden md:flex items-center gap-1 text-sm" style={{ color: "#f0d080" }}>
-            <Calendar className="w-3.5 h-3.5 shrink-0" />
-            Mar 27 to 31
-          </span>
+            <span className="hidden sm:flex items-center gap-1.5 text-sm font-medium" style={{ color: "#c9c9c9" }}>
+              <MapPin className="w-3.5 h-3.5" style={{ color: "#c9a227" }} />
+              Denver, CO
+            </span>
 
-          <a
-            href="/book-demo"
-            className="text-xs font-bold px-3 py-1 rounded-full transition-all duration-200 whitespace-nowrap"
-            style={{ background: "#c9a227", color: "#0a1628" }}
-            onMouseEnter={e => (e.currentTarget.style.background = "#e0b830")}
-            onMouseLeave={e => (e.currentTarget.style.background = "#c9a227")}
+            <span className="hidden md:flex items-center gap-1.5 text-sm font-medium" style={{ color: "#c9c9c9" }}>
+              <Calendar className="w-3.5 h-3.5" style={{ color: "#c9a227" }} />
+              Mar 27 to 29
+            </span>
+
+            <Star className="w-4 h-4 hidden sm:block" style={{ color: "#c9a227" }} fill="#c9a227" />
+          </div>
+
+          {/* Dismiss */}
+          <button
+            onClick={() => {
+              sessionStorage.setItem("aad-banner-dismissed", "true");
+              setDismissed(true);
+            }}
+            className="shrink-0 p-1.5 rounded-full transition-all duration-200"
+            style={{ color: "rgba(255,255,255,0.4)", border: "1px solid rgba(255,255,255,0.15)" }}
+            onMouseEnter={e => {
+              e.currentTarget.style.color = "#fff";
+              e.currentTarget.style.borderColor = "rgba(255,255,255,0.5)";
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.color = "rgba(255,255,255,0.4)";
+              e.currentTarget.style.borderColor = "rgba(255,255,255,0.15)";
+            }}
+            aria-label="Dismiss banner"
           >
-            Book a Meeting
-          </a>
+            <X className="w-3.5 h-3.5" />
+          </button>
         </div>
-
-        {/* Right: dismiss */}
-        <button
-          onClick={handleDismiss}
-          className="shrink-0 p-1 rounded-full transition-colors"
-          style={{ color: "rgba(255,255,255,0.5)" }}
-          onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
-          onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
-          aria-label="Dismiss banner"
-        >
-          <X className="w-4 h-4" />
-        </button>
       </div>
-    </div>
+    </>
   );
 }
