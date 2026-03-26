@@ -1,4 +1,5 @@
 import { Link, useLocation } from "wouter";
+import { AADBanner } from "@/components/AADBanner";
 import { Button } from "@/components/ui/button";
 import { 
   Stethoscope, Menu, X, Phone, Mail, Clock, ChevronRight, 
@@ -497,6 +498,7 @@ export function Navbar() {
           </div>
         )}
       </nav>
+      <AADBanner />
     </div>
   );
 }
