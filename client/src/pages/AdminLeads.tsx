@@ -53,6 +53,7 @@ interface PageViewStats {
 interface RecentPageView {
   id: number;
   path: string;
+  ipAddress: string | null;
   country: string | null;
   city: string | null;
   deviceType: string | null;
@@ -628,6 +629,7 @@ export default function AdminLeads() {
                         <TableHeader>
                           <TableRow>
                             <TableHead>Page</TableHead>
+                            <TableHead>IP Address</TableHead>
                             <TableHead>Location</TableHead>
                             <TableHead>Device</TableHead>
                             <TableHead>Browser</TableHead>
@@ -638,6 +640,7 @@ export default function AdminLeads() {
                           {recentViews.slice(0, 20).map((view) => (
                             <TableRow key={view.id} data-testid={`row-pageview-${view.id}`}>
                               <TableCell className="font-medium text-sm">{view.path}</TableCell>
+                              <TableCell className="text-sm text-slate-500 font-mono">{view.ipAddress || "—"}</TableCell>
                               <TableCell className="text-sm text-slate-600">
                                 {[view.city, view.country].filter(Boolean).join(", ") || "—"}
                               </TableCell>
@@ -653,7 +656,7 @@ export default function AdminLeads() {
                           ))}
                           {recentViews.length === 0 && (
                             <TableRow>
-                              <TableCell colSpan={5} className="text-center py-8 text-slate-400">
+                              <TableCell colSpan={6} className="text-center py-8 text-slate-400">
                                 No page views recorded yet
                               </TableCell>
                             </TableRow>
