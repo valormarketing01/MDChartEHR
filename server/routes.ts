@@ -5,6 +5,7 @@ import { insertContactRequestSchema, insertWhitePaperDownloadSchema, insertPageV
 import { z } from "zod";
 import { sendContactEmail, sendWhitePaperDownloadEmail } from "./resend";
 import { setupAuth, registerAuthRoutes, isAuthenticated } from "./replit_integrations/auth";
+import geoip from "geoip-lite";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -177,13 +178,13 @@ export async function registerRoutes(
       let city = null;
       let region = null;
 
-      // Method 1: Cloudflare injects CF-IPCountry on every request — no API call needed
+      // Method 1: Cloudflare header (instant, no API call needed)
       const cfCountryCode = (req.headers["cf-ipcountry"] as string || "").toUpperCase();
       if (cfCountryCode && cfCountryCode !== "XX" && cfCountryCode !== "T1") {
         country = COUNTRY_NAMES[cfCountryCode] || cfCountryCode;
       }
 
-      // Method 2: Fall back to ipinfo.io for non-Cloudflare traffic
+      // Method 2: Local geoip-lite database lookup (offline, works on any host)
       if (!country) {
         const cleanIp = ip.replace(/^::ffff:/, "");
         const isPrivate = /^(127\.|10\.|172\.(1[6-9]|2\d|3[01])\.|192\.168\.|100\.|169\.254\.|::1$|localhost$)/.test(cleanIp);
@@ -191,22 +192,13 @@ export async function registerRoutes(
           if (geoCache.has(cleanIp)) {
             ({ country, city, region } = geoCache.get(cleanIp)!);
           } else {
-            try {
-              const controller = new AbortController();
-              const timeout = setTimeout(() => controller.abort(), 3000);
-              const geoRes = await fetch(`https://ipinfo.io/${cleanIp}/json`, { signal: controller.signal });
-              clearTimeout(timeout);
-              if (geoRes.ok) {
-                const geoData = await geoRes.json();
-                if (!geoData.bogon) {
-                  const code = geoData.country || null;
-                  country = code ? (COUNTRY_NAMES[code] || code) : null;
-                  city = geoData.city || null;
-                  region = geoData.region || null;
-                }
-              }
-              geoCache.set(cleanIp, { country, city, region });
-            } catch {}
+            const geo = geoip.lookup(cleanIp);
+            if (geo) {
+              country = geo.country ? (COUNTRY_NAMES[geo.country] || geo.country) : null;
+              region = geo.region || null;
+              city = geo.city || null;
+            }
+            geoCache.set(cleanIp, { country, city, region });
           }
         }
       }
