@@ -122,9 +122,29 @@ export async function registerRoutes(
   const pageViewLimiter = new Map<string, number[]>();
   setInterval(() => pageViewLimiter.clear(), 60000);
 
+  // Cache IP → location to avoid repeated API calls and stay within rate limits
+  const geoCache = new Map<string, { country: string | null; city: string | null; region: string | null }>();
+
+  // Map ISO 3166-1 alpha-2 country codes to full names (common countries)
+  const COUNTRY_NAMES: Record<string, string> = {
+    US: "United States", CA: "Canada", GB: "United Kingdom", AU: "Australia",
+    IN: "India", DE: "Germany", FR: "France", NL: "Netherlands", SG: "Singapore",
+    JP: "Japan", BR: "Brazil", MX: "Mexico", PK: "Pakistan", NG: "Nigeria",
+    PH: "Philippines", ZA: "South Africa", AE: "United Arab Emirates", IE: "Ireland",
+    IT: "Italy", ES: "Spain", SE: "Sweden", NO: "Norway", DK: "Denmark",
+    FI: "Finland", PL: "Poland", CH: "Switzerland", NZ: "New Zealand",
+    KR: "South Korea", CN: "China", TW: "Taiwan", HK: "Hong Kong",
+    IL: "Israel", SA: "Saudi Arabia", EG: "Egypt", KE: "Kenya", GH: "Ghana",
+  };
+
   app.post("/api/page-view", async (req, res) => {
     try {
-      const ip = (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() || req.socket.remoteAddress || "";
+      // Check CF-Connecting-IP first (set by Cloudflare with real visitor IP)
+      const ip =
+        (req.headers["cf-connecting-ip"] as string) ||
+        (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
+        req.socket.remoteAddress ||
+        "";
 
       const now = Date.now();
       const hits = pageViewLimiter.get(ip) || [];
@@ -156,15 +176,29 @@ export async function registerRoutes(
       let country = null;
       let city = null;
       let region = null;
-      try {
-        const geoRes = await fetch(`http://ip-api.com/json/${ip}?fields=country,city,regionName`);
-        if (geoRes.ok) {
-          const geoData = await geoRes.json();
-          country = geoData.country || null;
-          city = geoData.city || null;
-          region = geoData.regionName || null;
+      // Strip IPv4-mapped IPv6 prefix (e.g. "::ffff:1.2.3.4" → "1.2.3.4")
+      const cleanIp = ip.replace(/^::ffff:/, "");
+      const isPrivate = /^(127\.|10\.|172\.(1[6-9]|2\d|3[01])\.|192\.168\.|::1$|localhost$)/.test(cleanIp);
+
+      if (cleanIp && !isPrivate) {
+        if (geoCache.has(cleanIp)) {
+          ({ country, city, region } = geoCache.get(cleanIp)!);
+        } else {
+          try {
+            const geoRes = await fetch(`https://ipinfo.io/${cleanIp}/json`);
+            if (geoRes.ok) {
+              const geoData = await geoRes.json();
+              if (!geoData.bogon) {
+                const code = geoData.country || null;
+                country = code ? (COUNTRY_NAMES[code] || code) : null;
+                city = geoData.city || null;
+                region = geoData.region || null;
+              }
+            }
+            geoCache.set(cleanIp, { country, city, region });
+          } catch {}
         }
-      } catch {}
+      }
 
       const viewData = {
         path: req.body.path || "/",
