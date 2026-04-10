@@ -5,8 +5,8 @@ import { insertContactRequestSchema, insertWhitePaperDownloadSchema, insertPageV
 import { z } from "zod";
 import { sendContactEmail, sendWhitePaperDownloadEmail } from "./resend";
 import { setupAuth, registerAuthRoutes, isAuthenticated } from "./replit_integrations/auth";
-// Lazy-load geoip-lite after server starts to avoid blocking Node.js startup
-// (the 50MB database takes 1-2 min to load on Azure's slow post-extraction disk)
+// Lazy-load geoip-lite after server starts to avoid blocking Node.js startup.
+// Wait 4 minutes so the background tar extraction of node_modules finishes first.
 let geoipModule: typeof import("geoip-lite") | null = null;
 setTimeout(() => {
   import("geoip-lite").then((mod) => {
@@ -15,7 +15,7 @@ setTimeout(() => {
   }).catch((err) => {
     console.error("[geoip] failed to load:", err);
   });
-}, 100);
+}, 4 * 60 * 1000);
 
 export async function registerRoutes(
   httpServer: Server,
