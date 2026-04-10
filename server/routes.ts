@@ -5,7 +5,17 @@ import { insertContactRequestSchema, insertWhitePaperDownloadSchema, insertPageV
 import { z } from "zod";
 import { sendContactEmail, sendWhitePaperDownloadEmail } from "./resend";
 import { setupAuth, registerAuthRoutes, isAuthenticated } from "./replit_integrations/auth";
-import geoip from "geoip-lite";
+// Lazy-load geoip-lite after server starts to avoid blocking Node.js startup
+// (the 50MB database takes 1-2 min to load on Azure's slow post-extraction disk)
+let geoipModule: typeof import("geoip-lite") | null = null;
+setTimeout(() => {
+  import("geoip-lite").then((mod) => {
+    geoipModule = mod.default as typeof import("geoip-lite");
+    console.log("[geoip] database loaded successfully");
+  }).catch((err) => {
+    console.error("[geoip] failed to load:", err);
+  });
+}, 100);
 
 export async function registerRoutes(
   httpServer: Server,
@@ -210,7 +220,7 @@ export async function registerRoutes(
             ({ country, city, region } = geoCache.get(cleanIp)!);
             console.log("[geo-debug] cache hit → country:", country);
           } else {
-            const geo = geoip.lookup(cleanIp);
+            const geo = geoipModule ? geoipModule.lookup(cleanIp) : null;
             console.log("[geo-debug] geoip.lookup result:", geo);
             if (geo) {
               country = geo.country ? (COUNTRY_NAMES[geo.country] || geo.country) : null;
