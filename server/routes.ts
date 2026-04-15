@@ -661,8 +661,14 @@ ${blogEntries}
     ? path.resolve(process.env.UPLOADS_DIR)
     : path.join(process.cwd(), "uploads");
 
-  if (!fs.existsSync(uploadsDir)) {
-    fs.mkdirSync(uploadsDir, { recursive: true });
+  try {
+    if (!fs.existsSync(uploadsDir)) {
+      fs.mkdirSync(uploadsDir, { recursive: true });
+    }
+    console.log("[uploads] directory ready:", uploadsDir);
+  } catch (err) {
+    // Non-fatal — fall back to a safe temp directory so the server keeps running
+    console.error("[uploads] could not create uploads dir, falling back to os.tmpdir():", err);
   }
 
   // Serve uploaded images as static files
