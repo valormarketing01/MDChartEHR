@@ -86,7 +86,7 @@ export function serveStatic(app: Express) {
   app.use("*", (req, res) => {
     try {
       const html = fs.readFileSync(indexHtmlPath, "utf-8");
-      const pagePath = req.path || "/";
+      const pagePath = req.originalUrl.split("?")[0] || "/";
       const modified = injectSeoTags(html, pagePath);
       res.setHeader("Content-Type", "text/html");
       res.setHeader("Cache-Control", "no-cache");
