@@ -5,13 +5,6 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { ArrowLeft, Download, FileText, Loader2, BarChart3, Globe } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 
@@ -229,30 +222,23 @@ export default function AdminAnalyticsPage() {
 
           {/* Country filter — loaded live from DB */}
           <div className="mb-8">
-            <Label className="text-slate-300 text-sm mb-1 block flex items-center gap-1">
+            <label className="text-slate-300 text-sm mb-1 flex items-center gap-1.5">
               <Globe className="h-3.5 w-3.5" />
               Country Filter (optional)
-              {countriesLoading && <Loader2 className="h-3 w-3 animate-spin ml-1" />}
-            </Label>
-            <Select value={country} onValueChange={setCountry} disabled={countriesLoading}>
-              <SelectTrigger className="bg-slate-800 border-slate-600 text-white">
-                <SelectValue placeholder="All Countries" />
-              </SelectTrigger>
-              <SelectContent className="bg-slate-800 border-slate-600 max-h-72 overflow-y-auto">
-                <SelectItem value="__all" className="text-white hover:bg-slate-700 focus:bg-slate-700">
-                  🌍 All Countries
-                </SelectItem>
-                {countries.map((c) => (
-                  <SelectItem
-                    key={c}
-                    value={c}
-                    className="text-white hover:bg-slate-700 focus:bg-slate-700"
-                  >
-                    {c}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+              {countriesLoading && <Loader2 className="h-3 w-3 animate-spin" />}
+            </label>
+            <select
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
+              disabled={countriesLoading}
+              size={1}
+              className="w-full bg-slate-800 border border-slate-600 text-white rounded-md px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 cursor-pointer"
+            >
+              <option value="__all">🌍 All Countries</option>
+              {countries.map((c) => (
+                <option key={c} value={c}>{c}</option>
+              ))}
+            </select>
             <p className="text-slate-500 text-xs mt-1">
               {countriesLoading
                 ? "Loading countries from database…"
