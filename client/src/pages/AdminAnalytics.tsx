@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -12,28 +12,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowLeft, Download, FileText, Loader2, BarChart3 } from "lucide-react";
+import { ArrowLeft, Download, FileText, Loader2, BarChart3, Globe } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
-
-// Country options — add more as needed
-const COUNTRIES = [
-  { value: "", label: "All Countries" },
-  { value: "US", label: "United States" },
-  { value: "IN", label: "India" },
-  { value: "GB", label: "United Kingdom" },
-  { value: "CA", label: "Canada" },
-  { value: "AU", label: "Australia" },
-  { value: "DE", label: "Germany" },
-  { value: "FR", label: "France" },
-  { value: "MX", label: "Mexico" },
-  { value: "BR", label: "Brazil" },
-  { value: "SG", label: "Singapore" },
-  { value: "AE", label: "United Arab Emirates" },
-  { value: "PK", label: "Pakistan" },
-  { value: "PH", label: "Philippines" },
-  { value: "NG", label: "Nigeria" },
-  { value: "ZA", label: "South Africa" },
-];
 
 // Quick-select presets
 function getPresetDates(preset: string): { from: string; to: string } {
@@ -84,13 +64,27 @@ export default function AdminAnalyticsPage() {
   });
   const [to, setTo] = useState(() => new Date().toISOString().slice(0, 10));
   const [country, setCountry] = useState("__all");
+  const [countries, setCountries] = useState<string[]>([]);
+  const [countriesLoading, setCountriesLoading] = useState(true);
   const [generating, setGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastGenerated, setLastGenerated] = useState<string | null>(null);
 
+  // Fetch distinct countries from the database
+  useEffect(() => {
+    if (!isAuthenticated) return;
+    fetch("/api/admin/analytics/countries")
+      .then((r) => r.json())
+      .then((data: string[]) => {
+        setCountries(Array.isArray(data) ? data : []);
+      })
+      .catch(() => setCountries([]))
+      .finally(() => setCountriesLoading(false));
+  }, [isAuthenticated]);
+
   if (authLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center bg-slate-950">
         <Loader2 className="h-8 w-8 animate-spin text-blue-500" />
       </div>
     );
@@ -133,7 +127,9 @@ export default function AdminAnalyticsPage() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      const safeCountry = (country && country !== "__all") ? `_${country.toLowerCase()}` : "";
+      const safeCountry = (country && country !== "__all")
+        ? `_${country.toLowerCase().replace(/\s+/g, "_")}`
+        : "";
       a.download = `mdcharts_analytics_${from}_to_${to}${safeCountry}.html`;
       document.body.appendChild(a);
       a.click();
@@ -231,27 +227,38 @@ export default function AdminAnalyticsPage() {
             </div>
           </div>
 
-          {/* Country filter */}
+          {/* Country filter — loaded live from DB */}
           <div className="mb-8">
-            <Label className="text-slate-300 text-sm mb-1 block">Country Filter (optional)</Label>
-            <Select value={country} onValueChange={setCountry}>
+            <Label className="text-slate-300 text-sm mb-1 block flex items-center gap-1">
+              <Globe className="h-3.5 w-3.5" />
+              Country Filter (optional)
+              {countriesLoading && <Loader2 className="h-3 w-3 animate-spin ml-1" />}
+            </Label>
+            <Select value={country} onValueChange={setCountry} disabled={countriesLoading}>
               <SelectTrigger className="bg-slate-800 border-slate-600 text-white">
                 <SelectValue placeholder="All Countries" />
               </SelectTrigger>
-              <SelectContent className="bg-slate-800 border-slate-600">
-                {COUNTRIES.map(({ value, label }) => (
+              <SelectContent className="bg-slate-800 border-slate-600 max-h-72 overflow-y-auto">
+                <SelectItem value="__all" className="text-white hover:bg-slate-700 focus:bg-slate-700">
+                  🌍 All Countries
+                </SelectItem>
+                {countries.map((c) => (
                   <SelectItem
-                    key={value || "__all"}
-                    value={value || "__all"}
+                    key={c}
+                    value={c}
                     className="text-white hover:bg-slate-700 focus:bg-slate-700"
                   >
-                    {label}
+                    {c}
                   </SelectItem>
                 ))}
               </SelectContent>
             </Select>
             <p className="text-slate-500 text-xs mt-1">
-              Leave blank to include all countries in the report
+              {countriesLoading
+                ? "Loading countries from database…"
+                : countries.length > 0
+                ? `${countries.length} countries with visitor data`
+                : "Select to filter report by country"}
             </p>
           </div>
 
