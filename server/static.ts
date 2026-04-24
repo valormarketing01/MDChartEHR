@@ -28,7 +28,7 @@ function injectSeoTags(html: string, pagePath: string): string {
   const ogTitle     = seo?.ogTitle         || title;
   const ogDesc      = seo?.ogDescription   || description;
   const ogImage     = seo?.ogImage         || "";
-  const canonical   = seo?.canonicalUrl    || `${SITE_URL}${pagePath}`;
+  const canonical   = seo?.canonicalUrl ||  (pagePath === "/" ? SITE_URL : `${SITE_URL}${pagePath}`);
 
   // Strip any existing duplicate tags the Vite template may already include
   let out = html
