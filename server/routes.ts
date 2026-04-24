@@ -60,6 +60,7 @@ const SITE_PAGES_FOR_SITEMAP = [
   { path: "/partners", priority: "0.6", changefreq: "monthly" },
   { path: "/hipaa-compliance", priority: "0.7", changefreq: "yearly" },
   { path: "/security", priority: "0.7", changefreq: "yearly" },
+  { path: "/sitemap", priority: "0.7", changefreq: "yearly" },
 ];
 
 // Social media / SEO bot user-agents that need server-side meta tags
@@ -105,7 +106,7 @@ export async function registerRoutes(
     const host = process.env.SITE_URL || "https://mdcharts.com";
     res.setHeader("Content-Type", "text/plain");
     res.send(`User-agent: *
-Allow: /
+Disallow: 
 
 Sitemap: ${host}/sitemap.xml`);
   });
