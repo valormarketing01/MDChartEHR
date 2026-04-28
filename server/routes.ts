@@ -703,6 +703,55 @@ ${blogEntries}
     res.json({ url });
   });
 
+  // ── Video Upload ─────────────────────────────────────────────────────────
+  const multerVideo = multer({
+    storage: multer.diskStorage({
+      destination: (_req, _file, cb) => cb(null, uploadsDir),
+      filename: (_req, file, cb) => {
+        const ext = path.extname(file.originalname).toLowerCase();
+        const name = `testimonial-video-${Date.now()}${ext}`;
+        cb(null, name);
+      },
+    }),
+    limits: { fileSize: 200 * 1024 * 1024 }, // 200 MB max
+    fileFilter: (_req, file, cb) => {
+      if (file.mimetype.startsWith("video/")) {
+        cb(null, true);
+      } else {
+        cb(new Error("Only video files are allowed"));
+      }
+    },
+  });
+
+  // POST /api/admin/upload-video — upload testimonial video (admin only)
+  app.post("/api/admin/upload-video", isAuthenticated, multerVideo.single("video"), async (req, res) => {
+    if (!req.file) { res.status(400).json({ error: "No video file received" }); return; }
+    const url = `/uploads/${req.file.filename}`;
+    // Save URL to settings so Testimonials page can fetch it
+    await storage.setSetting("testimonials_video_url", url);
+    res.json({ url });
+  });
+
+  // GET /api/settings/testimonials-video — public, returns current video URL
+  app.get("/api/settings/testimonials-video", async (_req, res) => {
+    try {
+      const url = await storage.getSetting("testimonials_video_url");
+      res.json({ url: url || null });
+    } catch (err) {
+      res.status(500).json({ error: "Failed to fetch video setting" });
+    }
+  });
+
+  // DELETE /api/admin/settings/testimonials-video — remove video (admin only)
+  app.delete("/api/admin/settings/testimonials-video", isAuthenticated, async (_req, res) => {
+    try {
+      await storage.setSetting("testimonials_video_url", "");
+      res.json({ success: true });
+    } catch (err) {
+      res.status(500).json({ error: "Failed to remove video" });
+    }
+  });
+
   // ── Blog API ──────────────────────────────────────────────────────────────
   // Public: list published posts
   app.get("/api/blog/posts", async (_req, res) => {

@@ -1,10 +1,11 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { 
-  Star, Quote, ArrowRight, Users
+import {
+  Star, Quote, ArrowRight, Users, Play, Pause, Volume2, VolumeX
 } from "lucide-react";
 
 const testimonials = [
@@ -41,6 +42,30 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const [videoUrl, setVideoUrl] = useState<string | null>(null);
+  const [playing, setPlaying] = useState(false);
+  const [muted, setMuted] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    fetch("/api/settings/testimonials-video")
+      .then(r => r.json())
+      .then(data => { if (data.url) setVideoUrl(data.url); })
+      .catch(() => {});
+  }, []);
+
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+    if (playing) { videoRef.current.pause(); setPlaying(false); }
+    else { videoRef.current.play(); setPlaying(true); }
+  };
+
+  const toggleMute = () => {
+    if (!videoRef.current) return;
+    videoRef.current.muted = !muted;
+    setMuted(!muted);
+  };
+
   return (
     <div className="min-h-screen bg-background font-sans overflow-x-hidden">
       <Navbar />
@@ -63,6 +88,58 @@ export default function Testimonials() {
           </div>
         </div>
       </section>
+
+      {/* Video Section — only renders when a video has been uploaded */}
+      {videoUrl && (
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-slate-900 mb-3">
+                  Hear It From Our <span className="text-primary">Customers</span>
+                </h2>
+                <p className="text-slate-600">Real stories from practices using MD Charts EHR</p>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-slate-900 group">
+                <video
+                  ref={videoRef}
+                  src={videoUrl}
+                  className="w-full max-h-[520px] object-cover"
+                  onEnded={() => setPlaying(false)}
+                  playsInline
+                />
+                {/* Overlay controls */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    onClick={togglePlay}
+                    className="h-16 w-16 rounded-full bg-white/90 hover:bg-white flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+                  >
+                    {playing
+                      ? <Pause className="h-7 w-7 text-slate-900" />
+                      : <Play className="h-7 w-7 text-slate-900 ml-1" />
+                    }
+                  </button>
+                </div>
+                {/* Play button when paused */}
+                {!playing && (
+                  <div className="absolute inset-0 flex items-center justify-center" onClick={togglePlay}>
+                    <button className="h-20 w-20 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center shadow-xl transition-transform hover:scale-110">
+                      <Play className="h-9 w-9 text-white ml-1" />
+                    </button>
+                  </div>
+                )}
+                {/* Mute button */}
+                <button
+                  onClick={toggleMute}
+                  className="absolute bottom-4 right-4 h-9 w-9 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors"
+                >
+                  {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
