@@ -150,6 +150,79 @@ const whitePaperTitles: Record<string, string> = {
   "specialty-ehr": "Specialty EHR Benefits"
 };
 
+// ── Testimonials Video Upload Component ───────────────────────────────────
+function TestimonialsVideoUpload() {
+  const [currentUrl, setCurrentUrl] = useState<string | null>(null);
+  const [uploading, setUploading] = useState(false);
+  const [uploadError, setUploadError] = useState<string | null>(null);
+  const [uploadSuccess, setUploadSuccess] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/settings/testimonials-video")
+      .then(r => r.json())
+      .then(d => setCurrentUrl(d.url || null))
+      .catch(() => {});
+  }, []);
+
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (file.size > 200 * 1024 * 1024) { setUploadError("File too large. Maximum size is 200 MB."); return; }
+    setUploadError(null); setUploadSuccess(false); setUploading(true);
+    try {
+      const formData = new FormData();
+      formData.append("video", file);
+      const res = await fetch("/api/admin/upload-video", { method: "POST", body: formData });
+      if (!res.ok) { const b = await res.json().catch(() => ({})); throw new Error(b.error ?? "Upload failed"); }
+      const data = await res.json();
+      setCurrentUrl(data.url);
+      setUploadSuccess(true);
+    } catch (err: any) {
+      setUploadError(err.message ?? "Upload failed. Please try again.");
+    } finally { setUploading(false); }
+  };
+
+  const handleRemove = async () => {
+    if (!confirm("Remove the testimonials video?")) return;
+    await fetch("/api/admin/settings/testimonials-video", { method: "DELETE" });
+    setCurrentUrl(null); setUploadSuccess(false);
+  };
+
+  return (
+    <div>
+      {currentUrl ? (
+        <div className="space-y-3">
+          <video src={currentUrl} controls className="w-full rounded-lg max-h-48 bg-slate-900" />
+          <div className="flex gap-2">
+            <label className="flex-1 cursor-pointer">
+              <input type="file" accept="video/*" className="hidden" onChange={handleFileChange} disabled={uploading} />
+              <div className="w-full border border-slate-300 rounded-lg px-4 py-2 text-sm text-center hover:bg-slate-50 cursor-pointer">
+                {uploading ? <><Loader2 className="h-4 w-4 animate-spin inline mr-1" />Uploading…</> : "Replace Video"}
+              </div>
+            </label>
+            <Button variant="outline" size="sm" onClick={handleRemove} className="text-red-500 hover:text-red-700 border-red-200 hover:bg-red-50">
+              <Trash2 className="h-4 w-4 mr-1" /> Remove
+            </Button>
+          </div>
+          {uploadSuccess && <p className="text-green-600 text-sm">✓ Video uploaded successfully</p>}
+        </div>
+      ) : (
+        <label className="cursor-pointer block">
+          <input type="file" accept="video/*" className="hidden" onChange={handleFileChange} disabled={uploading} />
+          <div className="border-2 border-dashed border-slate-300 rounded-xl p-8 text-center hover:border-primary hover:bg-primary/5 transition-colors">
+            {uploading ? (
+              <><Loader2 className="h-8 w-8 animate-spin text-primary mx-auto mb-2" /><p className="text-slate-600 font-medium">Uploading video…</p><p className="text-slate-400 text-xs mt-1">This may take a minute for large files</p></>
+            ) : (
+              <><Upload className="h-8 w-8 text-slate-400 mx-auto mb-2" /><p className="text-slate-600 font-medium">Click to upload a video</p><p className="text-slate-400 text-xs mt-1">MP4, MOV, WebM — max 200 MB</p></>
+            )}
+          </div>
+        </label>
+      )}
+      {uploadError && <p className="text-red-500 text-sm mt-2">{uploadError}</p>}
+    </div>
+  );
+}
+
 export default function AdminLeads() {
   const { user, isLoading: authLoading, isAuthenticated } = useAuth();
   const [downloads, setDownloads] = useState<WhitePaperDownload[]>([]);
@@ -1637,6 +1710,20 @@ export default function AdminLeads() {
                 {calendlyUrl && (
                   <p className="text-xs text-slate-400 mt-1">Current: <span className="font-mono text-slate-600">{calendlyUrl}</span></p>
                 )}
+              </div>
+
+              {/* Testimonials Video */}
+              <div className="bg-white rounded-xl border p-6">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Eye className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-slate-900">Testimonials Page Video</h3>
+                    <p className="text-sm text-slate-500">Upload a video to display at the top of the Testimonials page (max 200 MB)</p>
+                  </div>
+                </div>
+                <TestimonialsVideoUpload />
               </div>
 
               {/* Notification Emails */}
