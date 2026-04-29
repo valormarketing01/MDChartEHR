@@ -27,7 +27,7 @@ const solutionsLeft = [
     href: "/ehr", 
     description: "Intuitive charting with specialty templates",
     icon: FileText,
-    attribute: " EHR System"
+    attribute: "EHR System"
   },
   { 
     title: "Practice Management", 
