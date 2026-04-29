@@ -11,7 +11,7 @@ export function Footer() {
             <Link href="/" className="flex items-center mb-6">
               <img 
                 src={mdchartsLogo} 
-                alt="MD Charts EHR" 
+                alt="MD Charts –  EHR System" 
                 className="h-[48px] w-auto object-contain"
                 loading="lazy"
               />
