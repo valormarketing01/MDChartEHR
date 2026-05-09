@@ -150,7 +150,7 @@ export default function Home() {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="grid grid-cols-2 gap-4">
               {[
-                { value: "More Patients", label: "Patients Daily", color: "text-primary" },
+                { value: "< 2 hrs", label: "Average Support Response", color: "text-primary" },
                 { value: "< 1 min", label: "Note Documentation", color: "text-emerald-600" },
                 { value: "99%", label: "First-Pass Claim Rate", color: "text-amber-600" },
                 { value: "4.8", label: "Software Advice Rating", color: "text-violet-600", icon: true },
