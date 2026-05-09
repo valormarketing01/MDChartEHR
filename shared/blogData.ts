@@ -15,11 +15,11 @@
 export const blogCategories = [
   { id: "all", label: "All Posts" },
   { id: "ehr", label: "EHR" },
+  { id: "practice-management", label: "Practice Management" },
   { id: "rcm", label: "RCM" },
   { id: "derm", label: "Dermatology" },
   { id: "obgyn", label: "OB/GYN" },
   { id: "pediatrics", label: "Pediatrics" },
-  { id: "practice-management", label: "Practice Management" },
 ];
 
 export const blogPosts: BlogPost[] = [
