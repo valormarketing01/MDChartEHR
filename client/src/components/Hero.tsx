@@ -25,6 +25,7 @@ export function Hero() {
     const t = setInterval(() => setCurrent(c => (c + 1) % AI_MESSAGES.length), 3500);
     return () => clearInterval(t);
   }, []);
+  const CurrentIcon = AI_MESSAGES[current].Icon;
   return (
     <section className="relative pt-[92px] pb-2 md:pt-[119px] md:pb-3 overflow-hidden bg-slate-50/50">
       {/* Dense Professional Grid Background */}
@@ -115,7 +116,7 @@ export function Hero() {
                       className="flex items-start gap-3 px-4 py-3 bg-primary/5 border border-primary/20 rounded-xl group-hover:border-primary/40 group-hover:bg-primary/8 transition-colors"
                     >
                       <div className="shrink-0 h-7 w-7 rounded-lg bg-primary/10 flex items-center justify-center mt-0.5">
-                        <AI_MESSAGES[current].Icon className="h-4 w-4 text-primary" />
+                        <CurrentIcon className="h-4 w-4 text-primary" />
                       </div>
                       <p className="text-sm text-slate-600 leading-snug">
                         {AI_MESSAGES[current].text}
