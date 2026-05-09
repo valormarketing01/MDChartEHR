@@ -133,11 +133,12 @@ export default function Home() {
               <motion.div variants={fadeInUp} className="space-y-4">
                 {[
                   "Intuitive system, quick to learn",
-                  "Document notes in less than 2 minutes",
-                  "AI-Powered Charting with Ambient Scribe technology",
+                  "Document notes in under a minute with ScribeAI℠",
                   "Custom accelerators and templates to speed up documentation",
-                  "AutoConsult Letters for seamless referral communication",
+                  "See patients virtually with built-in Telehealth",
+                  "AutoConsult Letters for fast referral communication",
                   "Remote Check-in for contactless patient intake",
+                  "Automated appointment scheduling -- fewer no-shows, less admin work",
                   "Customized reporting for actionable insights",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3" data-testid={`welcome-feature-${i}`}>
@@ -149,8 +150,8 @@ export default function Home() {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="grid grid-cols-2 gap-4">
               {[
-                { value: "See More", label: "Patients Daily", color: "text-primary" },
-                { value: "< 2 min", label: "Note Documentation", color: "text-emerald-600" },
+                { value: "More Patients", label: "Patients Daily", color: "text-primary" },
+                { value: "< 1 min", label: "Note Documentation", color: "text-emerald-600" },
                 { value: "99%", label: "First-Pass Claim Rate", color: "text-amber-600" },
                 { value: "4.8", label: "Software Advice Rating", color: "text-violet-600", icon: true },
               ].map((stat, i) => (
