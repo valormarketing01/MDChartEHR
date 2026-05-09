@@ -15,7 +15,7 @@ import {
 import {
   Users, FileText, ArrowLeft, Search, Download, Mail, MapPin, Calendar, LogIn, Loader2,
   BarChart3, Eye, Monitor, Globe, Clock, Smartphone, Laptop, Tablet, RefreshCw, Settings, Plus, Trash2,
-  BookOpen, Tag, Link2, Save, X, Edit2, ChevronDown, ChevronUp, SearchCheck, Upload, ImageIcon
+  BookOpen, Tag, Link2, Save, X, Edit2, ChevronDown, ChevronUp, SearchCheck, Upload, ImageIcon, Info
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { useAuth } from "@/hooks/use-auth";
@@ -274,6 +274,7 @@ export default function AdminLeads() {
   const [blogLoading, setBlogLoading] = useState(false);
   const [blogEditing, setBlogEditing] = useState<AdminBlogPost | null>(null);
   const [blogIsNew, setBlogIsNew] = useState(false);
+  const [blogIsStaticEdit, setBlogIsStaticEdit] = useState(false);
   const [blogPreview, setBlogPreview] = useState(false);
   const [blogSaving, setBlogSaving] = useState(false);
   const [imageUploading, setImageUploading] = useState(false);
@@ -467,6 +468,19 @@ export default function AdminLeads() {
     setBlogPreview(false);
   };
 
+  const openEditStaticBlog = (post: typeof staticBlogPosts[0]) => {
+    setBlogForm({
+      title: post.title, slug: post.slug, excerpt: post.excerpt, content: post.content,
+      category: post.category, categoryLabel: post.categoryLabel, author: post.author,
+      publishedAt: post.date, readTime: post.readTime, image: post.image || "",
+      metaTitle: "", metaDescription: "", focusKeyword: "", published: true,
+    });
+    setBlogEditing(null);
+    setBlogIsNew(true);
+    setBlogIsStaticEdit(true);
+    setBlogPreview(false);
+  };
+
   const saveBlogPost = async () => {
     if (!blogForm.title || !blogForm.slug || !blogForm.content) return;
     setBlogSaving(true);
@@ -485,6 +499,7 @@ export default function AdminLeads() {
       if (res.ok) {
         await fetchBlogPosts();
         setBlogIsNew(false);
+        setBlogIsStaticEdit(false);
         setBlogEditing(null);
       }
     } catch (err) {
@@ -896,12 +911,12 @@ export default function AdminLeads() {
               {(blogIsNew || blogEditing) ? (
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-bold text-slate-900">{blogIsNew ? "New Blog Post" : "Edit Blog Post"}</h2>
+                    <h2 className="text-xl font-bold text-slate-900">{blogIsStaticEdit ? "Edit Static Post" : blogIsNew ? "New Blog Post" : "Edit Blog Post"}</h2>
                     <div className="flex gap-2">
                       <Button variant="outline" size="sm" onClick={() => setBlogPreview(!blogPreview)}>
                         <Eye className="h-4 w-4 mr-1" />{blogPreview ? "Editor" : "Preview"}
                       </Button>
-                      <Button variant="outline" size="sm" onClick={() => { setBlogIsNew(false); setBlogEditing(null); }}>
+                      <Button variant="outline" size="sm" onClick={() => { setBlogIsNew(false); setBlogIsStaticEdit(false); setBlogEditing(null); }}>
                         <X className="h-4 w-4 mr-1" />Cancel
                       </Button>
                       <Button size="sm" onClick={saveBlogPost} disabled={blogSaving || !blogForm.title || !blogForm.slug || !blogForm.content}>
@@ -910,6 +925,16 @@ export default function AdminLeads() {
                       </Button>
                     </div>
                   </div>
+
+                  {blogIsStaticEdit && (
+                    <div className="flex items-start gap-3 bg-blue-50 border border-blue-200 rounded-xl p-4">
+                      <Info className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-sm font-semibold text-blue-800">Editing a static (code) post</p>
+                        <p className="text-sm text-blue-600 mt-0.5">Saving will create a new database version of this post. The DB version takes priority over the static version and will be the one shown on the site.</p>
+                      </div>
+                    </div>
+                  )}
 
                   <div className="grid md:grid-cols-3 gap-6">
                     {/* Main content */}
@@ -922,7 +947,7 @@ export default function AdminLeads() {
                           onChange={e => {
                             const title = e.target.value;
                             const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-                            setBlogForm(f => ({ ...f, title, slug: blogIsNew ? slug : f.slug }));
+                            setBlogForm(f => ({ ...f, title, slug: (blogIsNew && !blogIsStaticEdit) ? slug : f.slug }));
                           }}
                           className="text-base font-medium"
                         />
@@ -1187,6 +1212,9 @@ export default function AdminLeads() {
                             <a href={`/blog/${post.slug}`} target="_blank" rel="noopener noreferrer">
                               <Button variant="outline" size="sm"><Eye className="h-4 w-4" /></Button>
                             </a>
+                            <Button variant="outline" size="sm" onClick={() => openEditStaticBlog(post)}>
+                              <Edit2 className="h-4 w-4" />
+                            </Button>
                           </div>
                         </div>
                       ))}
