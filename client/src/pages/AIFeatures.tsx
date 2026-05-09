@@ -145,7 +145,7 @@ export default function AIFeaturesPage() {
             <img
               src={aiHeroImage}
               alt="AI-powered clinical workflow"
-              className="w-full h-auto rounded-2xl shadow-2xl"
+              className="w-full h-[470px] object-cover rounded-2xl shadow-2xl"
             />
           </motion.div>
         </div>
