@@ -1139,7 +1139,7 @@ export default function AdminLeads() {
                           <div className="bg-slate-50 rounded-lg p-3 border">
                             <p className="text-xs text-slate-400 mb-1">Google Preview</p>
                             <p className="text-sm text-blue-700 font-medium truncate">{blogForm.metaTitle || blogForm.title || "Post Title"}</p>
-                            <p className="text-xs text-emerald-700">mdcharts.com/blog/{blogForm.slug || "post-slug"}</p>
+                            <p className="text-xs text-emerald-700">mdchartsehr.com/blog/{blogForm.slug || "post-slug"}</p>
                             <p className="text-xs text-slate-600 mt-0.5 line-clamp-2">{blogForm.metaDescription || blogForm.excerpt || "Post description..."}</p>
                           </div>
                         )}
@@ -1295,7 +1295,7 @@ export default function AdminLeads() {
                                 <Input
                                   value={seoForm.canonicalUrl}
                                   onChange={e => setSeoForm(f => ({ ...f, canonicalUrl: e.target.value }))}
-                                  placeholder={`https://mdcharts.com${page.path}`}
+                                  placeholder={`https://mdchartsehr.com${page.path}`}
                                   className="text-sm font-mono"
                                 />
                               </div>
@@ -1343,7 +1343,7 @@ export default function AdminLeads() {
                                 </div>
                                 <div className="md:col-span-2">
                                   <label className="text-xs font-medium text-slate-600 mb-1 block">OG Image URL <span className="text-slate-400">(shown when page is shared on social media)</span></label>
-                                  <Input value={seoForm.ogImage} onChange={e => setSeoForm(f => ({ ...f, ogImage: e.target.value }))} placeholder="https://mdcharts.com/assets/image.png" className="text-sm font-mono" />
+                                  <Input value={seoForm.ogImage} onChange={e => setSeoForm(f => ({ ...f, ogImage: e.target.value }))} placeholder="https://mdchartsehr.com/assets/image.png" className="text-sm font-mono" />
                                 </div>
                               </div>
                             </div>
@@ -1352,7 +1352,7 @@ export default function AdminLeads() {
                               <div className="bg-white rounded-lg p-3 border mt-3">
                                 <p className="text-xs text-slate-400 mb-1">Google Preview</p>
                                 <p className="text-sm text-blue-700 font-medium truncate">{seoForm.metaTitle || `${page.label} | MDCharts`}</p>
-                                <p className="text-xs text-emerald-700">mdcharts.com{page.path}</p>
+                                <p className="text-xs text-emerald-700">mdchartsehr.com{page.path}</p>
                                 <p className="text-xs text-slate-600 mt-0.5 line-clamp-2">{seoForm.metaDescription}</p>
                               </div>
                             )}
