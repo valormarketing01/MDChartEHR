@@ -95,18 +95,25 @@ interface PageSeoEntry {
 }
 
 const SITE_PAGES = [
+  // ── Core ────────────────────────────────────────────────────────────────────
   { path: "/", label: "Home" },
-  { path: "/about", label: "About Us" },
-  { path: "/why-mdcharts", label: "Why MDCharts" },
+
+  // ── Solutions ───────────────────────────────────────────────────────────────
   { path: "/ehr", label: "EHR" },
   { path: "/rcm", label: "RCM" },
   { path: "/practice-management", label: "Practice Management" },
   { path: "/patient-engagement", label: "Patient Engagement" },
-  { path: "/telehealth", label: "Telehealth" },
-  { path: "/mobile-app", label: "Mobile App" },
-  { path: "/lab-integration", label: "Lab Integration" },
-  { path: "/e-prescribing", label: "E-Prescribing" },
-  { path: "/patient-portal", label: "Patient Portal" },
+
+  // ── Features ────────────────────────────────────────────────────────────────
+  { path: "/ai-features", label: "AI Features" },
+  { path: "/features/telehealth", label: "Telehealth" },
+  { path: "/features/e-prescribing", label: "E-Prescribing" },
+  { path: "/features/lab-integration", label: "Lab Integration" },
+  { path: "/features/patient-portal", label: "Patient Portal" },
+  { path: "/features/analytics", label: "Analytics" },
+
+  // ── Specialties ─────────────────────────────────────────────────────────────
+  { path: "/specialties", label: "Specialties (Overview)" },
   { path: "/specialties/dermatology", label: "Specialty: Dermatology" },
   { path: "/specialties/cardiology", label: "Specialty: Cardiology" },
   { path: "/specialties/obgyn", label: "Specialty: OB/GYN" },
@@ -119,19 +126,39 @@ const SITE_PAGES = [
   { path: "/specialties/gastroenterology", label: "Specialty: Gastroenterology" },
   { path: "/specialties/neurology", label: "Specialty: Neurology" },
   { path: "/specialties/psychiatry", label: "Specialty: Psychiatry" },
+
+  // ── Company ─────────────────────────────────────────────────────────────────
+  { path: "/about", label: "About Us" },
+  { path: "/about/our-mission", label: "Our Mission" },
+  { path: "/about/management", label: "Management" },
+  { path: "/about/leadership", label: "Leadership" },
+  { path: "/about/click-less-care-more", label: "Click Less Care More" },
+  { path: "/why-mdcharts", label: "Why MDCharts" },
+  { path: "/careers", label: "Careers" },
+  { path: "/partners", label: "Partners" },
+  { path: "/press", label: "Press" },
+  { path: "/compliance", label: "Compliance" },
+
+  // ── Resources ───────────────────────────────────────────────────────────────
+  { path: "/blog", label: "Blog" },
+  { path: "/resources/case-studies", label: "Case Studies" },
+  { path: "/resources/testimonials", label: "Testimonials" },
+  { path: "/resources/faqs", label: "FAQs" },
+  { path: "/resources/webinars", label: "Webinars" },
+  { path: "/resources/white-papers", label: "White Papers" },
+
+  // ── Convert ─────────────────────────────────────────────────────────────────
   { path: "/pricing", label: "Pricing" },
   { path: "/book-demo", label: "Book a Demo" },
   { path: "/contact", label: "Contact" },
-  { path: "/blog", label: "Blog" },
-  { path: "/case-studies", label: "Case Studies" },
-  { path: "/testimonials", label: "Testimonials" },
-  { path: "/faqs", label: "FAQs" },
-  { path: "/webinars", label: "Webinars" },
-  { path: "/white-papers", label: "White Papers" },
-  { path: "/careers", label: "Careers" },
-  { path: "/partners", label: "Partners" },
+  { path: "/support", label: "Support" },
+
+  // ── Legal ───────────────────────────────────────────────────────────────────
   { path: "/hipaa-compliance", label: "HIPAA Compliance" },
   { path: "/security", label: "Security" },
+  { path: "/privacy-policy", label: "Privacy Policy" },
+  { path: "/terms-of-service", label: "Terms of Service" },
+
   { path: "/test", label: "🧪 TEST (safe to delete)" },
 ];
 
