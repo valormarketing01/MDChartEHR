@@ -1,6 +1,6 @@
 # MDcharts EHR - Click Less, Care More
 
-## Overview of MDCharts EHR
+## Overview of MDCharts EHR 
 
 [MD Charts: EMR Software, EHR System and Billing Software, HIPAA ...](https://mdchartsehr.com/): This page provides an overview of MDCharts, detailing its functionalities as an Electronic Medical Record (EMR) software, EHR system, and billing software. It emphasizes compliance with HIPAA regulations and highlights the software's capabilities in streamlining healthcare operations.
 
