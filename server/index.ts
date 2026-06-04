@@ -35,6 +35,15 @@ export function log(message: string, source = "express") {
   console.log(`${formattedTime} [${source}] ${message}`);
 }
 
+// Redirect dermcharts.net → mdchartsehr.com (301 permanent, keeps path)
+app.use((req, res, next) => {
+  const host = req.hostname || "";
+  if (host === "dermcharts.net" || host === "www.dermcharts.net") {
+    return res.redirect(301, `https://mdchartsehr.com${req.originalUrl}`);
+  }
+  next();
+});
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
