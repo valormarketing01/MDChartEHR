@@ -275,17 +275,17 @@ export default function UrologySpecialty() {
               </div>
               
               <blockquote className="text-xl md:text-2xl text-slate-700 leading-relaxed mb-8">
-                "UroCharts has transformed how we run our urology practice. Documentation that took 10 minutes now takes 3. The TriZetto integration means claims go out faster and we get paid sooner. Our denials dropped from 8% to under 2%."
+                "After more than 15 years in urology practice, I've worked with several EMR systems—but MD Charts stands out by a wide margin. The ease of use is exceptional; it fits seamlessly into my daily workflow without slowing me down. Even more impressive is the customer support—responsive, knowledgeable, and genuinely invested in our success."
               </blockquote>
-              
+
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-xl font-bold text-primary">RK</span>
+                  <span className="text-xl font-bold text-primary">RM</span>
                 </div>
                 <div>
-                  <div className="font-bold text-slate-900">Dr. Robert Kim, MD, FACS</div>
-                  <div className="text-slate-500">Director, Advanced Urology Center</div>
-                  <div className="text-slate-400 text-sm">6 providers, 15,000+ patients</div>
+                  <div className="font-bold text-slate-900">Randy Makovsky</div>
+                  <div className="text-slate-500">Urologist</div>
+                  <div className="text-slate-400 text-sm">15+ Years in Practice</div>
                 </div>
               </div>
             </div>
