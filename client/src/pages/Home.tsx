@@ -381,6 +381,7 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              { quote: "After more than 15 years in urology practice, I've worked with several EMR systems—but MD Charts stands out by a wide margin. The ease of use is exceptional; it fits seamlessly into my daily workflow without slowing me down. Even more impressive is the customer support—responsive, knowledgeable, and genuinely invested in our success. MD Charts has made a meaningful difference in both efficiency and patient care in my practice.", name: "Randy Makovsky", role: "Urologist, 15+ Years in Practice" },
               { quote: "I have been very satisfied user of MD Charts for over 9 years. Program is user friendly for providers, MA's, front desk and billers. Unlike most EHR programs, my providers actually see more patients a day due to the ease of use and customization of the program.", name: "Kerri", role: "Practice Administrator" },
               { quote: "Makes my job so much easier. Reports are there when you need it. Also support team can help with reports of any type.", name: "TJ Barrett", role: "Office Manager, Great Neck OB GYN" },
               { quote: "I highly recommend the team at MD Charts! They have consistently gone above and beyond for us. MD Charts has been extremely knowledgeable, professional, friendly, pleasant, timely, and patient while working with us. Not to mention the fantastic value for the money.", name: "Progressive Medical Group", role: "Multi-Specialty Practice" },
