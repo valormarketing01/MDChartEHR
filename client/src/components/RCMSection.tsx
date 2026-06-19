@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import rcmImage from "@assets/generated_images/abstract_medical_financial_growth_chart.png";
+import rcmImageWebp from "@assets/generated_images/abstract_medical_financial_growth_chart.webp";
 import { Button } from "./ui/button";
 import { Link } from "wouter";
 
@@ -70,7 +71,10 @@ export function RCMSection() {
              className="relative"
           >
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
-              <img src={rcmImage} alt="Financial Analytics" className="w-full h-auto" loading="lazy" width="1408" height="768" />
+              <picture>
+                <source srcSet={rcmImageWebp} type="image/webp" />
+                <img src={rcmImage} alt="Financial Analytics" className="w-full h-auto" loading="lazy" width="1408" height="768" />
+              </picture>
             </div>
           </motion.div>
         </div>

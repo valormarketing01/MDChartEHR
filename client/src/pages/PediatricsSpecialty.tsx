@@ -11,8 +11,11 @@ import {
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 import heroImage from "@assets/generated_images/diverse_pediatricians_examining_child.png";
+import heroImageWebp from "@assets/generated_images/diverse_pediatricians_examining_child.webp";
 import vaccinationImage from "@assets/generated_images/pediatric_vaccination_procedure.png";
+import vaccinationImageWebp from "@assets/generated_images/pediatric_vaccination_procedure.webp";
 import growthImage from "@assets/generated_images/pediatric_growth_assessment.png";
+import growthImageWebp from "@assets/generated_images/pediatric_growth_assessment.webp";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -174,7 +177,10 @@ export default function PediatricsSpecialty() {
               className="relative"
             >
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                <img src={heroImage} alt="Pediatricians with child" className="w-full h-[500px] object-cover" loading="lazy" width="800" height="500" />
+                <picture>
+                  <source srcSet={heroImageWebp} type="image/webp" />
+                  <img src={heroImage} alt="Pediatricians with child" className="w-full h-[500px] object-cover" loading="lazy" width="800" height="500" />
+                </picture>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-xl">
                 <div className="flex items-center gap-3">
@@ -261,7 +267,10 @@ export default function PediatricsSpecialty() {
               className="space-y-6"
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={vaccinationImage} alt="Pediatric vaccination" className="w-full h-[300px] object-cover" loading="lazy" width="800" height="300" />
+                <picture>
+                  <source srcSet={vaccinationImageWebp} type="image/webp" />
+                  <img src={vaccinationImage} alt="Pediatric vaccination" className="w-full h-[300px] object-cover" loading="lazy" width="800" height="300" />
+                </picture>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Vaccine Management Made Easy</h3>
@@ -281,7 +290,10 @@ export default function PediatricsSpecialty() {
                 <p className="text-slate-600">TriZetto clearinghouse integration means faster payments, fewer denials, and no separate billing software needed.</p>
               </div>
               <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={growthImage} alt="Growth assessment" className="w-full h-[300px] object-cover" loading="lazy" width="800" height="300" />
+                <picture>
+                  <source srcSet={growthImageWebp} type="image/webp" />
+                  <img src={growthImage} alt="Growth assessment" className="w-full h-[300px] object-cover" loading="lazy" width="800" height="300" />
+                </picture>
               </div>
             </motion.div>
           </div>

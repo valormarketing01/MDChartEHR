@@ -8,7 +8,9 @@ import ehrDashboardImage from "@assets/image_1773987891246.png";
 import patientChartImage from "@assets/image_1773988273994.png";
 import dermchartsSlide from "@assets/mdcharts_dermcharts_slide.png";
 import aiMedicalIcon from "@assets/generated_images/ai_medical_charting_icon.png";
+import aiMedicalIconWebp from "@assets/generated_images/ai_medical_charting_icon.webp";
 import aiScribeIcon from "@assets/generated_images/ai_ambient_scribe_icon.png";
+import aiScribeIconWebp from "@assets/generated_images/ai_ambient_scribe_icon.webp";
 
 const features = [
   {
@@ -154,7 +156,10 @@ export default function EHRPage() {
 
               {/* AI Callout */}
               <div className="flex items-start gap-4 bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
-                <img src={aiScribeIcon} alt="AI Ambient Scribe" className="h-14 w-14 rounded-lg object-cover flex-shrink-0" width="56" height="56" />
+                <picture>
+                  <source srcSet={aiScribeIconWebp} type="image/webp" />
+                  <img src={aiScribeIcon} alt="AI Ambient Scribe" className="h-14 w-14 rounded-lg object-cover flex-shrink-0" width="56" height="56" />
+                </picture>
                 <div>
                   <div className="flex items-center gap-1.5 mb-1">
                     <Sparkles className="h-3.5 w-3.5 text-primary" />

@@ -15,15 +15,25 @@ import {
 } from "lucide-react";
 
 import dermExamImage from "@assets/generated_images/dermatologist_examining_patient_skin.png";
+import dermExamImageWebp from "@assets/generated_images/dermatologist_examining_patient_skin.webp";
 import happyPatientImage from "@assets/generated_images/happy_patient_cosmetic_consultation.png";
+import happyPatientImageWebp from "@assets/generated_images/happy_patient_cosmetic_consultation.webp";
 import laserTreatmentImage from "@assets/generated_images/laser_skin_treatment_procedure.png";
+import laserTreatmentImageWebp from "@assets/generated_images/laser_skin_treatment_procedure.webp";
 import consultationImage from "@assets/generated_images/doctor_patient_treatment_discussion.png";
+import consultationImageWebp from "@assets/generated_images/doctor_patient_treatment_discussion.webp";
 import backExamImage from "@assets/generated_images/back_skin_examination_check.png";
+import backExamImageWebp from "@assets/generated_images/back_skin_examination_check.webp";
 import skincareImage from "@assets/generated_images/skincare_treatment_application.png";
+import skincareImageWebp from "@assets/generated_images/skincare_treatment_application.webp";
 import resultsImage from "@assets/generated_images/treatment_results_comparison_screen.png";
+import resultsImageWebp from "@assets/generated_images/treatment_results_comparison_screen.webp";
 import acneImage from "@assets/generated_images/acne_treatment_procedure.png";
+import acneImageWebp from "@assets/generated_images/acne_treatment_procedure.webp";
 import drFoxStyleImage from "@assets/generated_images/smiling_male_dermatologist_with_patient.png";
+import drFoxStyleImageWebp from "@assets/generated_images/smiling_male_dermatologist_with_patient.webp";
 import heroTeamImage from "@assets/generated_images/laughing_lady_doctors_treating_patient.png";
+import heroTeamImageWebp from "@assets/generated_images/laughing_lady_doctors_treating_patient.webp";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -271,7 +281,9 @@ export default function DermatologySpecialty() {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
+                <picture>
+                  <source srcSet={heroTeamImageWebp} type="image/webp" />
+                  <img 
                   src={heroTeamImage} 
                   alt="Three dermatologists treating patient" 
                   className="w-full h-[500px] object-cover"
@@ -279,6 +291,7 @@ export default function DermatologySpecialty() {
                   width="800"
                   height="500"
                 />
+                </picture>
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl border border-slate-100">
@@ -394,7 +407,10 @@ export default function DermatologySpecialty() {
                   ))}
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src={drFoxStyleImage} alt="Medical dermatology workflow" className="w-full h-auto" loading="lazy" width="1408" height="768" />
+                  <picture>
+                    <source srcSet={drFoxStyleImageWebp} type="image/webp" />
+                    <img src={drFoxStyleImage} alt="Medical dermatology workflow" className="w-full h-auto" loading="lazy" width="1408" height="768" />
+                  </picture>
                 </div>
               </div>
             </TabsContent>
@@ -412,7 +428,10 @@ export default function DermatologySpecialty() {
                   ))}
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src={laserTreatmentImage} alt="Surgical dermatology workflow" className="w-full h-auto" loading="lazy" width="1408" height="768" />
+                  <picture>
+                    <source srcSet={laserTreatmentImageWebp} type="image/webp" />
+                    <img src={laserTreatmentImage} alt="Surgical dermatology workflow" className="w-full h-auto" loading="lazy" width="1408" height="768" />
+                  </picture>
                 </div>
               </div>
             </TabsContent>
@@ -430,7 +449,10 @@ export default function DermatologySpecialty() {
                   ))}
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src={happyPatientImage} alt="Cosmetic dermatology workflow" className="w-full h-auto" loading="lazy" width="1408" height="768" />
+                  <picture>
+                    <source srcSet={happyPatientImageWebp} type="image/webp" />
+                    <img src={happyPatientImage} alt="Cosmetic dermatology workflow" className="w-full h-auto" loading="lazy" width="1408" height="768" />
+                  </picture>
                 </div>
               </div>
             </TabsContent>

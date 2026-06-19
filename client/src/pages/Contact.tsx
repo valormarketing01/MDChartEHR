@@ -11,6 +11,7 @@ import { Footer } from "@/components/Footer";
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroImage from "@assets/generated_images/medical_team_welcoming_patients.png";
+import heroImageWebp from "@assets/generated_images/medical_team_welcoming_patients.webp";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -117,7 +118,9 @@ export default function Contact() {
             className="max-w-5xl mx-auto"
           >
             <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <img 
+              <picture>
+                <source srcSet={heroImageWebp} type="image/webp" />
+                <img 
                 src={heroImage} 
                 alt="Friendly medical team at reception" 
                 className="w-full h-[300px] object-cover"
@@ -125,6 +128,7 @@ export default function Contact() {
                 width="800"
                 height="300"
               />
+              </picture>
             </div>
           </motion.div>
         </div>

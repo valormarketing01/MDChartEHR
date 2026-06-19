@@ -13,9 +13,13 @@ import {
 } from "lucide-react";
 
 import heroTeamImage from "@assets/generated_images/diverse_laughing_cardiologists_treating_patient.png";
+import heroTeamImageWebp from "@assets/generated_images/diverse_laughing_cardiologists_treating_patient.webp";
 import echoImage from "@assets/generated_images/diverse_doctors_echocardiogram_exam.png";
+import echoImageWebp from "@assets/generated_images/diverse_doctors_echocardiogram_exam.webp";
 import ecgImage from "@assets/generated_images/black_doctor_ecg_review_patient.png";
+import ecgImageWebp from "@assets/generated_images/black_doctor_ecg_review_patient.webp";
 import stressTestImage from "@assets/generated_images/diverse_doctors_cardiac_stress_test.png";
+import stressTestImageWebp from "@assets/generated_images/diverse_doctors_cardiac_stress_test.webp";
 
 const fadeIn = {
   hidden: { opacity: 0 },
@@ -159,7 +163,9 @@ export default function CardiologySpecialty() {
             transition={{ duration: 1 }}
             className="h-full"
           >
-            <img
+            <picture>
+              <source srcSet={heroTeamImageWebp} type="image/webp" />
+              <img
               src={heroTeamImage}
               alt="Cardiology team"
               className="w-full h-full object-cover min-h-[500px] lg:min-h-screen"
@@ -167,6 +173,7 @@ export default function CardiologySpecialty() {
               width="1280"
               height="896"
             />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-transparent lg:from-slate-900/30"></div>
             
             {/* Floating Badge */}

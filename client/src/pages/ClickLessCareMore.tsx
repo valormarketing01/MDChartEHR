@@ -8,7 +8,9 @@ import {
   ArrowRight, CheckCircle, Zap, Clock, MousePointer
 } from "lucide-react";
 import heroImage from "@assets/generated_images/efficient_doctor_using_technology.png";
+import heroImageWebp from "@assets/generated_images/efficient_doctor_using_technology.webp";
 import techImage from "@assets/generated_images/healthcare_technology_abstract_concept.png";
+import techImageWebp from "@assets/generated_images/healthcare_technology_abstract_concept.webp";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -114,7 +116,9 @@ export default function ClickLessCareMore() {
               className="relative"
             >
               <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img 
+                <picture>
+                  <source srcSet={heroImageWebp} type="image/webp" />
+                  <img 
                   src={heroImage} 
                   alt="Doctor using tablet efficiently" 
                   className="w-full h-[400px] object-cover"
@@ -122,6 +126,7 @@ export default function ClickLessCareMore() {
                   width="800"
                   height="400"
                 />
+                </picture>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 border border-slate-100">
                 <div className="flex items-center gap-3">
@@ -172,7 +177,9 @@ export default function ClickLessCareMore() {
               viewport={{ once: true }}
               className="rounded-3xl overflow-hidden shadow-xl"
             >
-              <img 
+              <picture>
+                <source srcSet={techImageWebp} type="image/webp" />
+                <img 
                 src={techImage} 
                 alt="Healthcare technology interface" 
                 className="w-full h-[350px] object-cover"
@@ -180,6 +187,7 @@ export default function ClickLessCareMore() {
                 width="800"
                 height="350"
               />
+              </picture>
             </motion.div>
           </div>
         </div>

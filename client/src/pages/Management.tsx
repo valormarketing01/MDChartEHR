@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Users, ArrowRight } from "lucide-react";
 import heroImage from "@assets/generated_images/corporate_leadership_team_meeting.png";
+import heroImageWebp from "@assets/generated_images/corporate_leadership_team_meeting.webp";
 import aaronImage from "@assets/Gemini_Generated_Image_7ejgbg7ejgbg7ejg_1770827867393.png";
 import maitryImage from "@assets/Gemini_Generated_Image_4s1te44s1te44s1t_1770827529031.png";
 import danielImage from "@assets/Gemini_Generated_Image_60hu5060hu5060hu_1770827363357.png";
@@ -86,7 +87,9 @@ export default function Management() {
             className="max-w-5xl mx-auto"
           >
             <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <img 
+              <picture>
+                <source srcSet={heroImageWebp} type="image/webp" />
+                <img 
                 src={heroImage} 
                 alt="Leadership team in meeting" 
                 className="w-full h-[400px] object-cover"
@@ -94,6 +97,7 @@ export default function Management() {
                 width="800"
                 height="400"
               />
+              </picture>
             </div>
           </motion.div>
         </div>

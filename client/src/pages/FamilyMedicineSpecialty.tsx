@@ -10,8 +10,11 @@ import {
 } from "lucide-react";
 
 import heroImage from "@assets/generated_images/diverse_family_doctors_with_family.png";
+import heroImageWebp from "@assets/generated_images/diverse_family_doctors_with_family.webp";
 import checkupImage from "@assets/generated_images/family_medicine_annual_checkup.png";
+import checkupImageWebp from "@assets/generated_images/family_medicine_annual_checkup.webp";
 import consultImage from "@assets/generated_images/family_medicine_health_consultation.png";
+import consultImageWebp from "@assets/generated_images/family_medicine_health_consultation.webp";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -137,7 +140,10 @@ export default function FamilyMedicineSpecialty() {
                 className="relative"
               >
                 <div className="rounded-3xl overflow-hidden shadow-2xl">
-                  <img src={heroImage} alt="Family medicine team" className="w-full h-[550px] object-cover" loading="lazy" width="800" height="550" />
+                  <picture>
+                    <source srcSet={heroImageWebp} type="image/webp" />
+                    <img src={heroImage} alt="Family medicine team" className="w-full h-[550px] object-cover" loading="lazy" width="800" height="550" />
+                  </picture>
                 </div>
                 
                 <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-xl border border-slate-100">
@@ -267,7 +273,10 @@ export default function FamilyMedicineSpecialty() {
               className="relative group"
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={checkupImage} alt="Annual checkup" className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="800" height="350" />
+                <picture>
+                  <source srcSet={checkupImageWebp} type="image/webp" />
+                  <img src={checkupImage} alt="Annual checkup" className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="800" height="350" />
+                </picture>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent rounded-2xl flex items-end p-6">
                 <div>
@@ -285,7 +294,10 @@ export default function FamilyMedicineSpecialty() {
               className="relative group"
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={consultImage} alt="Health consultation" className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="800" height="350" />
+                <picture>
+                  <source srcSet={consultImageWebp} type="image/webp" />
+                  <img src={consultImage} alt="Health consultation" className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="800" height="350" />
+                </picture>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent rounded-2xl flex items-end p-6">
                 <div>
