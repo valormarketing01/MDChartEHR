@@ -6,9 +6,13 @@ import { Link } from "wouter";
 import heroImage from "@assets/generated_images/futuristic_glass_medical_interface_abstract_3d.png";
 import oncSeal from "@assets/generated_images/onc_certified_health_it_seal_3d_gold_and_blue.png";
 import doctorPortrait from "@assets/generated_images/friendly_doctor_portrait.png";
+import doctorPortraitWebp from "@assets/generated_images/friendly_doctor_portrait.webp";
 import clinicInterior from "@assets/generated_images/diverse_doctors_hallway_patient_2.png";
+import clinicInteriorWebp from "@assets/generated_images/diverse_doctors_hallway_patient_2.webp";
 import doctorTablet from "@assets/generated_images/doctor_using_tablet.png";
+import doctorTabletWebp from "@assets/generated_images/doctor_using_tablet.webp";
 import medicalTeam from "@assets/generated_images/medical_team_collaboration.png";
+import medicalTeamWebp from "@assets/generated_images/medical_team_collaboration.webp";
 
 const AI_MESSAGES = [
   { Icon: Mic2,       text: "AI listens to your patient encounters and auto-generates clinical notes in real time — no manual charting needed." },
@@ -151,7 +155,10 @@ export function Hero() {
                 whileHover={{ scale: 1.03 }}
                 className="h-48 md:h-56 rounded-2xl border-4 border-white shadow-2xl overflow-hidden"
               >
-                <img src={doctorPortrait} alt="Dr. Sarah Chen" className="w-full h-full object-cover" loading="lazy" width="1408" height="768" />
+                <picture>
+                  <source srcSet={doctorPortraitWebp} type="image/webp" />
+                  <img src={doctorPortrait} alt="Dr. Sarah Chen" className="w-full h-full object-cover" loading="lazy" width="1408" height="768" />
+                </picture>
               </motion.div>
               
               <motion.div
@@ -161,7 +168,10 @@ export function Hero() {
                 whileHover={{ scale: 1.03 }}
                 className="h-48 md:h-56 rounded-2xl border-4 border-white shadow-2xl overflow-hidden mt-8"
               >
-                <img src={medicalTeam} alt="Medical Team of Doctors" className="w-full h-full object-cover" loading="lazy" width="1408" height="768" />
+                <picture>
+                  <source srcSet={medicalTeamWebp} type="image/webp" />
+                  <img src={medicalTeam} alt="Medical Team of Doctors" className="w-full h-full object-cover" loading="lazy" width="1408" height="768" />
+                </picture>
               </motion.div>
 
               {/* Row 2 */}
@@ -172,7 +182,10 @@ export function Hero() {
                 whileHover={{ scale: 1.03 }}
                 className="h-48 md:h-56 rounded-2xl border-4 border-white shadow-2xl overflow-hidden -mt-4"
               >
-                <img src={doctorTablet} alt="Dermatology Patient Records" className="w-full h-full object-cover" loading="lazy" width="1408" height="768" />
+                <picture>
+                  <source srcSet={doctorTabletWebp} type="image/webp" />
+                  <img src={doctorTablet} alt="Dermatology Patient Records" className="w-full h-full object-cover" loading="lazy" width="1408" height="768" />
+                </picture>
               </motion.div>
               
               <motion.div
@@ -182,7 +195,10 @@ export function Hero() {
                 whileHover={{ scale: 1.03 }}
                 className="h-48 md:h-56 rounded-2xl border-4 border-white shadow-2xl overflow-hidden mt-4"
               >
-                <img src={clinicInterior} alt="MD Charts Doctors" className="w-full h-full object-cover" loading="lazy" width="1280" height="896" />
+                <picture>
+                  <source srcSet={clinicInteriorWebp} type="image/webp" />
+                  <img src={clinicInterior} alt="MD Charts Doctors" className="w-full h-full object-cover" loading="lazy" width="1280" height="896" />
+                </picture>
               </motion.div>
             </div>
 
