@@ -7,12 +7,20 @@ import heroImage from "@assets/generated_images/futuristic_glass_medical_interfa
 import oncSeal from "@assets/generated_images/onc_certified_health_it_seal_3d_gold_and_blue.png";
 import doctorPortrait from "@assets/generated_images/friendly_doctor_portrait.png";
 import doctorPortraitWebp from "@assets/generated_images/friendly_doctor_portrait.webp";
+import doctorPortraitWebp480 from "@assets/generated_images/friendly_doctor_portrait_480w.webp";
+import doctorPortraitWebp960 from "@assets/generated_images/friendly_doctor_portrait_960w.webp";
 import clinicInterior from "@assets/generated_images/diverse_doctors_hallway_patient_2.png";
 import clinicInteriorWebp from "@assets/generated_images/diverse_doctors_hallway_patient_2.webp";
+import clinicInteriorWebp480 from "@assets/generated_images/diverse_doctors_hallway_patient_2_480w.webp";
+import clinicInteriorWebp960 from "@assets/generated_images/diverse_doctors_hallway_patient_2_960w.webp";
 import doctorTablet from "@assets/generated_images/doctor_using_tablet.png";
 import doctorTabletWebp from "@assets/generated_images/doctor_using_tablet.webp";
+import doctorTabletWebp480 from "@assets/generated_images/doctor_using_tablet_480w.webp";
+import doctorTabletWebp960 from "@assets/generated_images/doctor_using_tablet_960w.webp";
 import medicalTeam from "@assets/generated_images/medical_team_collaboration.png";
 import medicalTeamWebp from "@assets/generated_images/medical_team_collaboration.webp";
+import medicalTeamWebp480 from "@assets/generated_images/medical_team_collaboration_480w.webp";
+import medicalTeamWebp960 from "@assets/generated_images/medical_team_collaboration_960w.webp";
 
 const AI_MESSAGES = [
   { Icon: Mic2,       text: "AI listens to your patient encounters and auto-generates clinical notes in real time — no manual charting needed." },
@@ -156,7 +164,7 @@ export function Hero() {
                 className="h-48 md:h-56 rounded-2xl border-4 border-white shadow-2xl overflow-hidden"
               >
                 <picture>
-                  <source srcSet={doctorPortraitWebp} type="image/webp" />
+                  <source srcSet={`${doctorPortraitWebp480} 480w, ${doctorPortraitWebp960} 960w, ${doctorPortraitWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                   <img src={doctorPortrait} alt="Dr. Sarah Chen" className="w-full h-full object-cover" loading="lazy" width="1408" height="768" />
                 </picture>
               </motion.div>
@@ -169,7 +177,7 @@ export function Hero() {
                 className="h-48 md:h-56 rounded-2xl border-4 border-white shadow-2xl overflow-hidden mt-8"
               >
                 <picture>
-                  <source srcSet={medicalTeamWebp} type="image/webp" />
+                  <source srcSet={`${medicalTeamWebp480} 480w, ${medicalTeamWebp960} 960w, ${medicalTeamWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                   <img src={medicalTeam} alt="Medical Team of Doctors" className="w-full h-full object-cover" loading="lazy" width="1408" height="768" />
                 </picture>
               </motion.div>
@@ -183,7 +191,7 @@ export function Hero() {
                 className="h-48 md:h-56 rounded-2xl border-4 border-white shadow-2xl overflow-hidden -mt-4"
               >
                 <picture>
-                  <source srcSet={doctorTabletWebp} type="image/webp" />
+                  <source srcSet={`${doctorTabletWebp480} 480w, ${doctorTabletWebp960} 960w, ${doctorTabletWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                   <img src={doctorTablet} alt="Dermatology Patient Records" className="w-full h-full object-cover" loading="lazy" width="1408" height="768" />
                 </picture>
               </motion.div>
@@ -196,7 +204,7 @@ export function Hero() {
                 className="h-48 md:h-56 rounded-2xl border-4 border-white shadow-2xl overflow-hidden mt-4"
               >
                 <picture>
-                  <source srcSet={clinicInteriorWebp} type="image/webp" />
+                  <source srcSet={`${clinicInteriorWebp480} 480w, ${clinicInteriorWebp960} 960w, ${clinicInteriorWebp} 1280w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                   <img src={clinicInterior} alt="MD Charts Doctors" className="w-full h-full object-cover" loading="lazy" width="1280" height="896" />
                 </picture>
               </motion.div>

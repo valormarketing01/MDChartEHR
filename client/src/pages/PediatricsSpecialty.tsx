@@ -12,10 +12,16 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 import heroImage from "@assets/generated_images/diverse_pediatricians_examining_child.png";
 import heroImageWebp from "@assets/generated_images/diverse_pediatricians_examining_child.webp";
+import heroImageWebp480 from "@assets/generated_images/diverse_pediatricians_examining_child_480w.webp";
+import heroImageWebp960 from "@assets/generated_images/diverse_pediatricians_examining_child_960w.webp";
 import vaccinationImage from "@assets/generated_images/pediatric_vaccination_procedure.png";
 import vaccinationImageWebp from "@assets/generated_images/pediatric_vaccination_procedure.webp";
+import vaccinationImageWebp480 from "@assets/generated_images/pediatric_vaccination_procedure_480w.webp";
+import vaccinationImageWebp960 from "@assets/generated_images/pediatric_vaccination_procedure_960w.webp";
 import growthImage from "@assets/generated_images/pediatric_growth_assessment.png";
 import growthImageWebp from "@assets/generated_images/pediatric_growth_assessment.webp";
+import growthImageWebp480 from "@assets/generated_images/pediatric_growth_assessment_480w.webp";
+import growthImageWebp960 from "@assets/generated_images/pediatric_growth_assessment_960w.webp";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -178,7 +184,7 @@ export default function PediatricsSpecialty() {
             >
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                 <picture>
-                  <source srcSet={heroImageWebp} type="image/webp" />
+                  <source srcSet={`${heroImageWebp480} 480w, ${heroImageWebp960} 960w, ${heroImageWebp} 1280w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                   <img src={heroImage} alt="Pediatricians with child" className="w-full h-[500px] object-cover" loading="lazy" width="800" height="500" />
                 </picture>
               </div>
@@ -268,7 +274,7 @@ export default function PediatricsSpecialty() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <picture>
-                  <source srcSet={vaccinationImageWebp} type="image/webp" />
+                  <source srcSet={`${vaccinationImageWebp480} 480w, ${vaccinationImageWebp960} 960w, ${vaccinationImageWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                   <img src={vaccinationImage} alt="Pediatric vaccination" className="w-full h-[300px] object-cover" loading="lazy" width="800" height="300" />
                 </picture>
               </div>
@@ -291,7 +297,7 @@ export default function PediatricsSpecialty() {
               </div>
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <picture>
-                  <source srcSet={growthImageWebp} type="image/webp" />
+                  <source srcSet={`${growthImageWebp480} 480w, ${growthImageWebp960} 960w, ${growthImageWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                   <img src={growthImage} alt="Growth assessment" className="w-full h-[300px] object-cover" loading="lazy" width="800" height="300" />
                 </picture>
               </div>

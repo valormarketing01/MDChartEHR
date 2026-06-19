@@ -11,10 +11,16 @@ import {
 
 import heroImage from "@assets/generated_images/diverse_urologists_consulting_patient.png";
 import heroImageWebp from "@assets/generated_images/diverse_urologists_consulting_patient.webp";
+import heroImageWebp480 from "@assets/generated_images/diverse_urologists_consulting_patient_480w.webp";
+import heroImageWebp960 from "@assets/generated_images/diverse_urologists_consulting_patient_960w.webp";
 import diagnosticImage from "@assets/generated_images/urology_diagnostic_review.png";
 import diagnosticImageWebp from "@assets/generated_images/urology_diagnostic_review.webp";
+import diagnosticImageWebp480 from "@assets/generated_images/urology_diagnostic_review_480w.webp";
+import diagnosticImageWebp960 from "@assets/generated_images/urology_diagnostic_review_960w.webp";
 import teamImage from "@assets/generated_images/urology_team_treatment_planning.png";
 import teamImageWebp from "@assets/generated_images/urology_team_treatment_planning.webp";
+import teamImageWebp480 from "@assets/generated_images/urology_team_treatment_planning_480w.webp";
+import teamImageWebp960 from "@assets/generated_images/urology_team_treatment_planning_960w.webp";
 
 const fadeIn = {
   hidden: { opacity: 0 },
@@ -137,7 +143,7 @@ export default function UrologySpecialty() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
                   <picture>
-                    <source srcSet={heroImageWebp} type="image/webp" />
+                    <source srcSet={`${heroImageWebp480} 480w, ${heroImageWebp960} 960w, ${heroImageWebp} 1280w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                     <img src={heroImage} alt="Urology team" className="w-full h-[550px] object-cover" loading="lazy" width="800" height="550" />
                   </picture>
                 </div>
@@ -254,13 +260,13 @@ export default function UrologySpecialty() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <picture>
-                  <source srcSet={diagnosticImageWebp} type="image/webp" />
+                  <source srcSet={`${diagnosticImageWebp480} 480w, ${diagnosticImageWebp960} 960w, ${diagnosticImageWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                   <img src={diagnosticImage} alt="Diagnostic review" className="w-full h-[280px] object-cover" loading="lazy" width="800" height="280" />
                 </picture>
               </div>
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <picture>
-                  <source srcSet={teamImageWebp} type="image/webp" />
+                  <source srcSet={`${teamImageWebp480} 480w, ${teamImageWebp960} 960w, ${teamImageWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                   <img src={teamImage} alt="Treatment planning" className="w-full h-[280px] object-cover" loading="lazy" width="800" height="280" />
                 </picture>
               </div>

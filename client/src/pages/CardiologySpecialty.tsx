@@ -14,6 +14,8 @@ import {
 
 import heroTeamImage from "@assets/generated_images/diverse_laughing_cardiologists_treating_patient.png";
 import heroTeamImageWebp from "@assets/generated_images/diverse_laughing_cardiologists_treating_patient.webp";
+import heroTeamImageWebp480 from "@assets/generated_images/diverse_laughing_cardiologists_treating_patient_480w.webp";
+import heroTeamImageWebp960 from "@assets/generated_images/diverse_laughing_cardiologists_treating_patient_960w.webp";
 import echoImage from "@assets/generated_images/diverse_doctors_echocardiogram_exam.png";
 import echoImageWebp from "@assets/generated_images/diverse_doctors_echocardiogram_exam.webp";
 import ecgImage from "@assets/generated_images/black_doctor_ecg_review_patient.png";
@@ -164,7 +166,7 @@ export default function CardiologySpecialty() {
             className="h-full"
           >
             <picture>
-              <source srcSet={heroTeamImageWebp} type="image/webp" />
+              <source srcSet={`${heroTeamImageWebp480} 480w, ${heroTeamImageWebp960} 960w, ${heroTeamImageWebp} 1280w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
               <img
               src={heroTeamImage}
               alt="Cardiology team"

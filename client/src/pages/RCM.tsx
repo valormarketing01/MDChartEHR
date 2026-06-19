@@ -7,6 +7,8 @@ import { Footer } from "@/components/Footer";
 import { ContactModal } from "@/components/ContactModal";
 import rcmImage from "@assets/generated_images/abstract_medical_financial_growth_chart.png";
 import rcmImageWebp from "@assets/generated_images/abstract_medical_financial_growth_chart.webp";
+import rcmImageWebp480 from "@assets/generated_images/abstract_medical_financial_growth_chart_480w.webp";
+import rcmImageWebp960 from "@assets/generated_images/abstract_medical_financial_growth_chart_960w.webp";
 import trizettoBadge from "@assets/generated_images/trizetto_provider_solutions_integration_badge.png";
 import trizettoBadgeWebp from "@assets/generated_images/trizetto_provider_solutions_integration_badge.webp";
 
@@ -102,7 +104,7 @@ export default function RCMPage() {
                    <div className="text-[10px] font-mono text-slate-400 ml-2">rcm_dashboard_v4.2.exe</div>
                  </div>
                  <picture>
-                   <source srcSet={rcmImageWebp} type="image/webp" />
+                   <source srcSet={`${rcmImageWebp480} 480w, ${rcmImageWebp960} 960w, ${rcmImageWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                    <img
                   src={rcmImage}
                   alt="RCM Dashboard Analytics"

@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 import heroImage from "@assets/generated_images/medical_support_team_helping.png";
 import heroImageWebp from "@assets/generated_images/medical_support_team_helping.webp";
+import heroImageWebp480 from "@assets/generated_images/medical_support_team_helping_480w.webp";
+import heroImageWebp960 from "@assets/generated_images/medical_support_team_helping_960w.webp";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -86,7 +88,7 @@ export default function Support() {
           >
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <picture>
-                <source srcSet={heroImageWebp} type="image/webp" />
+                <source srcSet={`${heroImageWebp480} 480w, ${heroImageWebp960} 960w, ${heroImageWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                 <img 
                 src={heroImage} 
                 alt="Professional support team helping customers" 

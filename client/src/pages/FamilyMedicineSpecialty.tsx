@@ -11,10 +11,16 @@ import {
 
 import heroImage from "@assets/generated_images/diverse_family_doctors_with_family.png";
 import heroImageWebp from "@assets/generated_images/diverse_family_doctors_with_family.webp";
+import heroImageWebp480 from "@assets/generated_images/diverse_family_doctors_with_family_480w.webp";
+import heroImageWebp960 from "@assets/generated_images/diverse_family_doctors_with_family_960w.webp";
 import checkupImage from "@assets/generated_images/family_medicine_annual_checkup.png";
 import checkupImageWebp from "@assets/generated_images/family_medicine_annual_checkup.webp";
+import checkupImageWebp480 from "@assets/generated_images/family_medicine_annual_checkup_480w.webp";
+import checkupImageWebp960 from "@assets/generated_images/family_medicine_annual_checkup_960w.webp";
 import consultImage from "@assets/generated_images/family_medicine_health_consultation.png";
 import consultImageWebp from "@assets/generated_images/family_medicine_health_consultation.webp";
+import consultImageWebp480 from "@assets/generated_images/family_medicine_health_consultation_480w.webp";
+import consultImageWebp960 from "@assets/generated_images/family_medicine_health_consultation_960w.webp";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -141,7 +147,7 @@ export default function FamilyMedicineSpecialty() {
               >
                 <div className="rounded-3xl overflow-hidden shadow-2xl">
                   <picture>
-                    <source srcSet={heroImageWebp} type="image/webp" />
+                    <source srcSet={`${heroImageWebp480} 480w, ${heroImageWebp960} 960w, ${heroImageWebp} 1280w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                     <img src={heroImage} alt="Family medicine team" className="w-full h-[550px] object-cover" loading="lazy" width="800" height="550" />
                   </picture>
                 </div>
@@ -274,7 +280,7 @@ export default function FamilyMedicineSpecialty() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <picture>
-                  <source srcSet={checkupImageWebp} type="image/webp" />
+                  <source srcSet={`${checkupImageWebp480} 480w, ${checkupImageWebp960} 960w, ${checkupImageWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                   <img src={checkupImage} alt="Annual checkup" className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="800" height="350" />
                 </picture>
               </div>
@@ -295,7 +301,7 @@ export default function FamilyMedicineSpecialty() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <picture>
-                  <source srcSet={consultImageWebp} type="image/webp" />
+                  <source srcSet={`${consultImageWebp480} 480w, ${consultImageWebp960} 960w, ${consultImageWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                   <img src={consultImage} alt="Health consultation" className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" width="800" height="350" />
                 </picture>
               </div>

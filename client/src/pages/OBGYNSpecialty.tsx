@@ -15,10 +15,16 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 import heroImage from "@assets/generated_images/diverse_obgyn_doctors_with_pregnant_patient.png";
 import heroImageWebp from "@assets/generated_images/diverse_obgyn_doctors_with_pregnant_patient.webp";
+import heroImageWebp480 from "@assets/generated_images/diverse_obgyn_doctors_with_pregnant_patient_480w.webp";
+import heroImageWebp960 from "@assets/generated_images/diverse_obgyn_doctors_with_pregnant_patient_960w.webp";
 import ultrasoundImage from "@assets/generated_images/prenatal_ultrasound_examination.png";
 import ultrasoundImageWebp from "@assets/generated_images/prenatal_ultrasound_examination.webp";
+import ultrasoundImageWebp480 from "@assets/generated_images/prenatal_ultrasound_examination_480w.webp";
+import ultrasoundImageWebp960 from "@assets/generated_images/prenatal_ultrasound_examination_960w.webp";
 import postpartumImage from "@assets/generated_images/obgyn_with_new_mother_and_baby.png";
 import postpartumImageWebp from "@assets/generated_images/obgyn_with_new_mother_and_baby.webp";
+import postpartumImageWebp480 from "@assets/generated_images/obgyn_with_new_mother_and_baby_480w.webp";
+import postpartumImageWebp960 from "@assets/generated_images/obgyn_with_new_mother_and_baby_960w.webp";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -169,7 +175,7 @@ export default function OBGYNSpecialty() {
           >
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <picture>
-                <source srcSet={heroImageWebp} type="image/webp" />
+                <source srcSet={`${heroImageWebp480} 480w, ${heroImageWebp960} 960w, ${heroImageWebp} 1280w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                 <img src={heroImage} alt="OB/GYN team with patient" className="w-full h-[500px] object-cover" loading="lazy" width="800" height="500" />
               </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
@@ -261,7 +267,7 @@ export default function OBGYNSpecialty() {
               className="relative rounded-2xl overflow-hidden shadow-xl"
             >
               <picture>
-                <source srcSet={ultrasoundImageWebp} type="image/webp" />
+                <source srcSet={`${ultrasoundImageWebp480} 480w, ${ultrasoundImageWebp960} 960w, ${ultrasoundImageWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                 <img src={ultrasoundImage} alt="Prenatal ultrasound" className="w-full h-[350px] object-cover" loading="lazy" width="800" height="350" />
               </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent flex items-end p-6">
@@ -280,7 +286,7 @@ export default function OBGYNSpecialty() {
               className="relative rounded-2xl overflow-hidden shadow-xl"
             >
               <picture>
-                <source srcSet={postpartumImageWebp} type="image/webp" />
+                <source srcSet={`${postpartumImageWebp480} 480w, ${postpartumImageWebp960} 960w, ${postpartumImageWebp} 1408w`} sizes="(max-width: 1024px) 100vw, 50vw" type="image/webp" />
                 <img src={postpartumImage} alt="Postpartum care" className="w-full h-[350px] object-cover" loading="lazy" width="800" height="350" />
               </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent flex items-end p-6">
