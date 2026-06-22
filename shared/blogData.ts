@@ -1766,6 +1766,70 @@ If your current setup has the clinical and billing sides of your practice runnin
     date: "May 2026",
     readTime: "8 min read",
   },
+  {
+    id: "31",
+    slug: "patient-collections-reduce-friction",
+    title: "Your Patients Want to Pay You. So Why Are You Making It So Hard?",
+    excerpt: "Patient financial responsibility is rising while collection rates are falling. The problem isn't unwilling patients — it's friction. Here's how to fix it.",
+    content: `I want to tell you about a scenario I've seen play out at more practices than I can count. A patient comes in, the visit goes fine, they leave. A paper statement gets mailed to an address that's two moves out of date. It sits unopened in a stack of mail. Thirty days pass. The practice sends another statement. By the time someone calls, the patient has no memory of the balance and very little motivation to pay quickly.
+
+The patient wasn't trying to avoid the bill. They just never had a real opportunity to pay it. The process failed them before they even had a chance to engage. That's the patient collections problem in one paragraph — not unwilling patients, but friction.
+
+## The Numbers Tell a Difficult Story
+
+Patient financial responsibility has been climbing steadily, while the percentage patients actually pay has been declining. Insured patient yield dropped from 45.1% in 2024 to 42.4% in 2025. The HFMA and PayZen 2026 survey of revenue cycle leaders found that practices are collecting less than a third of total patient billings — two out of every three dollars billed directly to patients isn't making it back.
+
+> **Cedar analyzed 1.5 billion patient financial interactions and found that 90% of patients now receive bills through their preferred channels — yet collection rates remain flat. The problem isn't delivery. It's what stands in the way.**
+
+## What Patients Actually Want
+
+The message from patient preference research is consistent: pay digitally, pay fast, pay from a phone. TrustCommerce's 2024 Healthcare Payment Trends Report found the majority of patients prefer paying by debit or credit card. Inovalon's research found that nearly two-thirds of consumers prefer paying medical bills online. Among patients under 35, nearly three-quarters said they had switched providers — or would — for a better payment experience. Billing experience is now a retention factor, not just a back-office metric.
+
+Text-based payment links are where the real shift is happening. SMS has a 98% open rate compared to roughly 20% for email. Studies on text-based payment reminders consistently show significantly higher payment rates, with a meaningful share of patients paying within minutes of receiving a secure link.
+
+## When You Collect Matters as Much as How
+
+MGMA's 2025 benchmarking data makes something very clear: practices that collect at time of service consistently outperform peers who wait to bill patients after insurance processing. The HFMA/PayZen 2026 survey showed pre-service collections improving year over year as more practices capture payment — or at least a card on file — during the estimate stage.
+
+The patient's motivation to pay is highest right after their visit. Every week that passes between the encounter and the statement is a week of motivation you've lost. A good payment workflow catches the patient at multiple moments — at check-in, immediately post-visit, and again when the balance finalizes.
+
+## What MDCharts Is Doing About This
+
+MDCharts is an integrated EHR and RCM platform, meaning billing isn't a separate system bolted on after the fact. Patient balances, claim statuses, and A/R are visible within the same workflow providers use to document care — removing the handoff delays where balances typically fall through the cracks.
+
+We're now integrating with a payment gateway to complete the patient payment picture. The platform has been recognized as Best in KLAS for Patient Financial Engagement for two consecutive years — 2025 and 2026. Healthcare organizations using the integrated payment tools have reported a 15% to 50% increase in online payments.
+
+Once the integration goes live, MDCharts practices will be able to send patients a secure payment link right after their visit — no portal login required, no paper chase. The patient gets a text or email, taps the link, and pays. The practice gets faster collections and fewer hours spent on follow-up calls.
+
+## Make It Easy or Chase It Forever
+
+Technology alone doesn't fix a broken collections process. But a tight strategy — one that combines early conversations, digital payment links, and a smart follow-up cadence — does. The practices winning on collections right now are doing a few things consistently:
+
+- Collecting or capturing a card on file at time of service, before care is delivered
+- Sending a payment link within hours of the visit, while it's still top of mind
+- Using text and email together — not just paper statements mailed three weeks later
+- Following up once or twice with a simple link, not repeated calls with no easy resolution
+
+Patients are not the problem. Friction is. Remove the friction, and the money follows.
+
+---
+
+## References
+
+1. Kodiak Solutions Revenue Cycle Benchmarking Data, 2025
+2. HFMA / PayZen Patient Collections Survey, 2026
+3. Cedar 2026 Trends in Healthcare Payments Report
+4. TrustCommerce 2024 Healthcare Payment Trends and Future Outlook Report
+5. Inovalon / JP Morgan Trends in Healthcare Payments, 2024
+6. DrChrono / Curogram Healthcare Billing SMS Research, 2025
+7. MGMA Patient Balance Collections Stat Poll, October 2025
+`,
+    category: "rcm",
+    categoryLabel: "Revenue Cycle Management",
+    author: "MDCharts RCM Team",
+    date: "June 2026",
+    readTime: "5 min read",
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
