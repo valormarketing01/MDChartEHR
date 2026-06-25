@@ -11,6 +11,11 @@ import {
 
 const testimonials = [
   {
+    quote: "After more than 15 years in urology practice, I've worked with several EMR systems—but MD Charts stands out by a wide margin. The ease of use is exceptional; it fits seamlessly into my daily workflow without slowing me down. Even more impressive is the customer support—responsive, knowledgeable, and genuinely invested in our success. MD Charts has made a meaningful difference in both efficiency and patient care in my practice.",
+    name: "Randy Makovsky",
+    specialty: "Urologist, 15+ Years in Practice"
+  },
+  {
     quote: "The specialty-specific templates have transformed how we document patient visits. Our providers are happier and more efficient.",
     name: "Practice Administrator",
     specialty: "Multi-Specialty Practice"
